@@ -33,7 +33,7 @@ nav {
     list-style-type: none;
 }
 .nav-item a {
-    margin: 0 .75em;
+    margin: 0 .6em;
     font-family: 'Quicksand', sans-serif;
     color: black !important;
     text-decoration: none;
@@ -58,9 +58,10 @@ nav {
 }
 @media screen and (max-width: 600px) {
     .nav-item a {
+        font-size: 13px;
         border: 2px solid rgba(0, 255, 255, .8);
         padding: 5px;
-        margin: 6px;
+        margin: 1vw;
         border-radius: 8px;
     }
     .nav-item a.active {
