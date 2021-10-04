@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--lightblue);
-    padding-bottom: 6em;
+    padding-bottom: 2.0em;
     position: relative;
 }
 
@@ -105,7 +105,7 @@ a:hover, a:active {
 header {
     max-width: 650px;
     padding: 0 25px 0;
-    margin: 0 auto 4.0em;
+    margin: 0 auto 3.0em;
 }
 article {
     max-width: 650px;
@@ -268,9 +268,12 @@ figure {
     header {
         margin-bottom: 1.0em;
     }
-    h2 {
-        font-size: 36px;
+    h1 {
+        font-size: 30px;
         margin-top: 0.3em;
+    }
+    h2 {
+        margin-bottom: -1.0em;
     }
     .socials {
         /* transform: scale(0.8); */
