@@ -189,7 +189,7 @@ header img {
     /* border: 1px solid black; */
     padding: 50px;
     opacity: 0;
-    animation: delay 1s ease forwards .5s;
+    animation: delay 1s ease forwards .5s, wave 3s ease forwards .5s;
 }
 header img:hover {
     transform: rotate(25deg);
@@ -271,6 +271,19 @@ figure {
         display: block;
     }
 }
+/* credit: https://jarv.is/notes/css-waving-hand-emoji/ */
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+   /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
 
 /* 
     MEDIA QUERIES
@@ -282,7 +295,6 @@ figure {
         width: 60px;
         margin: 0 0;
         padding: 50px 0 50px;
-        animation: delay 1s ease forwards .5s, wave 2s ease forwards 1s;
     }
     header {
         margin-bottom: 1.0em;
@@ -310,12 +322,5 @@ figure {
         0% { right: -185px; }
         100% { right: 0; opacity: 1;}
     }
-    @keyframes wave {
-        0% { transform: rotate(0deg);}
-        25% { transform: rotate(-10deg); }
-        43% { transform: rotate(25deg); }
-        60% { transform: rotate(-5deg); }
-        83% { transform: rotate(20deg); }
-        100% { transform: rotate(0deg); }
-    }
+    
 }
