@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* natural box model */
+html {
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+/* 
+    UTLILITIES
+*/
+.show-mobile {
+    display: block;
+}
+.show-desktop {
+    display: none;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightblue);
+    padding-bottom: 2.0em;
+    position: relative;
+    margin-bottom: 5.0em;
+}
+
+/* colors */
+:root {
+    --darkgray: rgb(104, 104, 104);
+    --shadow: rgba(150, 150, 150, 0.3);
+    --lightblue: rgb(230,255,255);
+    --darkblue: rgb(215,242,255);
+    --lightgray: rgb(215, 215, 215);
+}
+
+/* 
+    TYPOGRAPHY
+*/
+/* TYPOGRAPHY */
+h1, h2, h3, h4, p, figcaption {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--darkgray);
+}
+h1 {
+    text-align: left;
+    font-weight: 300;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    margin: 0.5em 0;
+    display: none;
+    opacity: 0;
+    animation: delay 1.4s ease forwards 3.9s;
+}
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 2.0em;
+    display: block;
+}
+h3 {
+    font-size: 22px;
+    margin: 0.3em 0;
+    line-height: 1.3em;
+    font-weight: 400;
+}
+figcaption {
+    margin-top: 0.5em;
+    font-size: 20px;
+    font-weight: 300;
+}
+figcaption p {
+    margin: 0.5em 0;
+    font-size: 0.85em;
+}
+/* figcaption p:not(:first-child) {
+    font-size: 0.85em;
+} */
+/* skills */
+.skills {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.skills p:first-child {
+    margin: 0 10px 0 0;
+    font-size: 0.85em;
+}
+.skill {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    padding: 3px 8px;
+    background-color: var(--lightgray);
+    color: var(--darkgray);
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 5px 10px 5px 0;
+    border-radius: 3px;
+    border: 1px solid var(--darkgray);
+}
+/* links */
+a:link, a:visited {
+    color: var(--darkgray);
+    text-decoration: none;
+    /* border-bottom: 3.5px solid var(--darkgray); */
+    /* box-shadow:  */
+    background-size: 1px 1em;
+    text-shadow:
+        -1px -1px var(--lightblue),
+        -1px 1px var(--lightblue),
+        1px -1px var(--lightblue),
+        1px 1px var(--lightblue);
+    box-shadow:
+        inset 0 -0.1em var(--lightblue),
+        inset 0 -0.15em var(--darkgray);
+    display: inline;
+}
+a:hover, a:active {
+    color: var(--darkgray);
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+/* 
+    SPACING/STRUCTURE
+*/
+header {
+    max-width: 650px;
+    padding: 0 25px 0;
+    margin: 0 auto 3.0em;
+}
+article {
+    /* max-width: 650px; */
+    padding: 0 25px 0;
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    animation: delay 1.5s ease forwards 4.6s;
+}
+section {
+    max-width: 950px;
+    margin: 2.0em auto;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+section.buildout {
+    grid-template-columns: repeat(2, 1fr);
+}
+.show-grid-2 {
+    display: none;
+}
+figure {
+    /* border: 1px solid green; */
+    /* max-width: 380px; */
+}
+
+/* 
+    HEADER
+*/
+/* socials */
+.socials {
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    /* height: 6em; */
+    display: flex;
+    position: fixed;
+    top: 30px;
+    right: 15px;
+    flex-flow: row wrap;
+    z-index: 100;
+    opacity: 0;
+    animation: delay 1.4s ease forwards 3.9s;
+}
+.socials a {
+    font-size: 20px;
+    padding-top: 5.5px;
+    color: var(--darkgray);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--lightblue);
+    /* background-color: red; */
+    border: 1px solid var(--darkgray);
+    border-radius: 50%;
+    margin: 0 7.5px;
+    box-shadow: none;
+    transition: color .5s ease-out, background-color .5s ease-out, border-color .5s ease-out;  
+}
+.socials a:hover {
+    /* color: #cccccc; */
+    background-color: var(--darkgray);
+    /* border-color: var(--lightblue); */
+    color: var(--lightblue);
+    transition: color .5s ease-in, background-color .5s ease-in, border-color .5s ease-in;
+}
+/* waving hand */
+header img {
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    padding: 50px;
+    opacity: 0;
+    --rotate: 0;
+    transform: rotate(var(--rotate));
+    animation: delay 1s ease forwards .5s, wave 3s ease .5s;
+    transition: transform .25s ease;
+}
+header img:hover {
+    --rotate: 25deg;
+    transition: transform .25s ease;
+}
+/* name animation */
+#hi-there {
+    stroke: var(--darkgray);
+    fill: none;
+    margin: 0;
+    stroke-miterlimit:10;
+    animation: fill 2s ease forwards 3s;
+    display: block;
+}
+
+/* 
+    ARTICLE
+*/
+article img {
+    width: 100%;
+    box-shadow: 1px 1px 10px var(--shadow);
+}
+figure {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+/* responsive video player */
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+    ANIMATIONS
+*/
+
+/* animate drawing effect*/
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+} 
+/* animate fill */
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: var(--darkgray);
+    }
+}
+/* animate lines next to subhead */
+@keyframes increase {
+    to {
+        width: 350px;
+        background: var(--darkgray);
+    }
+}
+/* delay appearance of subhed */
+@keyframes delay {
+    0% { opacity: 0; height: auto;}
+    100% { opacity: 1; height: auto;}
+}
+@keyframes delay-border {
+    to {
+        border-color: var(--darkgray);
+    }
+}
+/* delay large section of things */
+@keyframes delay-div {
+    to {
+        display: block;
+    }
+}
+/* credit: https://jarv.is/notes/css-waving-hand-emoji/ */
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+   /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* 
+    MEDIA QUERIES
+*/
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    section {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header img {
+        width: 60px;
+        margin: 0 0;
+        padding: 50px 0 50px;
+    }
+    header {
+        margin-bottom: 1.0em;
+    }
+    h1 {
+        font-size: 30px;
+        margin-top: 0.3em;
+    }
+    h2 {
+        margin-bottom: -1.0em;
+    }
+    section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .show-grid-2 {
+        display: block;
+    }
+    .socials {
+        /* transform: scale(0.8); */
+        background-color: var(--darkgray);
+        /* border: 1px solid var(--darkgray); */
+        padding: 10px;
+        border-radius: 50px 0 0 50px;
+        opacity: 0;
+        right: 0;
+        box-shadow: -1px 3px 6px 0 rgba(0,0,0,.2);
+        animation: slide-in 2s ease forwards 3.9s;
+    }
+
+    @keyframes slide-in {
+        0% { right: -185px; }
+        100% { right: 0; opacity: 1;}
+    }
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    body {
+        /* background-color: red; */
+    }
+    
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
