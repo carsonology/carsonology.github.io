@@ -50,7 +50,6 @@ h1 {
     font-size: 42px;
     letter-spacing: 0.05em;
     margin: 0.5em 0;
-    display: none;
     opacity: 0;
     animation: delay 1.4s ease forwards 3.9s;
 }
