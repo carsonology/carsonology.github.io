@@ -8,7 +8,7 @@ const name = document.querySelectorAll("#name path");
 const hithere = document.querySelectorAll("#hi-there path");
 
 // set animation delay variable to 0 to start iteration
-let animDelay = 1;
+let animDelay = 0.5;
 
 for (let letter of hithere) {
     let perimeter = letter.getTotalLength(); // get perimeter length of each svg letter
