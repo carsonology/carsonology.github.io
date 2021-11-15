@@ -235,6 +235,24 @@ figure {
     ANIMATIONS
 */
 
+/*
+    ANIMATIONS
+*/
+h1 {
+    opacity: 0;
+    animation: delay 2s ease forwards 2.2s;
+}
+.socials {
+    opacity: 0;
+    animation: delay 2s ease forwards 2.2s;
+}
+article {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    animation: delay 2s ease forwards 2.2s;
+}
+
 /* animate drawing effect*/
 @keyframes line-anim {
     to {
