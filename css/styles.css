@@ -150,18 +150,24 @@ header {
     z-index: 1000;
 }
 
-.socials a:link,
-.socials a:visited {
+.socials a {
     font-size: 20px;
-    padding-top: 5.5px;
+    /* padding-top: 5.5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--darkgray);
     width: 40px;
     height: 40px;
     text-align: center;
-    background-color: var(--lightblue);
     border: 1px solid var(--darkgray);
     border-radius: 50%;
     margin: 0 7.5px;
+}
+
+.socials a:link,
+.socials a:visited {
+    background-color: var(--lightblue);
     box-shadow: none;
     transition: color .35s ease-out, background-color .35s ease-out, border-color .35s ease-out;
 }
@@ -463,7 +469,7 @@ footer a:active {
 /*
     ANIMATIONS
 */
-h1 {
+/* h1 {
     opacity: 0;
     animation: delay 2s ease forwards 2.2s;
 }
@@ -479,7 +485,7 @@ footer {
     height: 0;
     overflow: hidden;
     animation: delay 2s ease forwards 2.2s;
-}
+} */
 
 /* animate drawing effect*/
 @keyframes line-anim {
