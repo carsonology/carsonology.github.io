@@ -18,7 +18,7 @@ function Header() {
                 <SocialButton link="mailto:carson.terbush@gmail.com" icon="envelope" />
                 <SocialButton link="https://www.linkedin.com/in/carson-terbush-6a1a58193/" icon="linkedin" />
             </div>
-            <img src="https://www.carsonterbush.com/images/wave.png" alt="wave emoji" />
+            <img src="./wave.png" alt="wave emoji" />
 
             <NameAnim />
             <h1>A designer, coder and writer.</h1>
