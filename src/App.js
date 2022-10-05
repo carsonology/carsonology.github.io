@@ -326,8 +326,8 @@ function App() {
 
       <footer>
         <div>
-          <img src="https://www.carsonterbush.com/images/headshot.jpg"
-            alt="A headshot of a girl with blonde hair and a white sweater smiling at the camera in front of a brick wall" />
+          <img src="./headshot.jpg"
+            alt="Carson's headshot" />
           <div>
             <p>I'm <a href="https://twitter.com/_carsonology" target="_blank">Carson TerBush</a>, a journalist
               studying at Indiana University. I like to write, design and code stories. In my free time, I love
