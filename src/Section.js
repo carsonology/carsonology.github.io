@@ -10,7 +10,7 @@ function Section(props) {
 
             {title === "webdev" &&
                 <>
-                    <h3>💫 Selects</h3>
+                    <h3 style={{ marginTop: 0 }}>💫 Selects</h3>
                     {data.filter(clip => clip.select).map((clip, i) => {
                         return (
                             <Clip
