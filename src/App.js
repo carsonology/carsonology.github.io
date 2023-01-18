@@ -345,7 +345,7 @@ function App() {
           </div>
         </div>
 
-        <small><p className="footnote">Made with <span style={{ color: "#C93662", marginTop: '-2px' }}>&#9829;</span> and <a href="https://github.com/carsonology/carsonology.github.io/tree/dev" target="_blank">React</a> | &#169; 2022</p></small>
+        <small><p className="footnote">Made with <span style={{ color: "#C93662", marginTop: '-2px' }}>&#9829;</span> and <a href="https://github.com/carsonology/carsonology.github.io" target="_blank">React</a> | &#169; 2023</p></small>
       </footer>
     </>
   );
