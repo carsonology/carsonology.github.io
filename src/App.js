@@ -159,6 +159,24 @@ function App() {
   ]
   const graphic_clips = [
     {
+      date: "February 2023",
+      headline: "Part of ongoing project",
+      url: "",
+      codepen: "abavLpq"
+    },
+    {
+      date: "February 2023",
+      headline: "Part of ongoing project",
+      url: "",
+      codepen: "MWqaEEm"
+    },
+    {
+      date: "February 2023",
+      headline: "Part of ongoing project",
+      url: "",
+      codepen: "gOdaGoY"
+    },
+    {
       date: "10/25/2021",
       headline: "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
       url: "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
@@ -182,7 +200,7 @@ function App() {
       image: {
         src: './wapo-p1.png',
         alt: "",
-        height: 1.6667
+        // height: 1.6667
       }
     },
     {
