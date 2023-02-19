@@ -107,7 +107,8 @@ h3 {
 }
 
 /* links */
-article a {
+article a,
+.dead-link {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 20px;
@@ -892,7 +893,8 @@ img:not([src]) {
   .grid-2,
   .grid-3,
   .grid-4 {
-    display: block;
+    display: flex;
+    flex-flow: column;
     padding-bottom: 0;
   }
 
