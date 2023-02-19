@@ -12,7 +12,7 @@ function Clip(props) {
                 </LazyLoad>
             )}
             {codepen && (
-                <Codepen hash={codepen} user="carsonology" height={500} defaultTab="result" preview="false" />
+                <Codepen hash={codepen} user="carsonology" height={600} defaultTab="result" preview="false" />
             )}
             {type === 'writing' && (
                 <>
@@ -23,7 +23,11 @@ function Clip(props) {
             {type === 'webdev' && (
                 <div>
                     <p>{date}</p>
-                    <a href={url} target="_blank">{headline}</a>
+                    <p>{url &&
+                        (<a href={url} target="_blank">{headline}</a>)
+                    }{!url &&
+                        <span className="dead-link">{headline}</span>
+                        }</p>
                 </div>
             )}
         </div>
