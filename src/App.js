@@ -18,6 +18,16 @@ function App() {
   const web_clips = [
     {
       image: {
+        src: "./nagpra-illo.png",
+        alt: ""
+      },
+      date: "4/28/2023",
+      url: "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
+      headline: "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
+      select: true
+    },
+    {
+      image: {
         src: "./gory.png",
         alt: "A computer screen with the title 'Grandma gets gory' and six portraits of actors with scary makeup"
       },
@@ -159,22 +169,22 @@ function App() {
   ]
   const graphic_clips = [
     {
+      date: "4/28/23",
+      url: "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
+      headline: "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
+      codepen: "MWqaEEm"
+    },
+    {
+      date: "4/28/23",
+      url: "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
+      headline: "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
+      codepen: "gOdaGoY"
+    },
+    {
       date: "February 2023",
       headline: "Part of ongoing project",
       url: "",
       codepen: "abavLpq"
-    },
-    {
-      date: "February 2023",
-      headline: "Part of ongoing project",
-      url: "",
-      codepen: "MWqaEEm"
-    },
-    {
-      date: "February 2023",
-      headline: "Part of ongoing project",
-      url: "",
-      codepen: "gOdaGoY"
     },
     {
       date: "10/25/2021",
@@ -261,6 +271,11 @@ function App() {
 
   ]
   const writing_clips = [
+    {
+      date: "4/28/2023",
+      url: "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
+      headline: "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
+    },
     {
       date: "1/5/2022",
       url: "https://specials.idsnews.com/trojan-horse-great-resignation-bloomington-kirkwood/",
