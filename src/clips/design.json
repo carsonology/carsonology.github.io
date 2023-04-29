@@ -1,0 +1,62 @@
+[
+    {
+        "image": {
+            "src": "./wapo-p1.png",
+            "alt": ""
+        }
+    },
+    {
+        "image": {
+            "src": "./wapo-metro.png",
+            "alt": ""
+        }
+    },
+    {
+        "image": {
+            "src": "IDSA04-CL-0420.jpg",
+            "alt": "A newspaper page with the headline 'Into the deep end' and a large photo of a man playing soccer"
+        }
+    },
+    {
+        "image": {
+            "src": "./IDSB01-CL-0910.jpg",
+            "alt": "A newspaper page with the headline 'Break out the books"
+        }
+    },
+    {
+        "image": {
+            "src": "./sign1twitter.gif",
+            "alt": "A gif with the words 'how to sign Do you have a mask' above an animation of how to communicate that phrase in sign language"
+        }
+    },
+    {
+        "image": {
+            "src": "./sign2twitter.gif",
+            "alt": "A gif with the words 'how to sign coronavirus' above an animation of how to communicate that phrase in sign language"
+        }
+    },
+    {
+        "image": {
+            "src": "./larisa1.png",
+            "alt": "A poster titled 'The Nutcracker' with a photo of a ballerina in a pink tutu"
+        }
+    },
+    {
+        "image": {
+            "src": "./sleeping-beauty.png",
+            "alt": "A poster titled 'The Sleeping Beauty' with a photo of two dancers dressed in white"
+        }
+    },
+    {
+        "image": {
+            "src": "./dashboard-illo.png",
+            "alt": "An illustration of the Sample Gates at IU surrounded by bar charts and pie charts"
+        }
+    },
+    {
+        "image": {
+            "src": "./sports-psych-01.png",
+            "alt": "An illustration of a brain inside a football helmet"
+        }
+    }
+]
