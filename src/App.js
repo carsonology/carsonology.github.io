@@ -11,14 +11,7 @@ import design_clips from './clips/design.json'
 
 function App() {
 
-  const [shownSection, setShownSection] = useState('')
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShownSection('webdev')
-    }, 2200);
-    return () => clearTimeout(timer);
-  }, []);
+  const [shownSection, setShownSection] = useState('webdev')
 
   return (
     <>

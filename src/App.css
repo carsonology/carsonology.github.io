@@ -358,16 +358,15 @@ nav li div {
   margin: 0 !important;
 }
 
-nav li svg {
+/* nav li svg {
   fill: var(--lightgray);
   height: 18px;
   transition: fill 0.3s;
-  /* margin: 0 5px -1px; */
-}
+} */
 
-nav li.active svg {
+/* nav li.active svg {
   fill: var(--darkgray);
-}
+} */
 
 nav li:hover {
   /* name changes color on hover */
@@ -445,7 +444,7 @@ nav li.active:after {
   width: calc(100%);
   transform: translateX(-15px);
   background-color: var(--lightblue);
-  height: 20px;
+  height: 10px;
   position: absolute;
   bottom: -4px;
   display: block;
@@ -480,7 +479,6 @@ main {
 */
 article {
   padding-top: 60px;
-  /* display: none; */
 }
 
 article img {
