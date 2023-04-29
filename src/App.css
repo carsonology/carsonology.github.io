@@ -340,7 +340,7 @@ nav li {
   font-weight: bold;
   color: var(--lightgray);
   border: 3px solid var(--lightgray);
-  padding: 15px;
+  padding: 10px 15px;
   cursor: pointer;
   text-align: center;
   display: block;
@@ -348,13 +348,21 @@ nav li {
   letter-spacing: 0.075em;
   position: relative;
   transition: color 0.3s;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+nav li div {
+  margin: 0 !important;
 }
 
 nav li svg {
   fill: var(--lightgray);
   height: 18px;
   transition: fill 0.3s;
-  margin: 0 5px -1px;
+  /* margin: 0 5px -1px; */
 }
 
 nav li.active svg {

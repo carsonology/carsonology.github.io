@@ -1,11 +1,17 @@
+import { useState } from 'react'
 import Icon from './Icon.js'
 
 function ListItem(props) {
     const { section, name, icon, shownSection, setShownSection } = props
+
+    const [animationStopped, setAnimationStopped] = useState(true)
+
     return (
-        <li className={shownSection === section ? 'active' : ''} onClick={() => setShownSection(section)}>
-            {/* <i className="fa fa-palette show-mobile-xs"></i> */}
-            <Icon name={icon} />
+        <li onMouseEnter={(() => setAnimationStopped(false))}
+            onMouseLeave={(() => setAnimationStopped(true))}
+            className={shownSection === section ? 'active' : ''}
+            onClick={() => setShownSection(section)}>
+            <Icon name={icon} animationStopped={animationStopped} />
             <span className="show-desktop-sm">{name}</span>
             <div className="lines"></div>
             <div className="lines1"></div>
