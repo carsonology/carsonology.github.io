@@ -5,7 +5,7 @@ function Clip(props) {
     const { type, image, date, url, headline, codepen } = props
 
     return (
-        <div className={`${type === 'webdev' ? 'web-clip' : ''}${type === 'writing' ? ' writing-clip' : ''}`}>
+        <div className={`${type === 'webdev' ? 'web-clip' : ''}${codepen ? ' codepen' : ''}${type === 'writing' ? ' writing-clip' : ''}`}>
             {image && (
                 <LazyLoad height={image.height} offset={100}>
                     <img className="image" src={image.src} alt={image.alt} />

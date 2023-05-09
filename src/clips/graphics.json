@@ -1,5 +1,23 @@
 [
     {
+        "image": {
+            "src": "./map-sc.png",
+            "alt": ""
+        },
+        "date": "5/7/2023",
+        "url": "https://specials.idsnews.com/car-crash-dashboard-monroe-county/",
+        "headline": "Crash map: See every car crash reported in Monroe County since 2003"
+    },
+    {
+        "image": {
+            "src": "./charts-sc.png",
+            "alt": ""
+        },
+        "date": "5/7/2023",
+        "url": "https://specials.idsnews.com/car-crash-charts-takeaways-iu-bloomington/",
+        "headline": "5 charts that explain car crashes in Monroe County"
+    },
+    {
         "date": "4/28/23",
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
@@ -10,12 +28,6 @@
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
         "codepen": "gOdaGoY"
-    },
-    {
-        "date": "February 2023",
-        "headline": "Part of ongoing project",
-        "url": "",
-        "codepen": "abavLpq"
     },
     {
         "date": "10/25/2021",

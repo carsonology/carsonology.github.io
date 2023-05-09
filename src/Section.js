@@ -34,6 +34,7 @@ function Section(props) {
             }
 
             {title === "graphics" && data.map((clip, i) => {
+
                 return (
                     <Clip
                         key={i}
@@ -57,7 +58,7 @@ function Section(props) {
                 return (
                     <Clip
                         key={i}
-                        type="writing"
+                        type={clip?.image ? "webdev" : "writing"}
                         {...clip}
                     />
                 )

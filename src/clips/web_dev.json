@@ -1,8 +1,18 @@
 [
     {
         "image": {
-            "src": "./nagpra-illo.png",
-            "alt": ""
+            "src": "./crash-sc.png",
+            "alt": "A computer screen with the title 'Catastrophic': The difficulty of addressing severe car crashes in Bloomington'"
+        },
+        "date": "5/7/2023",
+        "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
+        "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
+        "select": true
+    },
+    {
+        "image": {
+            "src": "./nagpra.png",
+            "alt": "A computer screen with three black and white photos and the title 'Thousands of Native American remains, a legacy of offensive research and the effort to move forward"
         },
         "date": "4/28/2023",
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",

@@ -541,7 +541,7 @@ figure {
   height: auto;
 }
 
-#webdev .web-clip div:nth-child(2) {
+.web-clip:not(.codepen) div:nth-child(2) {
   width: 30%;
 }
 
