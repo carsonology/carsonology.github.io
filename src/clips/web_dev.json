@@ -1,13 +1,23 @@
 [
     {
         "image": {
+            "src": "./abortion-data.png",
+            "alt": ""
+        },
+        "date": "6/22/2023",
+        "url": "https://wapo.st/3pQ1JxV",
+        "headline": "A fragile new phase of abortion in America",
+        "select": true
+    },
+    {
+        "image": {
             "src": "./crash-sc.png",
             "alt": "A computer screen with the title 'Catastrophic': The difficulty of addressing severe car crashes in Bloomington'"
         },
         "date": "5/7/2023",
         "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
         "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
-        "select": true
+        "select": false
     },
     {
         "image": {
@@ -97,7 +107,7 @@
         "date": "8/17/2022",
         "url": "https://wapo.st/3SuPH66",
         "headline": "Kids who witness parents shot to death rarely get help for trauma",
-        "select": true
+        "select": false
     },
     {
         "image": {
@@ -127,7 +137,7 @@
         "date": "1/5/2022",
         "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
         "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
-        "select": true
+        "select": false
     },
     {
         "image": {

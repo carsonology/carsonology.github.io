@@ -1,6 +1,15 @@
 [
     {
         "image": {
+            "src": "./hot-dog-chart.png",
+            "alt": ""
+        },
+        "date": "7/1/2023",
+        "url": "https://wapo.st/3XPezce",
+        "headline": "How hot dog contestants went from eating 10 to 76 hot dogs in 10 minutes"
+    },
+    {
+        "image": {
             "src": "./map-sc.png",
             "alt": ""
         },
