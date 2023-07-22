@@ -51,8 +51,8 @@ function App() {
           <img src="./terbush-headshot.jpg"
             alt="Carson's headshot" />
           <div>
-            <p>I'm <a href="https://twitter.com/_carsonology" target="_blank">Carson TerBush</a>, a journalist
-              studying at Indiana University. I like to write, design and code stories. In my free time, I love
+            <p>I'm <a href="https://twitter.com/_carsonology" target="_blank">Carson TerBush</a>, a visual journalist
+              with experience in data visualization, design, web development and investigative reporting. In my free time, I love
               cooking, drawing and rewatching Fleabag.</p>
             <p>Want to connect? <a href="mailto:carson.terbush@gmail.com">Email me!</a></p>
           </div>
