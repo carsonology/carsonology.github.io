@@ -9,6 +9,8 @@ import graphic_clips from './clips/graphics.json'
 import writing_clips from './clips/writing.json'
 import design_clips from './clips/design.json'
 
+// small change
+
 function App() {
 
   const [shownSection, setShownSection] = useState('webdev')
