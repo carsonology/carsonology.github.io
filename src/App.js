@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Header from './Header.js'
 import Nav from './Nav.js'
 import Section from './Section.js'

@@ -1,6 +1,16 @@
 [
     {
         "image": {
+            "src": "./world-cup-groups.png",
+            "alt": ""
+        },
+        "date": "7/17/2023",
+        "url": "https://wapo.st/3q3vCL8",
+        "headline": "Everything you need to know about the women’s World Cup group stage",
+        "select": false
+    },
+    {
+        "image": {
             "src": "./abortion-data.png",
             "alt": ""
         },
