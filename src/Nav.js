@@ -1,18 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Icon from './Icon.js'
 
 function ListItem(props) {
     const { section, name, shownSection, setShownSection } = props
 
     const [hoveredAnimId, setHoveredAnimId] = useState(null)
-
-    // useEffect(() => {
-    //     console.log(hoveredAnimId)
-    // }, [hoveredAnimId])
-
-    // useEffect(() => {
-    //     console.log(shownSection)
-    // }, [shownSection])
 
     return (
         <li
