@@ -1,6 +1,16 @@
 [
     {
         "image": {
+            "src": "./ticks.png",
+            "alt": ""
+        },
+        "date": "8/29/2023",
+        "url": "https://wapo.st/44CAG7p",
+        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
+        "select": false
+    },
+    {
+        "image": {
             "src": "./brooke-and-billy.png",
             "alt": ""
         },
