@@ -1,8 +1,9 @@
 import './App.css';
-import { useState } from 'react'
-import Header from './Header.js'
-import Nav from './Nav.js'
-import Section from './Section.js'
+import { useState, useEffect } from 'react'
+import Header from './components/Header.js'
+import Filters from './components/Filters'
+import Nav from './components/Nav.js'
+import Section from './components/Section.js'
 // import content for clips
 import web_clips from './clips/web_dev.json'
 import graphic_clips from './clips/graphics.json'
@@ -13,7 +14,43 @@ import design_clips from './clips/design.json'
 
 function App() {
 
+  const config = [
+    {
+      section: 'webdev',
+      data: web_clips,
+    },
+    {
+      section: 'graphics',
+      data: graphic_clips,
+    },
+    {
+      section: 'design',
+      data: design_clips,
+    },
+    {
+      section: 'writing',
+      data: writing_clips,
+    }
+  ]
+
+  const getFilters = (section) => {
+    return Array.from(
+      new Set(config
+        .filter(item => item?.section === section)[0]?.data
+        .filter(c => c?.skills)
+        .map(c => c.skills)
+        .flat())
+    )
+  }
+
   const [shownSection, setShownSection] = useState('webdev')
+  const [filters, setFilters] = useState(getFilters('webdev'))
+
+  useEffect(() => {
+    setFilters(getFilters(shownSection))
+  }, [shownSection])
+
+  console.log(filters)
 
   return (
     <>
@@ -22,30 +59,26 @@ function App() {
       <main>
         <Nav shownSection={shownSection} setShownSection={setShownSection} />
 
-        {shownSection === 'webdev' && (
-          <Section
-            title="webdev"
-            data={web_clips}
-          />
-        )}
-        {shownSection === 'graphics' && (
-          <Section
-            title="graphics"
-            data={graphic_clips}
-          />
-        )}
-        {shownSection === 'design' && (
-          <Section
-            title="design"
-            data={design_clips}
-          />
-        )}
-        {shownSection === 'writing' && (
-          <Section
-            title="writing"
-            data={writing_clips}
-          />
-        )}
+        {config.map(topic => {
+          return (
+            <>
+              {shownSection === topic.section && (
+                <>
+                  <Filters
+                    filters={filters}
+                    setFilters={setFilters}
+                    allFilters={getFilters(topic.section)}
+                  />
+                  <Section
+                    title={topic.section}
+                    data={topic.data}
+                    filters={filters}
+                  />
+                </>
+              )}
+            </>
+          )
+        })}
       </main>
 
       <footer>
