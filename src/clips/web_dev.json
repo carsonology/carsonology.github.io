@@ -1,16 +1,6 @@
 [
     {
         "image": {
-            "src": "./ticks.png",
-            "alt": ""
-        },
-        "date": "8/29/2023",
-        "url": "https://wapo.st/44CAG7p",
-        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
-        "select": false
-    },
-    {
-        "image": {
             "src": "./brooke-and-billy.png",
             "alt": ""
         },
@@ -21,16 +11,6 @@
     },
     {
         "image": {
-            "src": "./world-cup-groups.png",
-            "alt": ""
-        },
-        "date": "7/17/2023",
-        "url": "https://wapo.st/3q3vCL8",
-        "headline": "Everything you need to know about the women’s World Cup group stage",
-        "select": false
-    },
-    {
-        "image": {
             "src": "./abortion-data.png",
             "alt": ""
         },
@@ -38,6 +18,36 @@
         "url": "https://wapo.st/3pQ1JxV",
         "headline": "A fragile new phase of abortion in America",
         "select": true
+    },
+    {
+        "image": {
+            "src": "./candidates.png",
+            "alt": ""
+        },
+        "date": "10/3/2022",
+        "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
+        "headline": "Meet your candidates for local Bloomington and executive state office",
+        "select": true
+    },
+    {
+        "image": {
+            "src": "./ticks.png",
+            "alt": ""
+        },
+        "date": "8/29/2023",
+        "url": "https://wapo.st/44CAG7p",
+        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
+        "select": false
+    },
+    {
+        "image": {
+            "src": "./world-cup-groups.png",
+            "alt": ""
+        },
+        "date": "7/17/2023",
+        "url": "https://wapo.st/3q3vCL8",
+        "headline": "Everything you need to know about the women’s World Cup group stage",
+        "select": false
     },
     {
         "image": {
@@ -88,16 +98,6 @@
         "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
         "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
         "select": true
-    },
-    {
-        "image": {
-            "src": "./candidates.png",
-            "alt": ""
-        },
-        "date": "10/3/2022",
-        "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
-        "headline": "Meet your candidates for local Bloomington and executive state office",
-        "select": false
     },
     {
         "image": {
