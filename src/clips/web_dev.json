@@ -41,6 +41,16 @@
     },
     {
         "image": {
+            "src": "./glacier.png",
+            "alt": ""
+        },
+        "date": "8/28/2022",
+        "url": "https://wapo.st/3RpKWcH",
+        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
+        "select": false
+    },
+    {
+        "image": {
             "src": "./world-cup-groups.png",
             "alt": ""
         },
@@ -68,6 +78,36 @@
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
         "select": true
+    },
+    {
+        "image": {
+            "src": "./wolves.png",
+            "alt": ""
+        },
+        "date": "8/25/2022",
+        "url": "https://wapo.st/3LWgea1",
+        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+        "select": false
+    },
+    {
+        "image": {
+            "src": "./gun-violence.png",
+            "alt": ""
+        },
+        "date": "8/17/2022",
+        "url": "https://wapo.st/3SuPH66",
+        "headline": "Kids who witness parents shot to death rarely get help for trauma",
+        "select": false
+    },
+    {
+        "image": {
+            "src": "./border.png",
+            "alt": ""
+        },
+        "date": "7/8/2022",
+        "url": "https://wapo.st/3M20nqC",
+        "headline": "Across southern Arizona, a full range of border woes for Biden",
+        "select": false
     },
     {
         "image": {
@@ -107,46 +147,6 @@
         "date": "9/2/2022",
         "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
         "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./glacier.png",
-            "alt": ""
-        },
-        "date": "8/28/2022",
-        "url": "https://wapo.st/3RpKWcH",
-        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./wolves.png",
-            "alt": ""
-        },
-        "date": "8/25/2022",
-        "url": "https://wapo.st/3LWgea1",
-        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./gun-violence.png",
-            "alt": ""
-        },
-        "date": "8/17/2022",
-        "url": "https://wapo.st/3SuPH66",
-        "headline": "Kids who witness parents shot to death rarely get help for trauma",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./border.png",
-            "alt": ""
-        },
-        "date": "7/8/2022",
-        "url": "https://wapo.st/3M20nqC",
-        "headline": "Across southern Arizona, a full range of border woes for Biden",
         "select": false
     },
     {
