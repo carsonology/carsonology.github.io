@@ -31,6 +31,22 @@
     },
     {
         "image": {
+            "src": "./abortion-data.png",
+            "alt": ""
+        },
+        "date": "6/22/2023",
+        "url": "https://wapo.st/3pQ1JxV",
+        "headline": "A fragile new phase of abortion in America",
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "react",
+            "datawrapper"
+        ]
+    },
+    {
+        "image": {
             "src": "./candidates.png",
             "alt": ""
         },
@@ -60,18 +76,62 @@
     },
     {
         "image": {
-            "src": "./abortion-data.png",
+            "src": "./glacier.png",
             "alt": ""
         },
-        "date": "6/22/2023",
-        "url": "https://wapo.st/3pQ1JxV",
-        "headline": "A fragile new phase of abortion in America",
-        "select": true,
+        "date": "8/28/2022",
+        "url": "https://wapo.st/3RpKWcH",
+        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
+        "select": false,
         "skills": [
             "design",
             "development",
-            "react",
-            "datawrapper"
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./gun-violence.png",
+            "alt": ""
+        },
+        "date": "8/17/2022",
+        "url": "https://wapo.st/3SuPH66",
+        "headline": "Kids who witness parents shot to death rarely get help for trauma",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./wolves.png",
+            "alt": ""
+        },
+        "date": "8/25/2022",
+        "url": "https://wapo.st/3LWgea1",
+        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./border.png",
+            "alt": ""
+        },
+        "date": "7/8/2022",
+        "url": "https://wapo.st/3M20nqC",
+        "headline": "Across southern Arizona, a full range of border woes for Biden",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
         ]
     },
     {
@@ -172,66 +232,6 @@
             "design",
             "development",
             "from scratch"
-        ]
-    },
-    {
-        "image": {
-            "src": "./glacier.png",
-            "alt": ""
-        },
-        "date": "8/28/2022",
-        "url": "https://wapo.st/3RpKWcH",
-        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
-    },
-    {
-        "image": {
-            "src": "./wolves.png",
-            "alt": ""
-        },
-        "date": "8/25/2022",
-        "url": "https://wapo.st/3LWgea1",
-        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
-    },
-    {
-        "image": {
-            "src": "./gun-violence.png",
-            "alt": ""
-        },
-        "date": "8/17/2022",
-        "url": "https://wapo.st/3SuPH66",
-        "headline": "Kids who witness parents shot to death rarely get help for trauma",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
-    },
-    {
-        "image": {
-            "src": "./border.png",
-            "alt": ""
-        },
-        "date": "7/8/2022",
-        "url": "https://wapo.st/3M20nqC",
-        "headline": "Across southern Arizona, a full range of border woes for Biden",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
         ]
     },
     {

@@ -10,7 +10,20 @@
         "skills": [
             "illustrator",
             "animation",
-            "reporting"
+            "data analysis",
+            "python"
+        ]
+    },
+    {
+        "image": {
+            "src": "./abortion-chart.png",
+            "alt": ""
+        },
+        "date": "7/1/2023",
+        "url": "https://wapo.st/3pQ1JxV",
+        "headline": "A fragile new phase of abortion in America",
+        "skills": [
+            "datawrapper"
         ]
     },
     {
@@ -22,15 +35,15 @@
         "url": "https://specials.idsnews.com/car-crash-dashboard-monroe-county/",
         "headline": "Crash map: See every car crash reported in Monroe County since 2003",
         "skills": [
-            "mapbox",
-            "mapping",
-            "open sourcing",
-            "reporting"
+            "mapbox js",
+            "data analysis",
+            "python",
+            "open sourcing"
         ]
     },
     {
         "image": {
-            "src": "./charts-sc.png",
+            "src": "./heatmap.png",
             "alt": ""
         },
         "date": "5/7/2023",
@@ -38,34 +51,56 @@
         "headline": "5 charts that explain car crashes in Monroe County",
         "skills": [
             "datawrapper",
-            "reporting"
+            "d3",
+            "data analysis",
+            "python"
         ]
     },
     {
-        "date": "4/28/23",
+        "image": {
+            "src": "./beeswarm.png",
+            "alt": ""
+        },
+        "date": "4/28/2023",
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-        "codepen": "MWqaEEm",
         "skills": [
             "d3",
-            "beeswarm"
+            "python"
         ]
     },
     {
-        "date": "4/28/23",
+        "image": {
+            "src": "./d3-map.png",
+            "alt": ""
+        },
+        "date": "4/28/2023",
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-        "codepen": "gOdaGoY",
         "skills": [
-            "mapping",
-            "d3"
+            "d3",
+            "python"
         ]
     },
     {
+        "image": {
+            "src": "./westeros.png",
+            "alt": ""
+        },
+        "date": "3/29/2023",
+        "headline": "Westeros in Real Life (course project)",
+        "skills": [
+            "illustrator"
+        ]
+    },
+    {
+        "image": {
+            "src": "./lollipop.png",
+            "alt": ""
+        },
         "date": "10/25/2021",
         "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
         "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
-        "codepen": "wvrxLpr",
         "skills": [
             "d3"
         ]
@@ -76,17 +111,9 @@
         "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
         "codepen": "oNGPzQo",
         "skills": [
-            "scrolly",
+            "scrollytelling",
+            "javascript",
             "illustrator"
-        ]
-    },
-    {
-        "date": "12/10/2021",
-        "headline": "Hiring shortages, 70-hour weeks, reduced hours: How the Trojan Horse is surviving the Great Resignation",
-        "url": "https://specials.idsnews.com/trojan-horse-great-resignation-bloomington-kirkwood/",
-        "codepen": "bGojPYY",
-        "skills": [
-            "d3"
         ]
     }
 ]
