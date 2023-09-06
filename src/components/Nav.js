@@ -32,8 +32,8 @@ function Nav(props) {
     return (
         <nav>
             <ul>
-                <ListItem section="webdev" name="web dev" icon="laptop" shownSection={shownSection} setShownSection={setShownSection} />
                 <ListItem section="graphics" name="graphics" icon="chart" shownSection={shownSection} setShownSection={setShownSection} />
+                <ListItem section="webdev" name="web dev" icon="laptop" shownSection={shownSection} setShownSection={setShownSection} />
                 <ListItem section="design" name="design" icon="palette" shownSection={shownSection} setShownSection={setShownSection} />
                 <ListItem section="writing" name="writing" icon="pencil" shownSection={shownSection} setShownSection={setShownSection} />
             </ul>

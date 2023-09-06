@@ -30,7 +30,7 @@ function App() {
     }
   ]
 
-  const [shownSection, setShownSection] = useState('webdev')
+  const [shownSection, setShownSection] = useState('graphics')
 
   return (
     <>
