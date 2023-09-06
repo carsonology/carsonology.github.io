@@ -1,17 +1,34 @@
 import './App.css';
 import { useState } from 'react'
-import Header from './Header.js'
-import Nav from './Nav.js'
-import Section from './Section.js'
+import Header from './components/Header.js'
+import Nav from './components/Nav.js'
+import Section from './components/Section.js'
 // import content for clips
 import web_clips from './clips/web_dev.json'
 import graphic_clips from './clips/graphics.json'
 import writing_clips from './clips/writing.json'
 import design_clips from './clips/design.json'
 
-// small change
-
 function App() {
+
+  const config = [
+    {
+      section: 'webdev',
+      data: web_clips,
+    },
+    {
+      section: 'graphics',
+      data: graphic_clips,
+    },
+    {
+      section: 'design',
+      data: design_clips,
+    },
+    {
+      section: 'writing',
+      data: writing_clips,
+    }
+  ]
 
   const [shownSection, setShownSection] = useState('webdev')
 
@@ -22,30 +39,20 @@ function App() {
       <main>
         <Nav shownSection={shownSection} setShownSection={setShownSection} />
 
-        {shownSection === 'webdev' && (
-          <Section
-            title="webdev"
-            data={web_clips}
-          />
-        )}
-        {shownSection === 'graphics' && (
-          <Section
-            title="graphics"
-            data={graphic_clips}
-          />
-        )}
-        {shownSection === 'design' && (
-          <Section
-            title="design"
-            data={design_clips}
-          />
-        )}
-        {shownSection === 'writing' && (
-          <Section
-            title="writing"
-            data={writing_clips}
-          />
-        )}
+        {config.map(topic => {
+          return (
+            <>
+              {shownSection === topic.section && (
+                <>
+                  <Section
+                    title={topic.section}
+                    data={topic.data}
+                  />
+                </>
+              )}
+            </>
+          )
+        })}
       </main>
 
       <footer>
