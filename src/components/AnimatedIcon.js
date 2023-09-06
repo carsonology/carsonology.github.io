@@ -1,8 +1,8 @@
 import Lottie from 'react-lottie';
-import anim_data_graphics from './animation-data/bar-chart.json'
-import anim_data_design from './animation-data/paint-palette.json'
-import anim_data_writing from './animation-data/notebook.json'
-import anim_data_dev from './animation-data/laptop.json'
+import anim_data_graphics from '../animation-data/bar-chart.json'
+import anim_data_design from '../animation-data/paint-palette.json'
+import anim_data_writing from '../animation-data/notebook.json'
+import anim_data_dev from '../animation-data/laptop.json'
 import { flatten } from 'lottie-colorify'
 
 
