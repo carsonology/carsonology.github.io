@@ -1,7 +1,6 @@
 import './App.css';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Header from './components/Header.js'
-import Filters from './components/Filters'
 import Nav from './components/Nav.js'
 import Section from './components/Section.js'
 // import content for clips
@@ -9,8 +8,6 @@ import web_clips from './clips/web_dev.json'
 import graphic_clips from './clips/graphics.json'
 import writing_clips from './clips/writing.json'
 import design_clips from './clips/design.json'
-
-// small change
 
 function App() {
 
@@ -33,24 +30,7 @@ function App() {
     }
   ]
 
-  const getFilters = (section) => {
-    return Array.from(
-      new Set(config
-        .filter(item => item?.section === section)[0]?.data
-        .filter(c => c?.skills)
-        .map(c => c.skills)
-        .flat())
-    )
-  }
-
   const [shownSection, setShownSection] = useState('webdev')
-  const [filters, setFilters] = useState(getFilters('webdev'))
-
-  useEffect(() => {
-    setFilters(getFilters(shownSection))
-  }, [shownSection])
-
-  console.log(filters)
 
   return (
     <>
@@ -64,15 +44,9 @@ function App() {
             <>
               {shownSection === topic.section && (
                 <>
-                  <Filters
-                    filters={filters}
-                    setFilters={setFilters}
-                    allFilters={getFilters(topic.section)}
-                  />
                   <Section
                     title={topic.section}
                     data={topic.data}
-                    filters={filters}
                   />
                 </>
               )}
