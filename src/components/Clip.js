@@ -36,9 +36,11 @@ function Clip(props) {
                         (<span className="dead-link">{headline}</span>)
                     }
                 </h4>
-                <ul>
-                    {skills.map(s => <li className='skill'>{s}</li>)}
-                </ul>
+                {((image && headline) || codepen) && (
+                    <ul>
+                        {skills.map(s => <li className='skill'>{s}</li>)}
+                    </ul>
+                )}
             </div>
         </div>
     )
