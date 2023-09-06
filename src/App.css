@@ -507,7 +507,7 @@ figure {
 
 /* apply grid layout to writing clips */
 .writing-clip .headline-wrapper {
-  margin-bottom: 2.0em;
+  margin-bottom: 1.5em;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -525,7 +525,7 @@ figure {
 .web-clip {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 2.0em;
+  margin-bottom: 3.0em;
   justify-content: space-between;
 }
 
@@ -558,7 +558,7 @@ figure {
 }
 
 .codepen {
-  margin-bottom: 8px;
+  margin-bottom: 2.5em;
   margin-top: 20px;
 }
 
@@ -898,7 +898,7 @@ img:not([src]) {
 
   .web-clip {
     display: block;
-    margin-bottom: 3.0em;
+    margin-bottom: 3.5em;
   }
 
   .web-clip .image {
