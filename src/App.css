@@ -667,7 +667,7 @@ footer .footnote {
 /*
     ANIMATIONS
 */
-/* h1 {
+h1 {
   opacity: 0;
   animation: delay 2s ease forwards 2.2s;
 }
@@ -683,7 +683,7 @@ footer {
   height: 0;
   overflow: hidden;
   animation: delay 2s ease forwards 2.2s;
-} */
+}
 
 /* animate drawing effect*/
 @keyframes line-anim {
