@@ -1,23 +1,33 @@
 [
     {
         "image": {
+            "src": "./ticks.png",
+            "alt": ""
+        },
+        "date": "8/29/2023",
+        "url": "https://wapo.st/44CAG7p",
+        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
             "src": "./brooke-and-billy.png",
             "alt": ""
         },
         "date": "8/1/2023",
         "url": "https://wapo.st/457F1QQ",
         "headline": "An abortion ban made them teen parents. This is life two years later.",
-        "select": true
-    },
-    {
-        "image": {
-            "src": "./abortion-data.png",
-            "alt": ""
-        },
-        "date": "6/22/2023",
-        "url": "https://wapo.st/3pQ1JxV",
-        "headline": "A fragile new phase of abortion in America",
-        "select": true
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
     },
     {
         "image": {
@@ -27,27 +37,12 @@
         "date": "10/3/2022",
         "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
         "headline": "Meet your candidates for local Bloomington and executive state office",
-        "select": true
-    },
-    {
-        "image": {
-            "src": "./ticks.png",
-            "alt": ""
-        },
-        "date": "8/29/2023",
-        "url": "https://wapo.st/44CAG7p",
-        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./glacier.png",
-            "alt": ""
-        },
-        "date": "8/28/2022",
-        "url": "https://wapo.st/3RpKWcH",
-        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
-        "select": false
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -57,7 +52,27 @@
         "date": "7/17/2023",
         "url": "https://wapo.st/3q3vCL8",
         "headline": "Everything you need to know about the women’s World Cup group stage",
-        "select": false
+        "select": false,
+        "skills": [
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./abortion-data.png",
+            "alt": ""
+        },
+        "date": "6/22/2023",
+        "url": "https://wapo.st/3pQ1JxV",
+        "headline": "A fragile new phase of abortion in America",
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "react",
+            "datawrapper"
+        ]
     },
     {
         "image": {
@@ -67,7 +82,15 @@
         "date": "5/7/2023",
         "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
         "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "reporting",
+            "data analysis",
+            "react",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -77,37 +100,15 @@
         "date": "4/28/2023",
         "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
         "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-        "select": true
-    },
-    {
-        "image": {
-            "src": "./wolves.png",
-            "alt": ""
-        },
-        "date": "8/25/2022",
-        "url": "https://wapo.st/3LWgea1",
-        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./gun-violence.png",
-            "alt": ""
-        },
-        "date": "8/17/2022",
-        "url": "https://wapo.st/3SuPH66",
-        "headline": "Kids who witness parents shot to death rarely get help for trauma",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./border.png",
-            "alt": ""
-        },
-        "date": "7/8/2022",
-        "url": "https://wapo.st/3M20nqC",
-        "headline": "Across southern Arizona, a full range of border woes for Biden",
-        "select": false
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "reporting",
+            "data analysis",
+            "d3",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -117,7 +118,13 @@
         "date": "10/25/2022",
         "url": "https://specials.idsnews.com/halloween-makeup-indiana-haunted-house/",
         "headline": "Grandma gets gory: Meet Indy Scream Park’s longtime makeup manager",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "photography",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -127,7 +134,13 @@
         "date": "8/10/2022",
         "url": "https://wapo.st/3dZR3XB",
         "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
-        "select": true
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "react",
+            "typography"
+        ]
     },
     {
         "image": {
@@ -137,7 +150,14 @@
         "date": "12/10/2021",
         "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
         "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
-        "select": true
+        "select": true,
+        "skills": [
+            "design",
+            "development",
+            "audio",
+            "illustrator",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -147,7 +167,72 @@
         "date": "9/2/2022",
         "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
         "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "from scratch"
+        ]
+    },
+    {
+        "image": {
+            "src": "./glacier.png",
+            "alt": ""
+        },
+        "date": "8/28/2022",
+        "url": "https://wapo.st/3RpKWcH",
+        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./wolves.png",
+            "alt": ""
+        },
+        "date": "8/25/2022",
+        "url": "https://wapo.st/3LWgea1",
+        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./gun-violence.png",
+            "alt": ""
+        },
+        "date": "8/17/2022",
+        "url": "https://wapo.st/3SuPH66",
+        "headline": "Kids who witness parents shot to death rarely get help for trauma",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
+    },
+    {
+        "image": {
+            "src": "./border.png",
+            "alt": ""
+        },
+        "date": "7/8/2022",
+        "url": "https://wapo.st/3M20nqC",
+        "headline": "Across southern Arizona, a full range of border woes for Biden",
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "react"
+        ]
     },
     {
         "image": {
@@ -157,7 +242,14 @@
         "date": "1/5/2022",
         "url": "https://specials.idsnews.com/trojan-horse-great-resignation-bloomington-kirkwood/",
         "headline": "Hiring shortages, 70-hour weeks, reduced hours: How the Trojan Horse is surviving the Great Resignation",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "reporting",
+            "data analysis",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -167,17 +259,14 @@
         "date": "1/5/2022",
         "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
         "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
-        "select": false
-    },
-    {
-        "image": {
-            "src": "./mcrobbie-speeches.png",
-            "alt": "A white speech bubble on a red background with the words 'IU is diverse and inclusive —Michael McRobbie, IU president'"
-        },
-        "date": "12/15/2020",
-        "url": "http://specials.idsnews.com/iu-president-michael-mcrobbie-speeches-gpt-2/",
-        "headline": "The president’s speeches: Looking back on McRobbie’s tenure by analyzing his words",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "reporting",
+            "data analysis",
+            "from scratch"
+        ]
     },
     {
         "image": {
@@ -187,7 +276,12 @@
         "date": "12/15/2020",
         "url": "http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/",
         "headline": "Steve Moore almost died. Now he uses his experience to show COVID-19 is real and life-changing.",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "html/css/js"
+        ]
     },
     {
         "image": {
@@ -197,6 +291,11 @@
         "date": "12/1/2020",
         "url": "http://specials.idsnews.com/bloomington-tattoo-artist-creates-space-black-people/",
         "headline": "'Making change loudly': Local tattoo artist fights to create space for Black people in Bloomington",
-        "select": false
+        "select": false,
+        "skills": [
+            "design",
+            "development",
+            "html/css/js"
+        ]
     }
 ]

@@ -61,6 +61,7 @@ html {
   --shadow: rgba(150, 150, 150, 0.3);
   --lightblue: rgb(230, 255, 255);
   --lightgray: rgb(176, 176, 176);
+  --lightergray: rgb(225, 225, 225);
   --cyan: rgba(0, 255, 255, .8);
 }
 
@@ -79,7 +80,9 @@ body {
 h1,
 h2,
 h3,
-p {
+h4,
+p,
+button {
   font-family: 'Quicksand', sans-serif;
   color: var(--darkgray);
 }
@@ -106,14 +109,23 @@ h3 {
   margin: 1.0em 0 0.5em;
 }
 
-/* links */
-article a,
-.dead-link {
-  font-size: 1.5em;
+/* article headlines */
+h4 {
+  font-size: 22px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 0;
 }
 
+/* dates */
+.headline-wrapper p {
+  font-weight: 800;
+  font-size: 1.25em;
+  margin: 3px 0 0.5em 0;
+  font-weight: lighter;
+}
+
+/* links */
 a:link,
 a:visited {
   color: var(--darkgray);
@@ -451,6 +463,7 @@ nav li.active:after {
   z-index: 300;
 }
 
+
 /*
     MAIN
 */
@@ -484,6 +497,7 @@ article {
 article img {
   width: 100%;
   box-shadow: 1px 1px 10px var(--shadow);
+  border-radius: 3px;
 }
 
 figure {
@@ -492,25 +506,19 @@ figure {
 }
 
 /* apply grid layout to writing clips */
-.writing-clip {
+.writing-clip .headline-wrapper {
   margin-bottom: 2.0em;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
 }
 
-.writing-clip p {
-  font-weight: 800;
-  font-size: 1.25em;
-  margin: 3px 0 0.5em 0;
-  font-weight: lighter;
-}
-
+/* date */
 .writing-clip p {
   flex-basis: 16.67%;
 }
 
-.writing-clip div {
+.writing-clip h4 {
   flex-basis: 83.33%;
 }
 
@@ -541,13 +549,43 @@ figure {
   height: auto;
 }
 
-.web-clip:not(.codepen) div:nth-child(2) {
+.web-clip .headline-wrapper {
   width: 30%;
 }
 
 .cp_embed_wrapper {
   width: 100%;
-  margin-bottom: 10px;
+}
+
+.codepen {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+/*
+  SKILLS
+*/
+
+.headline-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.skill {
+  display: inline;
+  background: var(--lightergray);
+  font-size: .8em;
+  text-transform: uppercase;
+  font-family: Courier;
+  border: 1px solid var(--lightgray);
+  color: var(--darkgray);
+  padding: 2px 6px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 
 /* 
@@ -629,7 +667,7 @@ footer .footnote {
 /*
     ANIMATIONS
 */
-h1 {
+/* h1 {
   opacity: 0;
   animation: delay 2s ease forwards 2.2s;
 }
@@ -645,7 +683,7 @@ footer {
   height: 0;
   overflow: hidden;
   animation: delay 2s ease forwards 2.2s;
-}
+} */
 
 /* animate drawing effect*/
 @keyframes line-anim {
@@ -817,13 +855,12 @@ img:not([src]) {
     text-align: left;
   }
 
-  article a {
+  h4 {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
   }
 
-  .web-clip p,
-  .writing-clip p {
+  .headline-wrapper p {
     font-size: 1.2em;
   }
 
