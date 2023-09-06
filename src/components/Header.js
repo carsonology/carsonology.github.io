@@ -21,7 +21,7 @@ function Header() {
             <img src="./wave.png" alt="wave emoji" />
 
             <NameAnim />
-            <h1>A designer, developer and graphics reporter.</h1>
+            <h1>Designer, developer & graphics reporter.</h1>
         </header>
     )
 }
