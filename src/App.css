@@ -144,8 +144,7 @@ a:active {
 */
 header,
 nav,
-article,
-.filters {
+article {
   max-width: 800px;
   padding: 0 25px 0;
   margin: 0 auto;
@@ -463,77 +462,6 @@ nav li.active:after {
   z-index: 300;
 }
 
-/*
-  FILTERS
-*/
-.filters {
-  padding-top: 32px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.filters-inner {
-  /* background-color: rgba(0, 0, 0, .1); */
-  /* padding: 12px; */
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-.filters button {
-  margin: 0 5px 10px;
-  border-style: none;
-  background-color: transparent;
-  padding: 0;
-  /* border-radius: 4px; */
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.filters button p {
-  margin: 0;
-  background-color: var(--lightgray);
-  color: white;
-  /* border: 2px solid orange; */
-  padding: 4px 4px 4px 8px;
-  border-radius: 5px 0 0 5px;
-  transition: background-color .2s ease-in;
-}
-
-.filters button .icon {
-  padding-left: 6px;
-  height: .8em;
-  fill: white;
-  background-color: var(--lightgray);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 4px 8px 4px 4px;
-  border-radius: 0 5px 5px 0;
-  transition: background-color .2s ease-in;
-}
-
-.filters button.disabled {
-  opacity: .4;
-}
-
-.filters button svg {
-  height: 12px;
-}
-
-.filters button:hover p,
-.filters button:hover .icon {
-  background-color: var(--darkgray);
-  transition: background-color .2s ease-in;
-}
-
-.filters button .icon:hover {
-  background-color: rgb(31, 31, 31);
-}
 
 /*
     MAIN
