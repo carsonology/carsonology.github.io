@@ -41,7 +41,6 @@
         "skills": [
             "design",
             "development",
-            "html/css/js",
             "from scratch"
         ]
     },
@@ -108,7 +107,6 @@
             "reporting",
             "data analysis",
             "d3",
-            "react",
             "from scratch"
         ]
     },
@@ -125,7 +123,6 @@
             "design",
             "development",
             "photography",
-            "html/css/js",
             "from scratch"
         ]
     },
@@ -159,7 +156,6 @@
             "development",
             "audio",
             "illustrator",
-            "html/css/js",
             "from scratch"
         ]
     },
@@ -175,7 +171,6 @@
         "skills": [
             "design",
             "development",
-            "html/css/js",
             "from scratch"
         ]
     },
@@ -253,7 +248,6 @@
             "development",
             "reporting",
             "data analysis",
-            "html/css/js",
             "from scratch"
         ]
     },
@@ -271,25 +265,7 @@
             "development",
             "reporting",
             "data analysis",
-            "html/css/js",
             "from scratch"
-        ]
-    },
-    {
-        "image": {
-            "src": "./mcrobbie-speeches.png",
-            "alt": "A white speech bubble on a red background with the words 'IU is diverse and inclusive —Michael McRobbie, IU president'"
-        },
-        "date": "12/15/2020",
-        "url": "http://specials.idsnews.com/iu-president-michael-mcrobbie-speeches-gpt-2/",
-        "headline": "The president’s speeches: Looking back on McRobbie’s tenure by analyzing his words",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "reporting",
-            "data analysis",
-            "html/css/js"
         ]
     },
     {

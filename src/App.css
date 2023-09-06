@@ -61,6 +61,7 @@ html {
   --shadow: rgba(150, 150, 150, 0.3);
   --lightblue: rgb(230, 255, 255);
   --lightgray: rgb(176, 176, 176);
+  --lightergray: rgb(225, 225, 225);
   --cyan: rgba(0, 255, 255, .8);
 }
 
@@ -112,7 +113,7 @@ h3 {
 h4 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   margin-top: 0;
 }
 
@@ -561,6 +562,32 @@ figure {
   margin-top: 20px;
 }
 
+/*
+  SKILLS
+*/
+
+.headline-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.skill {
+  display: inline;
+  background: var(--lightergray);
+  font-size: .8em;
+  text-transform: uppercase;
+  font-family: Courier;
+  border: 1px solid var(--lightgray);
+  color: var(--darkgray);
+  padding: 2px 6px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
 /* 
     FOOTER
 */
@@ -830,7 +857,7 @@ img:not([src]) {
 
   h4 {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
   }
 
   .headline-wrapper p {

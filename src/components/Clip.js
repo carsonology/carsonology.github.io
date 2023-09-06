@@ -2,7 +2,7 @@ import LazyLoad from 'react-lazy-load';
 import Codepen from "react-codepen-embed";
 
 function Clip(props) {
-    const { image, date, url, headline, codepen } = props
+    const { image, date, url, headline, codepen, skills } = props
 
     const getClassName = () => {
         if (image && headline) {
@@ -36,6 +36,9 @@ function Clip(props) {
                         (<span className="dead-link">{headline}</span>)
                     }
                 </h4>
+                <ul>
+                    {skills.map(s => <li className='skill'>{s}</li>)}
+                </ul>
             </div>
         </div>
     )
