@@ -1,6 +1,20 @@
 [
     {
         "image": {
+            "src": "./shameworld.png",
+            "alt": ""
+        },
+        "date": "10/3/2023",
+        "url": "https://wapo.st/46s4RQv",
+        "headline": "Compare your life expectancy with others around the world",
+        "skills": [
+            "d3",
+            "react",
+            "illustrator"
+        ]
+    },
+    {
+        "image": {
             "src": "./hot-dog-chart.png",
             "alt": ""
         },
