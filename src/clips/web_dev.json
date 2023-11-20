@@ -1,6 +1,17 @@
 [
   {
     "image": {
+      "src": "./gaza.jpeg",
+      "alt": ""
+    },
+    "date": "11/17/2023",
+    "url": "https://wapo.st/3MMW0RO",
+    "headline": "Life under bombardment: A young Palestinian’s audio diary of the war",
+    "select": true,
+    "skills": ["development", "react", "figma", "ux", "snap scroll"]
+  },
+  {
+    "image": {
       "src": "./zebra.jpeg",
       "alt": ""
     },
