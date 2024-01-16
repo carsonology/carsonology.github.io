@@ -1,6 +1,17 @@
 [
   {
     "image": {
+      "src": "./fitness.jpeg",
+      "alt": ""
+    },
+    "date": "11/17/2023",
+    "url": "https://wapo.st/41NQS5Y",
+    "headline": "Are you fit for your age? Try our New Year’s tune-up to find out.",
+    "select": true,
+    "skills": ["development", "react", "svg", "personalization"]
+  },
+  {
+    "image": {
       "src": "./gaza.jpeg",
       "alt": ""
     },
@@ -18,7 +29,7 @@
     "date": "10/23/2023",
     "url": "https://wapo.st/46H0VeW",
     "headline": "Runaway zebras delighted the nation — and exposed their owner’s dark past",
-    "select": true,
+    "select": false,
     "skills": ["development", "react", "figma"]
   },
   {
@@ -40,7 +51,7 @@
     "date": "10/17/2023",
     "url": "https://wapo.st/46zEIzq",
     "headline": "Stress is weathering our bodies from the inside out.",
-    "select": true,
+    "select": false,
     "skills": ["development", "react"]
   },
   {

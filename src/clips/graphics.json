@@ -1,6 +1,16 @@
 [
   {
     "image": {
+      "src": "./emmys.png",
+      "alt": ""
+    },
+    "date": "1/12/2024",
+    "url": "https://wapo.st/3OnMuWb",
+    "headline": "See how HBO has led Emmy nominations for decades — and why its reign may end",
+    "skills": ["illustrator", "web scraping", "python"]
+  },
+  {
+    "image": {
       "src": "./shameworld.jpeg",
       "alt": ""
     },
