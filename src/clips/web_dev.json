@@ -1,6 +1,16 @@
 [
   {
     "image": {
+      "src": "./boxing.jpeg",
+      "alt": ""
+    },
+    "date": "2/15/2024",
+    "url": "https://wapo.st/3UcQpbn",
+    "headline": "How to start boxing",
+    "skills": ["design", "development", "figma", "react"]
+  },
+  {
+    "image": {
       "src": "./rock-climbing.jpeg",
       "alt": ""
     },

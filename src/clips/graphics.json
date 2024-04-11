@@ -1,13 +1,33 @@
 [
   {
     "image": {
+      "src": "./eclipse.png",
+      "alt": ""
+    },
+    "date": "3/21/2024",
+    "url": "https://wapo.st/3VzBcCe",
+    "headline": "See what the solar eclipse will look like in your city",
+    "skills": ["d3", "python"]
+  },
+  {
+    "image": {
+      "src": "./irish-pubs.png",
+      "alt": ""
+    },
+    "date": "3/14/2024",
+    "url": "https://wapo.st/3To1hS2",
+    "headline": "Why so many Irish pubs have the same names",
+    "skills": ["illustrator", "data analysis", "python"]
+  },
+  {
+    "image": {
       "src": "./emmys.png",
       "alt": ""
     },
     "date": "1/12/2024",
     "url": "https://wapo.st/3OnMuWb",
     "headline": "See how HBO has led Emmy nominations for decades — and why its reign may end",
-    "skills": ["illustrator", "web scraping", "python"]
+    "skills": ["illustrator", "web scraping", "data analysis", "python"]
   },
   {
     "image": {
