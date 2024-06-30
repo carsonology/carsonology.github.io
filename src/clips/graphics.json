@@ -7,7 +7,10 @@
     "date": "3/21/2024",
     "url": "https://wapo.st/3VzBcCe",
     "headline": "See what the solar eclipse will look like in your city",
-    "skills": ["d3", "python"]
+    "skills": [
+      "d3",
+      "python"
+    ]
   },
   {
     "image": {
@@ -17,7 +20,11 @@
     "date": "3/14/2024",
     "url": "https://wapo.st/3To1hS2",
     "headline": "Why so many Irish pubs have the same names",
-    "skills": ["illustrator", "data analysis", "python"]
+    "skills": [
+      "illustrator",
+      "data analysis",
+      "python"
+    ]
   },
   {
     "image": {
@@ -27,17 +34,26 @@
     "date": "1/12/2024",
     "url": "https://wapo.st/3OnMuWb",
     "headline": "See how HBO has led Emmy nominations for decades — and why its reign may end",
-    "skills": ["illustrator", "web scraping", "data analysis", "python"]
+    "skills": [
+      "illustrator",
+      "web scraping",
+      "data analysis",
+      "python"
+    ]
   },
   {
     "image": {
-      "src": "./shameworld.jpeg",
+      "src": "./shame-graphic.jpeg",
       "alt": ""
     },
     "date": "10/3/2023",
     "url": "https://wapo.st/46s4RQv",
     "headline": "Compare your life expectancy with others around the world",
-    "skills": ["d3", "react", "illustrator"]
+    "skills": [
+      "d3",
+      "react",
+      "illustrator"
+    ]
   },
   {
     "image": {
@@ -47,7 +63,12 @@
     "date": "7/1/2023",
     "url": "https://wapo.st/3XPezce",
     "headline": "How hot dog contestants went from eating 10 to 76 hot dogs in 10 minutes",
-    "skills": ["illustrator", "animation", "data analysis", "python"]
+    "skills": [
+      "illustrator",
+      "animation",
+      "data analysis",
+      "python"
+    ]
   },
   {
     "image": {
@@ -57,7 +78,9 @@
     "date": "7/1/2023",
     "url": "https://wapo.st/3pQ1JxV",
     "headline": "A fragile new phase of abortion in America",
-    "skills": ["datawrapper"]
+    "skills": [
+      "datawrapper"
+    ]
   },
   {
     "image": {
@@ -67,7 +90,12 @@
     "date": "5/7/2023",
     "url": "https://specials.idsnews.com/car-crash-dashboard-monroe-county/",
     "headline": "Crash map: See every car crash reported in Monroe County since 2003",
-    "skills": ["mapbox js", "data analysis", "python", "open sourcing"]
+    "skills": [
+      "mapbox js",
+      "data analysis",
+      "python",
+      "open sourcing"
+    ]
   },
   {
     "image": {
@@ -77,7 +105,12 @@
     "date": "5/7/2023",
     "url": "https://specials.idsnews.com/car-crash-charts-takeaways-iu-bloomington/",
     "headline": "5 charts that explain car crashes in Monroe County",
-    "skills": ["datawrapper", "d3", "data analysis", "python"]
+    "skills": [
+      "datawrapper",
+      "d3",
+      "data analysis",
+      "python"
+    ]
   },
   {
     "image": {
@@ -87,7 +120,10 @@
     "date": "4/28/2023",
     "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
     "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-    "skills": ["d3", "python"]
+    "skills": [
+      "d3",
+      "python"
+    ]
   },
   {
     "image": {
@@ -97,7 +133,10 @@
     "date": "4/28/2023",
     "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
     "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-    "skills": ["d3", "python"]
+    "skills": [
+      "d3",
+      "python"
+    ]
   },
   {
     "image": {
@@ -106,7 +145,9 @@
     },
     "date": "3/29/2023",
     "headline": "Westeros in Real Life (course project)",
-    "skills": ["illustrator"]
+    "skills": [
+      "illustrator"
+    ]
   },
   {
     "image": {
@@ -116,13 +157,19 @@
     "date": "10/25/2021",
     "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
     "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
-    "skills": ["d3"]
+    "skills": [
+      "d3"
+    ]
   },
   {
     "date": "12/10/2021",
     "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
     "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
     "codepen": "oNGPzQo",
-    "skills": ["scrollytelling", "javascript", "illustrator"]
+    "skills": [
+      "scrollytelling",
+      "javascript",
+      "illustrator"
+    ]
   }
 ]
