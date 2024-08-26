@@ -14,11 +14,13 @@ const Clip = (props) => {
     <div className={getClassName()}>
       {image && (
         <LazyLoad height={image.height} offset={100}>
-          <img
-            className="image"
-            src={`thumbnails/${image.src}`}
-            alt={image.alt}
-          />
+          <A url={url} className="no-highlight">
+            <img
+              className="image"
+              src={`thumbnails/${image.src}`}
+              alt={image.alt}
+            />
+          </A>
         </LazyLoad>
       )}
       {codepen && (
@@ -33,12 +35,7 @@ const Clip = (props) => {
       <div className="headline-wrapper">
         <p>{date}</p>
         <h4>
-          {url && (
-            <a href={url} target="_blank" rel="noreferrer">
-              {headline}
-            </a>
-          )}
-          {!url && <span className="dead-link">{headline}</span>}
+          <A url={url}>{headline}</A>
         </h4>
         {((image && headline) || codepen) && (
           <ul>
@@ -52,3 +49,17 @@ const Clip = (props) => {
   )
 }
 export default Clip
+
+const A = (props) => {
+  const { url, className } = props
+
+  if (url) {
+    return (
+      <a href={url} className={className} target="_blank" rel="noreferrer">
+        {props.children}
+      </a>
+    )
+  } else {
+    return <span className={`dead-link ${className}`}>{props.children}</span>
+  }
+}
