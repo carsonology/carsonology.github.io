@@ -140,6 +140,11 @@ a:not(.no-highlight):active {
   transition: box-shadow .5s;
 }
 
+a.light:link,
+a.light:visited {
+  color: inherit;
+}
+
 /* 
     SPACING/STRUCTURE
 */

@@ -65,6 +65,7 @@ function App() {
                 href="https://twitter.com/_carsonology"
                 target="_blank"
                 rel="noreferrer"
+                className="light"
               >
                 Carson TerBush
               </a>
@@ -74,7 +75,9 @@ function App() {
             </p>
             <p>
               Want to connect?{" "}
-              <a href="mailto:carson.terbush@gmail.com">Email me!</a>
+              <a href="mailto:carson.terbush@gmail.com" className="light">
+                Email me!
+              </a>
             </p>
           </div>
         </div>
