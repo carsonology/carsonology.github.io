@@ -1,465 +1,397 @@
 [
-    {
-        "image": {
-            "src": "./heat-islands.jpeg",
-            "alt": ""
-        },
-        "date": "6/26/2024",
-        "url": "https://wapo.st/3zlQXUD",
-        "headline": "A day in one of D.C.’s ‘heat islands’",
-        "skills": [
-            "design",
-            "development",
-            "figma",
-            "react"
-        ]
+  {
+    "image": {
+      "src": "./artistic-swimming.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./noise-restaurant.jpeg",
-            "alt": ""
-        },
-        "select": true,
-        "date": "6/2/2024",
-        "url": "https://wapo.st/4cEneV8",
-        "headline": "Why restaurants are so loud, and what science says we can do about it",
-        "skills": [
-            "development",
-            "react"
-        ]
+    "date": "8/4/2024",
+    "url": "https://wapo.st/3XgVeBY",
+    "headline": "How artistic swimming became a contact sport",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./javelin.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./listening.jpeg",
-            "alt": ""
-        },
-        "date": "6/1/2024",
-        "url": "https://wapo.st/4cymr8e",
-        "headline": "What’s Washington listening to?",
-        "skills": [
-            "design",
-            "development",
-            "figma",
-            "react"
-        ]
+    "date": "8/2/2024",
+    "url": "https://wapo.st/4gaFp7A",
+    "headline": "Train Like an Olympian",
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react",
+      "snap scroll",
+      "series"
+    ],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./measles.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./tai-chi.jpeg",
-            "alt": ""
-        },
-        "date": "4/5/2024",
-        "url": "https://wapo.st/3VZTHjb",
-        "headline": "How to start tai chi",
-        "skills": [
-            "design",
-            "development",
-            "figma",
-            "react"
-        ]
+    "date": "7/7/2024",
+    "url": "https://wapo.st/3MjmzgD",
+    "headline": "What it‘s like to survive measles",
+    "skills": ["design", "development", "figma", "react"]
+  },
+  {
+    "image": {
+      "src": "./heat-islands.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./boxing.jpeg",
-            "alt": ""
-        },
-        "date": "2/15/2024",
-        "url": "https://wapo.st/3UcQpbn",
-        "headline": "How to start boxing",
-        "skills": [
-            "design",
-            "development",
-            "figma",
-            "react"
-        ]
+    "date": "6/26/2024",
+    "url": "https://wapo.st/3zlQXUD",
+    "headline": "A day in one of D.C.’s ‘heat islands’",
+    "skills": ["design", "development", "figma", "react"]
+  },
+  {
+    "image": {
+      "src": "./noise-restaurant.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./rock-climbing.jpeg",
-            "alt": ""
-        },
-        "date": "1/3/2024",
-        "url": "https://wapo.st/41MM4Ot",
-        "headline": "How to start indoor rock climbing",
-        "select": true,
-        "skills": [
-            "design",
-            "development",
-            "figma",
-            "react"
-        ]
+    "select": true,
+    "date": "6/2/2024",
+    "url": "https://wapo.st/4cEneV8",
+    "headline": "Why restaurants are so loud, and what science says we can do about it",
+    "skills": ["development", "react"]
+  },
+  {
+    "image": {
+      "src": "./listening.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./fitness.jpeg",
-            "alt": ""
-        },
-        "date": "1/1/2024",
-        "url": "https://wapo.st/41NQS5Y",
-        "headline": "Are you fit for your age? Try our New Year’s tune-up to find out.",
-        "skills": [
-            "development",
-            "react",
-            "svg",
-            "personalization"
-        ]
+    "date": "6/1/2024",
+    "url": "https://wapo.st/4cymr8e",
+    "headline": "What’s Washington listening to?",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./data-centers.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./gaza.jpeg",
-            "alt": ""
-        },
-        "date": "11/17/2023",
-        "url": "https://wapo.st/3MMW0RO",
-        "headline": "Life under bombardment: A young Palestinian’s audio diary of the war",
-        "select": true,
-        "skills": [
-            "development",
-            "react",
-            "figma",
-            "ux",
-            "snap scroll"
-        ]
+    "date": "4/17/2024",
+    "url": "https://wapo.st/3X2lZsv",
+    "headline": "Internet data centers are fueling drive to old power source: Coal",
+    "skills": ["design", "development", "figma", "react"]
+  },
+  {
+    "image": {
+      "src": "./tai-chi.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./zebra.jpeg",
-            "alt": ""
-        },
-        "date": "10/23/2023",
-        "url": "https://wapo.st/46H0VeW",
-        "headline": "Runaway zebras delighted the nation — and exposed their owner’s dark past",
-        "select": false,
-        "skills": [
-            "development",
-            "react",
-            "figma"
-        ]
+    "date": "4/5/2024",
+    "url": "https://wapo.st/3VZTHjb",
+    "headline": "How to start tai chi",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./boxing.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./golf.png",
-            "alt": ""
-        },
-        "date": "10/18/2023",
-        "url": "https://wapo.st/45vSVw1",
-        "headline": "The modern golf swing is powerful but can hurt your back. Here’s how to prevent injuries.",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "2/15/2024",
+    "url": "https://wapo.st/3UcQpbn",
+    "headline": "How to start boxing",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./rock-climbing.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./shameworld.jpeg",
-            "alt": ""
-        },
-        "date": "10/3/2023",
-        "url": "https://wapo.st/46s4RQv",
-        "headline": "Compare your life expectancy with others around the world",
-        "select": true,
-        "skills": [
-            "d3",
-            "react",
-            "illustrator"
-        ]
+    "date": "1/3/2024",
+    "url": "https://wapo.st/41MM4Ot",
+    "headline": "How to start indoor rock climbing",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./fitness.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./ticks.jpeg",
-            "alt": ""
-        },
-        "date": "8/29/2023",
-        "url": "https://wapo.st/44CAG7p",
-        "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "1/1/2024",
+    "url": "https://wapo.st/41NQS5Y",
+    "headline": "Are you fit for your age? Try our New Year’s tune-up to find out.",
+    "skills": ["development", "react", "svg", "personalization"]
+  },
+  {
+    "image": {
+      "src": "./gaza.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./brooke-and-billy.png",
-            "alt": ""
-        },
-        "date": "8/1/2023",
-        "url": "https://wapo.st/457F1QQ",
-        "headline": "An abortion ban made them teen parents. This is life two years later.",
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "11/17/2023",
+    "url": "https://wapo.st/3MMW0RO",
+    "headline": "Life under bombardment: A young Palestinian’s audio diary of the war",
+    "select": true,
+    "skills": ["development", "react", "figma", "ux", "snap scroll"]
+  },
+  {
+    "image": {
+      "src": "./zebra.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./abortion-data.png",
-            "alt": ""
-        },
-        "date": "6/22/2023",
-        "url": "https://wapo.st/3pQ1JxV",
-        "headline": "A fragile new phase of abortion in America",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react",
-            "datawrapper"
-        ]
+    "date": "10/23/2023",
+    "url": "https://wapo.st/46H0VeW",
+    "headline": "Runaway zebras delighted the nation — and exposed their owner’s dark past",
+    "select": false,
+    "skills": ["development", "react", "figma"]
+  },
+  {
+    "image": {
+      "src": "./golf.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./candidates.png",
-            "alt": ""
-        },
-        "date": "10/3/2022",
-        "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
-        "headline": "Meet your candidates for local Bloomington and executive state office",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "from scratch"
-        ]
+    "date": "10/18/2023",
+    "url": "https://wapo.st/45vSVw1",
+    "headline": "The modern golf swing is powerful but can hurt your back. Here’s how to prevent injuries.",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./shameworld.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./world-cup-groups.png",
-            "alt": ""
-        },
-        "date": "7/17/2023",
-        "url": "https://wapo.st/3q3vCL8",
-        "headline": "Everything you need to know about the women’s World Cup group stage",
-        "select": false,
-        "skills": [
-            "development",
-            "react"
-        ]
+    "date": "10/3/2023",
+    "url": "https://wapo.st/46s4RQv",
+    "headline": "Compare your life expectancy with others around the world",
+    "select": true,
+    "skills": ["d3", "react", "illustrator"]
+  },
+  {
+    "image": {
+      "src": "./ticks.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./glacier.png",
-            "alt": ""
-        },
-        "date": "8/28/2022",
-        "url": "https://wapo.st/3RpKWcH",
-        "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "8/29/2023",
+    "url": "https://wapo.st/44CAG7p",
+    "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./brooke-and-billy.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./gun-violence.png",
-            "alt": ""
-        },
-        "date": "8/17/2022",
-        "url": "https://wapo.st/3SuPH66",
-        "headline": "Kids who witness parents shot to death rarely get help for trauma",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "8/1/2023",
+    "url": "https://wapo.st/457F1QQ",
+    "headline": "An abortion ban made them teen parents. This is life two years later.",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./abortion-data.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./wolves.jpeg",
-            "alt": ""
-        },
-        "date": "8/25/2022",
-        "url": "https://wapo.st/3LWgea1",
-        "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "6/22/2023",
+    "url": "https://wapo.st/3pQ1JxV",
+    "headline": "A fragile new phase of abortion in America",
+    "select": false,
+    "skills": ["design", "development", "react", "datawrapper"]
+  },
+  {
+    "image": {
+      "src": "./candidates.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./border.png",
-            "alt": ""
-        },
-        "date": "7/8/2022",
-        "url": "https://wapo.st/3M20nqC",
-        "headline": "Across southern Arizona, a full range of border woes for Biden",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react"
-        ]
+    "date": "10/3/2022",
+    "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
+    "headline": "Meet your candidates for local Bloomington and executive state office",
+    "select": false,
+    "skills": ["design", "development", "from scratch"]
+  },
+  {
+    "image": {
+      "src": "./world-cup-groups.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./crash-sc.png",
-            "alt": "A computer screen with the title 'Catastrophic': The difficulty of addressing severe car crashes in Bloomington'"
-        },
-        "date": "5/7/2023",
-        "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
-        "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "reporting",
-            "data analysis",
-            "react",
-            "from scratch"
-        ]
+    "date": "7/17/2023",
+    "url": "https://wapo.st/3q3vCL8",
+    "headline": "Everything you need to know about the women’s World Cup group stage",
+    "select": false,
+    "skills": ["development", "react"]
+  },
+  {
+    "image": {
+      "src": "./glacier.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./nagpra.jpeg",
-            "alt": "A computer screen with three black and white photos and the title 'Thousands of Native American remains, a legacy of offensive research and the effort to move forward"
-        },
-        "date": "4/28/2023",
-        "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
-        "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
-        "skills": [
-            "design",
-            "development",
-            "reporting",
-            "data analysis",
-            "d3",
-            "from scratch"
-        ]
+    "date": "8/28/2022",
+    "url": "https://wapo.st/3RpKWcH",
+    "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./gun-violence.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./gory.png",
-            "alt": "A computer screen with the title 'Grandma gets gory' and six portraits of actors with scary makeup"
-        },
-        "date": "10/25/2022",
-        "url": "https://specials.idsnews.com/halloween-makeup-indiana-haunted-house/",
-        "headline": "Grandma gets gory: Meet Indy Scream Park’s longtime makeup manager",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "photography",
-            "from scratch"
-        ]
+    "date": "8/17/2022",
+    "url": "https://wapo.st/3SuPH66",
+    "headline": "Kids who witness parents shot to death rarely get help for trauma",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./wolves.jpeg",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./art.png",
-            "alt": "A pink neon sign reading 'Art with a Point'"
-        },
-        "date": "8/10/2022",
-        "url": "https://wapo.st/3dZR3XB",
-        "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "react",
-            "typography"
-        ]
+    "date": "8/25/2022",
+    "url": "https://wapo.st/3LWgea1",
+    "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./border.png",
+      "alt": ""
     },
-    {
-        "image": {
-            "src": "./graves.png",
-            "alt": "An aerial photo of a cemetery"
-        },
-        "date": "12/10/2021",
-        "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
-        "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
-        "skills": [
-            "design",
-            "development",
-            "audio",
-            "illustrator",
-            "from scratch"
-        ]
+    "date": "7/8/2022",
+    "url": "https://wapo.st/3M20nqC",
+    "headline": "Across southern Arizona, a full range of border woes for Biden",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./crash-sc.png",
+      "alt": "A computer screen with the title 'Catastrophic': The difficulty of addressing severe car crashes in Bloomington'"
     },
-    {
-        "image": {
-            "src": "./pride.jpeg",
-            "alt": ""
-        },
-        "date": "9/2/2022",
-        "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
-        "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "from scratch"
-        ]
+    "date": "5/7/2023",
+    "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
+    "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
+    "select": false,
+    "skills": [
+      "design",
+      "development",
+      "reporting",
+      "data analysis",
+      "react",
+      "from scratch"
+    ]
+  },
+  {
+    "image": {
+      "src": "./nagpra.jpeg",
+      "alt": "A computer screen with three black and white photos and the title 'Thousands of Native American remains, a legacy of offensive research and the effort to move forward"
     },
-    {
-        "image": {
-            "src": "./trojan-horse.png",
-            "alt": ""
-        },
-        "date": "1/5/2022",
-        "url": "https://specials.idsnews.com/trojan-horse-great-resignation-bloomington-kirkwood/",
-        "headline": "Hiring shortages, 70-hour weeks, reduced hours: How the Trojan Horse is surviving the Great Resignation",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "reporting",
-            "data analysis",
-            "from scratch"
-        ]
+    "date": "4/28/2023",
+    "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
+    "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
+    "skills": [
+      "design",
+      "development",
+      "reporting",
+      "data analysis",
+      "d3",
+      "from scratch"
+    ]
+  },
+  {
+    "image": {
+      "src": "./gory.png",
+      "alt": "A computer screen with the title 'Grandma gets gory' and six portraits of actors with scary makeup"
     },
-    {
-        "image": {
-            "src": "./in-the-dark.png",
-            "alt": "A photo of a blackboard with the words 'In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients'"
-        },
-        "date": "1/5/2022",
-        "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
-        "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "reporting",
-            "data analysis",
-            "from scratch"
-        ]
+    "date": "10/25/2022",
+    "url": "https://specials.idsnews.com/halloween-makeup-indiana-haunted-house/",
+    "headline": "Grandma gets gory: Meet Indy Scream Park’s longtime makeup manager",
+    "select": false,
+    "skills": ["design", "development", "photography", "from scratch"]
+  },
+  {
+    "image": {
+      "src": "./art.png",
+      "alt": "A pink neon sign reading 'Art with a Point'"
     },
-    {
-        "image": {
-            "src": "./steve.jpeg",
-            "alt": ""
-        },
-        "date": "12/15/2020",
-        "url": "http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/",
-        "headline": "Steve Moore almost died. Now he uses his experience to show COVID-19 is real and life-changing.",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "html/css/js"
-        ]
+    "date": "8/10/2022",
+    "url": "https://wapo.st/3dZR3XB",
+    "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
+    "select": false,
+    "skills": ["design", "development", "react", "typography"]
+  },
+  {
+    "image": {
+      "src": "./graves.png",
+      "alt": "An aerial photo of a cemetery"
     },
-    {
-        "image": {
-            "src": "./tattoo.jpg",
-            "alt": "A photo of a man tattooing someone with the words 'Making change loudly: Local tattoo artist fights to create space for Black people in Bloomington'"
-        },
-        "date": "12/1/2020",
-        "url": "http://specials.idsnews.com/bloomington-tattoo-artist-creates-space-black-people/",
-        "headline": "'Making change loudly': Local tattoo artist fights to create space for Black people in Bloomington",
-        "select": false,
-        "skills": [
-            "design",
-            "development",
-            "html/css/js"
-        ]
-    }
+    "date": "12/10/2021",
+    "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
+    "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
+    "skills": ["design", "development", "audio", "illustrator", "from scratch"]
+  },
+  {
+    "image": {
+      "src": "./pride.jpeg",
+      "alt": ""
+    },
+    "date": "9/2/2022",
+    "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
+    "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
+    "select": false,
+    "skills": ["design", "development", "from scratch"]
+  },
+  {
+    "image": {
+      "src": "./trojan-horse.png",
+      "alt": ""
+    },
+    "date": "1/5/2022",
+    "url": "https://specials.idsnews.com/trojan-horse-great-resignation-bloomington-kirkwood/",
+    "headline": "Hiring shortages, 70-hour weeks, reduced hours: How the Trojan Horse is surviving the Great Resignation",
+    "select": false,
+    "skills": [
+      "design",
+      "development",
+      "reporting",
+      "data analysis",
+      "from scratch"
+    ]
+  },
+  {
+    "image": {
+      "src": "./in-the-dark.png",
+      "alt": "A photo of a blackboard with the words 'In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients'"
+    },
+    "date": "1/5/2022",
+    "url": "http://specials.idsnews.com/iu-health-bloomington-hospital-price-transparency-rule-medical-bill/",
+    "headline": "In the dark: Transparency rule fails to shed light on costs for IU Health Bloomington patients",
+    "select": false,
+    "skills": [
+      "design",
+      "development",
+      "reporting",
+      "data analysis",
+      "from scratch"
+    ]
+  },
+  {
+    "image": {
+      "src": "./steve.jpeg",
+      "alt": ""
+    },
+    "date": "12/15/2020",
+    "url": "http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/",
+    "headline": "Steve Moore almost died. Now he uses his experience to show COVID-19 is real and life-changing.",
+    "select": false,
+    "skills": ["design", "development", "html/css/js"]
+  },
+  {
+    "image": {
+      "src": "./tattoo.jpg",
+      "alt": "A photo of a man tattooing someone with the words 'Making change loudly: Local tattoo artist fights to create space for Black people in Bloomington'"
+    },
+    "date": "12/1/2020",
+    "url": "http://specials.idsnews.com/bloomington-tattoo-artist-creates-space-black-people/",
+    "headline": "'Making change loudly': Local tattoo artist fights to create space for Black people in Bloomington",
+    "select": false,
+    "skills": ["design", "development", "html/css/js"]
+  }
 ]
