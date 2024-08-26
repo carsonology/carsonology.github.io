@@ -36,7 +36,7 @@ const Section = (props) => {
         </>
       </div>
 
-      {numShownClips < data.length && (
+      {truncate && numShownClips < data.length && (
         <button
           className="show-more-button"
           onClick={() => {
