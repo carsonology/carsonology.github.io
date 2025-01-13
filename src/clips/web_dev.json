@@ -1,6 +1,79 @@
 [
   {
     "image": {
+      "src": "./7-min-workout.jpeg",
+      "alt": ""
+    },
+    "date": "1/9/2025",
+    "url": "https://wapo.st/3PBpp2l",
+    "headline": "The original, science‑backed 7‑minute workout to get fit fast",
+    "skills": ["design", "development", "react", "ux"],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./lucy.jpeg",
+      "alt": ""
+    },
+    "date": "11/22/2024",
+    "url": "https://wapo.st/4gRgE04",
+    "headline": "Lucy’s Legacy",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./voter-portraits.jpeg",
+      "alt": ""
+    },
+    "date": "11/5/2024",
+    "url": "https://wapo.st/3WgLmr8",
+    "headline": "Voters across America: Joyful, exhausted and anxious",
+    "skills": ["design", "development", "react", "snap scroll"]
+  },
+  {
+    "image": {
+      "src": "./summer-of-love.jpeg",
+      "alt": ""
+    },
+    "date": "8/7/2024",
+    "url": "https://wapo.st/4jezUWH",
+    "headline": "A summer of love",
+    "skills": ["design", "development", "react"],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./election-deniers.jpeg",
+      "alt": ""
+    },
+    "date": "10/23/2024",
+    "url": "https://wapo.st/40hIfQQ",
+    "headline": "Over 230 Republican candidates have cast doubt on the 2024 election",
+    "skills": ["design", "development", "react"],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./europa.jpeg",
+      "alt": ""
+    },
+    "date": "10/12/2024",
+    "url": "https://wapo.st/40hIfQQ",
+    "headline": "Can an icy Jupiter moon sustain life? NASA’s biggest space probe will investigate.",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./murderball.jpeg",
+      "alt": ""
+    },
+    "date": "9/29/2024",
+    "url": "https://wapo.st/3WinOlJ",
+    "headline": "They call it ‘murderball.’ Wheelchair rugby isn’t for the faint of heart.",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
       "src": "./artistic-swimming.jpeg",
       "alt": ""
     },
@@ -24,8 +97,7 @@
       "react",
       "snap scroll",
       "series"
-    ],
-    "select": true
+    ]
   },
   {
     "image": {
@@ -126,7 +198,6 @@
     "date": "11/17/2023",
     "url": "https://wapo.st/3MMW0RO",
     "headline": "Life under bombardment: A young Palestinian’s audio diary of the war",
-    "select": true,
     "skills": ["development", "react", "figma", "ux", "snap scroll"]
   },
   {

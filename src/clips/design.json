@@ -1,6 +1,20 @@
 [
   {
     "image": {
+      "src": "election-deniers-print.png",
+      "alt": ""
+    },
+    "skills": ["print layout"]
+  },
+  {
+    "image": {
+      "src": "corpse-flower-metro.png",
+      "alt": ""
+    },
+    "skills": ["print layout"]
+  },
+  {
+    "image": {
       "src": "wapo-p1.jpeg",
       "alt": ""
     },
@@ -8,7 +22,7 @@
   },
   {
     "image": {
-      "src": "wapo-metro.jpeg",
+      "src": "lucy-print.png",
       "alt": ""
     },
     "skills": ["print layout"]
