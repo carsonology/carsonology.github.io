@@ -1,40 +1,40 @@
-import "./App.css"
-import { useState } from "react"
-import Header from "./components/Header.js"
-import Nav from "./components/Nav.js"
-import Section from "./components/Section.js"
+import "./App.css";
+import { useState } from "react";
+import Header from "./components/Header.js";
+import Nav from "./components/Nav.js";
+import Section from "./components/Section.js";
 // import content for clips
-import web_clips from "./clips/web_dev.json"
-import graphic_clips from "./clips/graphics.json"
-import writing_clips from "./clips/writing.json"
-import design_clips from "./clips/design.json"
+import web_clips from "./clips/web_dev.json";
+import graphic_clips from "./clips/graphics.json";
+import writing_clips from "./clips/writing.json";
+import design_clips from "./clips/design.json";
 
-function App() {
-  const config = [
-    {
-      section: "webdev",
-      data: web_clips,
-      name: "web dev",
-      icon: "laptop",
-    },
-    {
-      section: "graphics",
-      data: graphic_clips,
-      icon: "chart",
-    },
-    {
-      section: "design",
-      data: design_clips,
-      icon: "palette",
-    },
-    {
-      section: "writing",
-      data: writing_clips,
-      icon: "pencil",
-    },
-  ]
+const config = [
+  {
+    section: "webdev",
+    data: web_clips,
+    name: "web dev",
+    icon: "laptop",
+  },
+  {
+    section: "graphics",
+    data: graphic_clips,
+    icon: "chart",
+  },
+  {
+    section: "design",
+    data: design_clips,
+    icon: "palette",
+  },
+  {
+    section: "writing",
+    data: writing_clips,
+    icon: "pencil",
+  },
+];
 
-  const [shownSection, setShownSection] = useState("webdev")
+const App = () => {
+  const [shownSection, setShownSection] = useState("webdev");
 
   return (
     <>
@@ -49,9 +49,9 @@ function App() {
 
         {config.map((topic) => {
           if (shownSection === topic.section) {
-            return <Section title={topic.section} data={topic.data} />
+            return <Section title={topic.section} data={topic.data} />;
           }
-          return null
+          return null;
         })}
       </main>
 
@@ -69,9 +69,9 @@ function App() {
               >
                 Carson TerBush
               </a>
-              , a visual journalist with experience in data visualization,
-              design, web development and investigative reporting. In my free
-              time, I love cooking, drawing and rewatching Fleabag.
+              , a visual journalist with experience in design, web development,
+              data visualization and investigative reporting. In my free time, I
+              love cooking, drawing and rewatching Fleabag.
             </p>
             <p>
               Want to connect?{" "}
@@ -99,7 +99,7 @@ function App() {
         </small>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
