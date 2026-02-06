@@ -60,18 +60,9 @@ const App = () => {
           <img src="./terbush-headshot.jpg" alt="Carson's headshot" />
           <div>
             <p>
-              I'm{" "}
-              <a
-                href="https://twitter.com/_carsonology"
-                target="_blank"
-                rel="noreferrer"
-                className="light"
-              >
-                Carson TerBush
-              </a>
-              , a visual journalist with experience in design, web development,
-              data visualization and investigative reporting. In my free time, I
-              love cooking, drawing and rewatching Fleabag.
+              I'm Carson TerBush, a visual journalist with experience in design,
+              web development, data visualization and investigative reporting.
+              In my free time, I love cooking, drawing and rewatching Fleabag.
             </p>
             <p>
               Want to connect?{" "}
