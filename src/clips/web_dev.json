@@ -1,6 +1,50 @@
 [
   {
     "image": {
+      "src": "./nochebuena.png",
+      "alt": ""
+    },
+    "date": "12/13/2025",
+    "url": "https://wapo.st/4ryaqqI",
+    "headline": "For Latino families, Nochebuena looks different this year",
+    "skills": [ "development",  "react"],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./good-life.png",
+      "alt": ""
+    },
+    "date": "12/14/2025",
+    "url": "https://wapo.st/4a0fK0h",
+    "headline": "Are you living a good life? Take this quiz to find out.",
+    "skills": ["design", "development", "quiz", "react"],
+    "select": false
+  },
+  {
+    "image": {
+      "src": "./klamath.png",
+      "alt": ""
+    },
+    "date": "8/8/2025",
+    "url": "https://wapo.st/4rU0aJR",
+    "headline": "15 teens. 300 miles. One mighty ancestral river, running free.",
+    "skills": ["design", "development", "video", "react", "ux"],
+    "select": true
+  },
+  {
+    "image": {
+      "src": "./youth-violence.png",
+      "alt": ""
+    },
+    "date": "6/9/2025",
+    "url": "https://wapo.st/4bD4QyP",
+    "headline": "Do kids feel safe in D.C.? We asked them.",
+    "skills": ["design", "development", "video", "react", "ux"],
+    "select": true
+  },
+  {
+    "image": {
       "src": "./7-min-workout.jpeg",
       "alt": ""
     },
@@ -38,8 +82,7 @@
     "date": "8/7/2024",
     "url": "https://wapo.st/4jezUWH",
     "headline": "A summer of love",
-    "skills": ["design", "development", "react"],
-    "select": true
+    "skills": ["design", "development", "react"]
   },
   {
     "image": {
@@ -49,8 +92,7 @@
     "date": "10/23/2024",
     "url": "https://wapo.st/40hIfQQ",
     "headline": "Over 230 Republican candidates have cast doubt on the 2024 election",
-    "skills": ["design", "development", "react"],
-    "select": true
+    "skills": ["design", "development", "react"]
   },
   {
     "image": {
@@ -124,7 +166,6 @@
       "src": "./noise-restaurant.jpeg",
       "alt": ""
     },
-    "select": true,
     "date": "6/2/2024",
     "url": "https://wapo.st/4cEneV8",
     "headline": "Why restaurants are so loud, and what science says we can do about it",
@@ -230,7 +271,6 @@
     "date": "10/3/2023",
     "url": "https://wapo.st/46s4RQv",
     "headline": "Compare your life expectancy with others around the world",
-    "select": true,
     "skills": ["d3", "react", "illustrator"]
   },
   {

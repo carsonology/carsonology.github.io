@@ -11,15 +11,15 @@ import design_clips from "./clips/design.json";
 
 const config = [
   {
+    section: "graphics",
+    data: graphic_clips,
+    icon: "chart",
+  },
+  {
     section: "webdev",
     data: web_clips,
     name: "web dev",
     icon: "laptop",
-  },
-  {
-    section: "graphics",
-    data: graphic_clips,
-    icon: "chart",
   },
   {
     section: "design",
@@ -34,7 +34,7 @@ const config = [
 ];
 
 const App = () => {
-  const [shownSection, setShownSection] = useState("webdev");
+  const [shownSection, setShownSection] = useState("graphics");
 
   return (
     <>

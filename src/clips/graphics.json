@@ -1,4 +1,28 @@
-[
+[{
+  "image": {
+    "src": "./homicide-declines-2.png",
+    "alt": ""
+  },
+  "date": "1/22/2026",
+  "url": "https://wapo.st/4bD4Lv1",
+  "headline": "U.S. crime has dropped sharply since the pandemic. Here’s where it stands.",
+  "skills": ["datawrapper",
+    "d3",
+    "python"
+  ]
+},{
+  "image": {
+    "src": "./homicide-declines.png",
+    "alt": ""
+  },
+  "date": "11/20/2025",
+  "url": "https://wapo.st/4kopwwL",
+  "headline": "These five cities help explain why homicide rates are down across the U.S.",
+  "skills": ["datawrapper",
+    "d3",
+    "python"
+  ]
+},
   {
     "image": {
       "src": "./eclipse.png",
