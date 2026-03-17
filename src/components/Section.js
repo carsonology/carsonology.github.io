@@ -1,14 +1,14 @@
-import { useState } from "react"
-import Clip from "./Clip.js"
+import { useState } from "react";
+import Clip from "./Clip.js";
 
 const Section = (props) => {
-  const { title, data } = props
+  const { title, data } = props;
 
-  const [numShownClips, setNumShownClips] = useState(10)
+  const [numShownClips, setNumShownClips] = useState(12);
 
-  const selects = data.filter((clip) => clip?.select)
-  const nonSelects = data.filter((clip) => !clip?.select)
-  const truncate = ["webdev", "graphics"].includes(title)
+  const selects = data.filter((clip) => clip?.select);
+  const nonSelects = data.filter((clip) => !clip?.select);
+  const truncate = ["webdev", "graphics"].includes(title);
 
   return (
     <article id={title}>
@@ -20,7 +20,7 @@ const Section = (props) => {
             <>
               <h3 style={{ marginTop: 0 }}>💫 Selects</h3>
               {selects.map((clip, i) => {
-                return <Clip key={i} {...clip} />
+                return <Clip key={i} {...clip} />;
               })}
               <h3 style={{ marginTop: "1.5em" }}>🗓️ Recent work</h3>
             </>
@@ -28,10 +28,10 @@ const Section = (props) => {
           {nonSelects
             .slice(
               0,
-              truncate ? numShownClips - selects.length : nonSelects.length
+              truncate ? numShownClips - selects.length : nonSelects.length,
             )
             .map((clip, i) => {
-              return <Clip key={i} {...clip} />
+              return <Clip key={i} {...clip} />;
             })}
         </>
       </div>
@@ -40,14 +40,14 @@ const Section = (props) => {
         <button
           className="show-more-button"
           onClick={() => {
-            setNumShownClips((prev) => prev + 10)
+            setNumShownClips((prev) => prev + 10);
           }}
         >
           Show more
         </button>
       )}
     </article>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;
