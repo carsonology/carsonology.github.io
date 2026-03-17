@@ -7,8 +7,7 @@
     "date": "12/13/2025",
     "url": "https://wapo.st/4ryaqqI",
     "headline": "For Latino families, Nochebuena looks different this year",
-    "skills": [ "development",  "react"],
-    "select": true
+    "skills": ["development", "react"]
   },
   {
     "image": {
@@ -51,8 +50,7 @@
     "date": "1/9/2025",
     "url": "https://wapo.st/3PBpp2l",
     "headline": "The original, science‑backed 7‑minute workout to get fit fast",
-    "skills": ["design", "development", "react", "ux"],
-    "select": true
+    "skills": ["design", "development", "react", "ux"]
   },
   {
     "image": {
@@ -64,16 +62,7 @@
     "headline": "Lucy’s Legacy",
     "skills": ["design", "development", "react"]
   },
-  {
-    "image": {
-      "src": "./voter-portraits.jpeg",
-      "alt": ""
-    },
-    "date": "11/5/2024",
-    "url": "https://wapo.st/3WgLmr8",
-    "headline": "Voters across America: Joyful, exhausted and anxious",
-    "skills": ["design", "development", "react", "snap scroll"]
-  },
+
   {
     "image": {
       "src": "./summer-of-love.jpeg",
@@ -92,37 +81,8 @@
     "date": "10/23/2024",
     "url": "https://wapo.st/40hIfQQ",
     "headline": "Over 230 Republican candidates have cast doubt on the 2024 election",
-    "skills": ["design", "development", "react"]
-  },
-  {
-    "image": {
-      "src": "./europa.jpeg",
-      "alt": ""
-    },
-    "date": "10/12/2024",
-    "url": "https://wapo.st/40hIfQQ",
-    "headline": "Can an icy Jupiter moon sustain life? NASA’s biggest space probe will investigate.",
-    "skills": ["design", "development", "react"]
-  },
-  {
-    "image": {
-      "src": "./murderball.jpeg",
-      "alt": ""
-    },
-    "date": "9/29/2024",
-    "url": "https://wapo.st/3WinOlJ",
-    "headline": "They call it ‘murderball.’ Wheelchair rugby isn’t for the faint of heart.",
-    "skills": ["design", "development", "react"]
-  },
-  {
-    "image": {
-      "src": "./artistic-swimming.jpeg",
-      "alt": ""
-    },
-    "date": "8/4/2024",
-    "url": "https://wapo.st/3XgVeBY",
-    "headline": "How artistic swimming became a contact sport",
-    "skills": ["design", "development", "react"]
+    "skills": ["design", "development", "react"],
+    "select": true
   },
   {
     "image": {
@@ -179,7 +139,8 @@
     "date": "6/1/2024",
     "url": "https://wapo.st/4cymr8e",
     "headline": "What’s Washington listening to?",
-    "skills": ["design", "development", "figma", "react", "series"]
+    "skills": ["design", "development", "figma", "react", "series"],
+    "select": true
   },
   {
     "image": {
@@ -190,26 +151,6 @@
     "url": "https://wapo.st/3X2lZsv",
     "headline": "Internet data centers are fueling drive to old power source: Coal",
     "skills": ["design", "development", "figma", "react"]
-  },
-  {
-    "image": {
-      "src": "./tai-chi.jpeg",
-      "alt": ""
-    },
-    "date": "4/5/2024",
-    "url": "https://wapo.st/3VZTHjb",
-    "headline": "How to start tai chi",
-    "skills": ["design", "development", "figma", "react", "series"]
-  },
-  {
-    "image": {
-      "src": "./boxing.jpeg",
-      "alt": ""
-    },
-    "date": "2/15/2024",
-    "url": "https://wapo.st/3UcQpbn",
-    "headline": "How to start boxing",
-    "skills": ["design", "development", "figma", "react", "series"]
   },
   {
     "image": {
@@ -254,36 +195,16 @@
   },
   {
     "image": {
-      "src": "./golf.png",
-      "alt": ""
-    },
-    "date": "10/18/2023",
-    "url": "https://wapo.st/45vSVw1",
-    "headline": "The modern golf swing is powerful but can hurt your back. Here’s how to prevent injuries.",
-    "select": false,
-    "skills": ["design", "development", "react"]
-  },
-  {
-    "image": {
       "src": "./shameworld.jpeg",
       "alt": ""
     },
     "date": "10/3/2023",
     "url": "https://wapo.st/46s4RQv",
     "headline": "Compare your life expectancy with others around the world",
-    "skills": ["d3", "react", "illustrator"]
+    "skills": ["d3", "react", "illustrator"],
+    "select": true
   },
-  {
-    "image": {
-      "src": "./ticks.jpeg",
-      "alt": ""
-    },
-    "date": "8/29/2023",
-    "url": "https://wapo.st/44CAG7p",
-    "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
-    "select": false,
-    "skills": ["design", "development", "react"]
-  },
+
   {
     "image": {
       "src": "./brooke-and-billy.png",
@@ -318,17 +239,6 @@
   },
   {
     "image": {
-      "src": "./world-cup-groups.png",
-      "alt": ""
-    },
-    "date": "7/17/2023",
-    "url": "https://wapo.st/3q3vCL8",
-    "headline": "Everything you need to know about the women’s World Cup group stage",
-    "select": false,
-    "skills": ["development", "react"]
-  },
-  {
-    "image": {
       "src": "./glacier.png",
       "alt": ""
     },
@@ -351,44 +261,16 @@
   },
   {
     "image": {
-      "src": "./wolves.jpeg",
-      "alt": ""
+      "src": "./art.png",
+      "alt": "A pink neon sign reading 'Art with a Point'"
     },
-    "date": "8/25/2022",
-    "url": "https://wapo.st/3LWgea1",
-    "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+    "date": "8/10/2022",
+    "url": "https://wapo.st/3dZR3XB",
+    "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
     "select": false,
-    "skills": ["design", "development", "react"]
+    "skills": ["design", "development", "react", "typography"]
   },
-  {
-    "image": {
-      "src": "./border.png",
-      "alt": ""
-    },
-    "date": "7/8/2022",
-    "url": "https://wapo.st/3M20nqC",
-    "headline": "Across southern Arizona, a full range of border woes for Biden",
-    "select": false,
-    "skills": ["design", "development", "react"]
-  },
-  {
-    "image": {
-      "src": "./crash-sc.png",
-      "alt": "A computer screen with the title 'Catastrophic': The difficulty of addressing severe car crashes in Bloomington'"
-    },
-    "date": "5/7/2023",
-    "url": "https://specials.idsnews.com/car-crash-traffic-safety-iu-monroe-county/",
-    "headline": "‘Catastrophic’: The difficulty of addressing severe car crashes in Bloomington",
-    "select": false,
-    "skills": [
-      "design",
-      "development",
-      "reporting",
-      "data analysis",
-      "react",
-      "from scratch"
-    ]
-  },
+
   {
     "image": {
       "src": "./nagpra.jpeg",
@@ -419,17 +301,6 @@
   },
   {
     "image": {
-      "src": "./art.png",
-      "alt": "A pink neon sign reading 'Art with a Point'"
-    },
-    "date": "8/10/2022",
-    "url": "https://wapo.st/3dZR3XB",
-    "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
-    "select": false,
-    "skills": ["design", "development", "react", "typography"]
-  },
-  {
-    "image": {
       "src": "./graves.png",
       "alt": "An aerial photo of a cemetery"
     },
@@ -437,17 +308,6 @@
     "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
     "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
     "skills": ["design", "development", "audio", "illustrator", "from scratch"]
-  },
-  {
-    "image": {
-      "src": "./pride.jpeg",
-      "alt": ""
-    },
-    "date": "9/2/2022",
-    "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
-    "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
-    "select": false,
-    "skills": ["design", "development", "from scratch"]
   },
   {
     "image": {
@@ -491,17 +351,6 @@
     "date": "12/15/2020",
     "url": "http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/",
     "headline": "Steve Moore almost died. Now he uses his experience to show COVID-19 is real and life-changing.",
-    "select": false,
-    "skills": ["design", "development", "html/css/js"]
-  },
-  {
-    "image": {
-      "src": "./tattoo.jpg",
-      "alt": "A photo of a man tattooing someone with the words 'Making change loudly: Local tattoo artist fights to create space for Black people in Bloomington'"
-    },
-    "date": "12/1/2020",
-    "url": "http://specials.idsnews.com/bloomington-tattoo-artist-creates-space-black-people/",
-    "headline": "'Making change loudly': Local tattoo artist fights to create space for Black people in Bloomington",
     "select": false,
     "skills": ["design", "development", "html/css/js"]
   }

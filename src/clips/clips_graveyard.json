@@ -1,0 +1,149 @@
+[
+  {
+    "image": {
+      "src": "./homicide-declines-2.png",
+      "alt": ""
+    },
+    "date": "1/22/2026",
+    "url": "https://wapo.st/4bD4Lv1",
+    "headline": "U.S. crime has dropped sharply since the pandemic. Here’s where it stands.",
+    "skills": ["datawrapper", "d3", "python"]
+  },
+  {
+    "image": {
+      "src": "./europa.jpeg",
+      "alt": ""
+    },
+    "date": "10/12/2024",
+    "url": "https://wapo.st/40hIfQQ",
+    "headline": "Can an icy Jupiter moon sustain life? NASA’s biggest space probe will investigate.",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./murderball.jpeg",
+      "alt": ""
+    },
+    "date": "9/29/2024",
+    "url": "https://wapo.st/3WinOlJ",
+    "headline": "They call it ‘murderball.’ Wheelchair rugby isn’t for the faint of heart.",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./artistic-swimming.jpeg",
+      "alt": ""
+    },
+    "date": "8/4/2024",
+    "url": "https://wapo.st/3XgVeBY",
+    "headline": "How artistic swimming became a contact sport",
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./voter-portraits.jpeg",
+      "alt": ""
+    },
+    "date": "11/5/2024",
+    "url": "https://wapo.st/3WgLmr8",
+    "headline": "Voters across America: Joyful, exhausted and anxious",
+    "skills": ["design", "development", "react", "snap scroll"]
+  },
+  {
+    "image": {
+      "src": "./tai-chi.jpeg",
+      "alt": ""
+    },
+    "date": "4/5/2024",
+    "url": "https://wapo.st/3VZTHjb",
+    "headline": "How to start tai chi",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./boxing.jpeg",
+      "alt": ""
+    },
+    "date": "2/15/2024",
+    "url": "https://wapo.st/3UcQpbn",
+    "headline": "How to start boxing",
+    "skills": ["design", "development", "figma", "react", "series"]
+  },
+  {
+    "image": {
+      "src": "./ticks.jpeg",
+      "alt": ""
+    },
+    "date": "8/29/2023",
+    "url": "https://wapo.st/44CAG7p",
+    "headline": "A deadly tick-borne epidemic is raging. Dogs are key to ending it.",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./golf.png",
+      "alt": ""
+    },
+    "date": "10/18/2023",
+    "url": "https://wapo.st/45vSVw1",
+    "headline": "The modern golf swing is powerful but can hurt your back. Here’s how to prevent injuries.",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./border.png",
+      "alt": ""
+    },
+    "date": "7/8/2022",
+    "url": "https://wapo.st/3M20nqC",
+    "headline": "Across southern Arizona, a full range of border woes for Biden",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./world-cup-groups.png",
+      "alt": ""
+    },
+    "date": "7/17/2023",
+    "url": "https://wapo.st/3q3vCL8",
+    "headline": "Everything you need to know about the women’s World Cup group stage",
+    "select": false,
+    "skills": ["development", "react"]
+  },
+  {
+    "image": {
+      "src": "./pride.jpeg",
+      "alt": ""
+    },
+    "date": "9/2/2022",
+    "url": "http://specials.idsnews.com/pride-photos-bloomington-2022/",
+    "headline": "Scenes from Bloomington Pridefest 2022 on Kirkwood",
+    "select": false,
+    "skills": ["design", "development", "from scratch"]
+  },
+  {
+    "image": {
+      "src": "./wolves.jpeg",
+      "alt": ""
+    },
+    "date": "8/25/2022",
+    "url": "https://wapo.st/3LWgea1",
+    "headline": "Truck, plane, backpack: Inside the extreme effort to save Mexican wolves",
+    "select": false,
+    "skills": ["design", "development", "react"]
+  },
+  {
+    "image": {
+      "src": "./tattoo.jpg",
+      "alt": "A photo of a man tattooing someone with the words 'Making change loudly: Local tattoo artist fights to create space for Black people in Bloomington'"
+    },
+    "date": "12/1/2020",
+    "url": "http://specials.idsnews.com/bloomington-tattoo-artist-creates-space-black-people/",
+    "headline": "'Making change loudly': Local tattoo artist fights to create space for Black people in Bloomington",
+    "select": false,
+    "skills": ["design", "development", "html/css/js"]
+  }
+]
