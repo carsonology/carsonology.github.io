@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* natural box model */
 html {
@@ -62,11 +62,11 @@ html {
   --lightblue: rgb(230, 255, 255);
   --lightgray: rgb(176, 176, 176);
   --lightergray: rgb(225, 225, 225);
-  --cyan: rgba(0, 255, 255, .8);
+  --cyan: rgba(0, 255, 255, 0.8);
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--lightblue);
@@ -83,14 +83,14 @@ h3,
 h4,
 p,
 button {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--darkgray);
 }
 
 h1 {
   /* a designer, coder and writer */
   font-weight: 300;
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 0.05em;
   margin: 0.5em 0;
 }
@@ -106,7 +106,7 @@ h2 {
 
 h3 {
   font-size: 28px;
-  margin: 1.0em 0 0.5em;
+  margin: 1em 0 0.5em;
 }
 
 /* article headlines */
@@ -130,14 +130,14 @@ a:not(.no-highlight):link,
 a:not(.no-highlight):visited {
   color: var(--darkgray);
   text-decoration: none;
-  box-shadow: inset 0 -.1em var(--cyan);
-  transition: box-shadow .5s;
+  box-shadow: inset 0 -0.1em var(--cyan);
+  transition: box-shadow 0.5s;
 }
 
 a:not(.no-highlight):hover,
 a:not(.no-highlight):active {
-  box-shadow: inset 0 -.55em var(--cyan);
-  transition: box-shadow .5s;
+  box-shadow: inset 0 -0.55em var(--cyan);
+  transition: box-shadow 0.5s;
 }
 
 a.light:link,
@@ -196,26 +196,30 @@ header {
 .socials a:visited {
   background-color: var(--lightblue);
   box-shadow: none;
-  transition: background-color .35s ease-out, border-color .35s ease-out;
+  transition:
+    background-color 0.35s ease-out,
+    border-color 0.35s ease-out;
 }
 
 .socials a:link svg,
 .socials a:visited svg {
   fill: var(--darkgray);
-  transition: fill .35 ease-out;
+  transition: fill 0.35 ease-out;
 }
 
 .socials a:hover,
 .socials a:active {
   background-color: var(--darkgray);
   color: var(--lightblue);
-  transition: background-color .35s ease-in, border-color .35s ease-in;
+  transition:
+    background-color 0.35s ease-in,
+    border-color 0.35s ease-in;
 }
 
 .socials a:hover svg,
 .socials a:active svg {
   fill: var(--lightblue);
-  transition: fill .35s ease-in;
+  transition: fill 0.35s ease-in;
 }
 
 /* waving hand */
@@ -228,13 +232,15 @@ header img {
   opacity: 0;
   --rotate: 0;
   transform: rotate(var(--rotate));
-  animation: delay .5s ease forwards, wave 3.5s ease;
-  transition: transform .25s ease;
+  animation:
+    delay 0.5s ease forwards,
+    wave 3.5s ease;
+  transition: transform 0.25s ease;
 }
 
 header img:hover {
   --rotate: 25deg;
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
 
 /* name animation */
@@ -332,7 +338,7 @@ nav {
 
 nav:after {
   /* gray line that goes across the page */
-  content: '';
+  content: "";
   height: 3px;
   width: 100vw;
   bottom: 0;
@@ -400,7 +406,7 @@ nav li:hover svg {
 .lines:before,
 .lines1:before,
 .lines2:before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--darkgray);
 }
@@ -411,12 +417,12 @@ nav li:hover svg {
   left: -3px;
   height: 0;
   width: 3px;
-  transition: height .2s .4s;
+  transition: height 0.2s 0.4s;
 }
 
 nav li:hover .lines:before {
   height: 100%;
-  transition: height .2s;
+  transition: height 0.2s;
 }
 
 /* top */
@@ -425,12 +431,12 @@ nav li:hover .lines:before {
   top: -3px;
   height: 3px;
   width: 0;
-  transition: width .2s .2s;
+  transition: width 0.2s 0.2s;
 }
 
 nav li:hover .lines1:before {
   width: calc(100% + 3px);
-  transition: width .2s .2s;
+  transition: width 0.2s 0.2s;
 }
 
 /* right side */
@@ -439,12 +445,12 @@ nav li:hover .lines1:before {
   top: -3px;
   height: 0;
   width: 3px;
-  transition: height .2s;
+  transition: height 0.2s;
 }
 
 nav li:hover .lines2:before {
   height: calc(100% + 3px);
-  transition: height .2s .4s;
+  transition: height 0.2s 0.4s;
 }
 
 /* style the active li */
@@ -457,7 +463,7 @@ nav li.active {
 
 /* add blue box over bottom border of active li */
 nav li.active:after {
-  content: '';
+  content: "";
   width: calc(100%);
   transform: translateX(-15px);
   background-color: var(--lightblue);
@@ -467,7 +473,6 @@ nav li.active:after {
   display: block;
   z-index: 300;
 }
-
 
 /*
     MAIN
@@ -485,7 +490,7 @@ main {
 */
 .LazyLoad {
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .is-visible {
@@ -506,7 +511,7 @@ article img {
 }
 
 figure {
-  margin: 50px 0 4.0em;
+  margin: 50px 0 4em;
   padding: 0;
 }
 
@@ -530,7 +535,7 @@ figure {
 .web-clip {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 3.0em;
+  margin-bottom: 3em;
   justify-content: space-between;
 }
 
@@ -582,7 +587,7 @@ figure {
 .skill {
   display: inline;
   background: var(--lightergray);
-  font-size: .8em;
+  font-size: 0.8em;
   text-transform: uppercase;
   font-family: Courier;
   border: 1px solid var(--lightgray);
@@ -604,13 +609,17 @@ figure {
   font-weight: bold;
   cursor: pointer;
   width: 100%;
-  transition: .4s background, .4s color;
+  transition:
+    0.4s background,
+    0.4s color;
 }
 
 .show-more-button:hover {
   background: var(--darkgray);
   color: var(--lightblue);
-  transition: .4s background, .4s color;
+  transition:
+    0.4s background,
+    0.4s color;
 }
 
 /* 
@@ -623,7 +632,7 @@ footer {
   overflow: hidden;
 }
 
-footer>div {
+footer > div {
   max-width: 800px;
   padding: 0 25px 0;
   margin: 40px auto;
@@ -634,7 +643,7 @@ footer>div {
 footer img {
   border-radius: 50%;
   height: 150px;
-  margin-right: 1.0em;
+  margin-right: 1em;
   border: 3px solid var(--lightblue);
 }
 
@@ -748,37 +757,37 @@ footer {
 /* credit: https://jarv.is/notes/css-waving-hand-emoji/ */
 @keyframes wave {
   0% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 
   10% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
 
   /* The following five values can be played with to make the waving more or less extreme */
   20% {
-    transform: rotate(-8.0deg)
+    transform: rotate(-8deg);
   }
 
   30% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
 
   40% {
-    transform: rotate(-4.0deg)
+    transform: rotate(-4deg);
   }
 
   50% {
-    transform: rotate(10.0deg)
+    transform: rotate(10deg);
   }
 
   60% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 
   /* Reset for the last half to pause */
   100% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 }
 
@@ -787,7 +796,7 @@ footer {
 */
 .image {
   position: relative;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .image img {
@@ -819,11 +828,11 @@ img:not([src]) {
 
 @keyframes placeHolderShimmer {
   0% {
-    background-position: -468px 0
+    background-position: -468px 0;
   }
 
   100% {
-    background-position: 468px 0
+    background-position: 468px 0;
   }
 }
 
@@ -834,7 +843,12 @@ img:not([src]) {
   animation-name: placeHolderShimmer;
   animation-timing-function: linear;
   background: #f6f7f8;
-  background: linear-gradient(to right, rgba(0, 0, 0, .15) 8%, rgba(0, 0, 0, .2) 38%, rgba(0, 0, 0, .15) 54%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.15) 8%,
+    rgba(0, 0, 0, 0.2) 38%,
+    rgba(0, 0, 0, 0.15) 54%
+  );
   background-size: 1000px 640px;
   position: relative;
 }
@@ -860,7 +874,6 @@ img:not([src]) {
 
 /* Small devices (768px and under) */
 @media (max-width: 768px) {
-
   /* 
         TYPOGRAPHY
     */
@@ -899,7 +912,7 @@ img:not([src]) {
     top: 10px;
     opacity: 0;
     right: -3px;
-    box-shadow: -1px 3px 6px 0 rgba(0, 0, 0, .2);
+    box-shadow: -1px 3px 6px 0 rgba(0, 0, 0, 0.2);
     animation: slide-in 1.5s ease forwards 2.2s;
   }
 
@@ -910,7 +923,7 @@ img:not([src]) {
   }
 
   header {
-    margin-bottom: 1.0em;
+    margin-bottom: 1em;
   }
 
   .writing-clip {
@@ -935,7 +948,7 @@ img:not([src]) {
     margin: 0.5em 0;
   }
 
-  footer>div {
+  footer > div {
     display: block;
   }
 
