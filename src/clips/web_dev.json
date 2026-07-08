@@ -7,7 +7,10 @@
     "date": "12/13/2025",
     "url": "https://wapo.st/4ryaqqI",
     "headline": "For Latino families, Nochebuena looks different this year",
-    "skills": ["development", "react"]
+    "skills": [
+      "development",
+      "react"
+    ]
   },
   {
     "image": {
@@ -17,7 +20,12 @@
     "date": "12/14/2025",
     "url": "https://wapo.st/4a0fK0h",
     "headline": "Are you living a good life? Take this quiz to find out.",
-    "skills": ["design", "development", "quiz", "react"],
+    "skills": [
+      "design",
+      "development",
+      "quiz",
+      "react"
+    ],
     "select": false
   },
   {
@@ -28,7 +36,13 @@
     "date": "8/8/2025",
     "url": "https://wapo.st/4rU0aJR",
     "headline": "15 teens. 300 miles. One mighty ancestral river, running free.",
-    "skills": ["design", "development", "video", "react", "ux"],
+    "skills": [
+      "design",
+      "development",
+      "video",
+      "react",
+      "ux"
+    ],
     "select": true
   },
   {
@@ -39,7 +53,13 @@
     "date": "6/9/2025",
     "url": "https://wapo.st/4bD4QyP",
     "headline": "Do kids feel safe in D.C.? We asked them.",
-    "skills": ["design", "development", "video", "react", "ux"],
+    "skills": [
+      "design",
+      "development",
+      "video",
+      "react",
+      "ux"
+    ],
     "select": true
   },
   {
@@ -50,7 +70,12 @@
     "date": "1/9/2025",
     "url": "https://wapo.st/3PBpp2l",
     "headline": "The original, science‑backed 7‑minute workout to get fit fast",
-    "skills": ["design", "development", "react", "ux"]
+    "skills": [
+      "design",
+      "development",
+      "react",
+      "ux"
+    ]
   },
   {
     "image": {
@@ -60,9 +85,12 @@
     "date": "11/22/2024",
     "url": "https://wapo.st/4gRgE04",
     "headline": "Lucy’s Legacy",
-    "skills": ["design", "development", "react"]
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ]
   },
-
   {
     "image": {
       "src": "./summer-of-love.jpeg",
@@ -71,7 +99,12 @@
     "date": "8/7/2024",
     "url": "https://wapo.st/4jezUWH",
     "headline": "A summer of love",
-    "skills": ["design", "development", "react"]
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ],
+    "select": true
   },
   {
     "image": {
@@ -81,7 +114,11 @@
     "date": "10/23/2024",
     "url": "https://wapo.st/4bKmT5D",
     "headline": "Over 230 Republican candidates have cast doubt on the 2024 election",
-    "skills": ["design", "development", "react"],
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ],
     "select": true
   },
   {
@@ -109,7 +146,12 @@
     "date": "7/7/2024",
     "url": "https://wapo.st/3MjmzgD",
     "headline": "What it‘s like to survive measles",
-    "skills": ["design", "development", "figma", "react"]
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react"
+    ]
   },
   {
     "image": {
@@ -119,7 +161,12 @@
     "date": "6/26/2024",
     "url": "https://wapo.st/3zlQXUD",
     "headline": "A day in one of D.C.’s ‘heat islands’",
-    "skills": ["design", "development", "figma", "react"]
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react"
+    ]
   },
   {
     "image": {
@@ -129,7 +176,11 @@
     "date": "6/2/2024",
     "url": "https://wapo.st/4cEneV8",
     "headline": "Why restaurants are so loud, and what science says we can do about it",
-    "skills": ["development", "react"]
+    "skills": [
+      "development",
+      "react"
+    ],
+    "select": true
   },
   {
     "image": {
@@ -139,8 +190,13 @@
     "date": "6/1/2024",
     "url": "https://wapo.st/4cymr8e",
     "headline": "What’s Washington listening to?",
-    "skills": ["design", "development", "figma", "react", "series"],
-    "select": true
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react",
+      "series"
+    ]
   },
   {
     "image": {
@@ -150,7 +206,12 @@
     "date": "4/17/2024",
     "url": "https://wapo.st/3X2lZsv",
     "headline": "Internet data centers are fueling drive to old power source: Coal",
-    "skills": ["design", "development", "figma", "react"]
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react"
+    ]
   },
   {
     "image": {
@@ -160,7 +221,13 @@
     "date": "1/3/2024",
     "url": "https://wapo.st/41MM4Ot",
     "headline": "How to start indoor rock climbing",
-    "skills": ["design", "development", "figma", "react", "series"]
+    "skills": [
+      "design",
+      "development",
+      "figma",
+      "react",
+      "series"
+    ]
   },
   {
     "image": {
@@ -170,7 +237,12 @@
     "date": "1/1/2024",
     "url": "https://wapo.st/41NQS5Y",
     "headline": "Are you fit for your age? Try our New Year’s tune-up to find out.",
-    "skills": ["development", "react", "svg", "personalization"]
+    "skills": [
+      "development",
+      "react",
+      "svg",
+      "personalization"
+    ]
   },
   {
     "image": {
@@ -180,7 +252,14 @@
     "date": "11/17/2023",
     "url": "https://wapo.st/3MMW0RO",
     "headline": "Life under bombardment: A young Palestinian’s audio diary of the war",
-    "skills": ["development", "react", "figma", "ux", "snap scroll"]
+    "skills": [
+      "development",
+      "react",
+      "figma",
+      "ux",
+      "snap scroll"
+    ],
+    "select": true
   },
   {
     "image": {
@@ -191,7 +270,11 @@
     "url": "https://wapo.st/46H0VeW",
     "headline": "Runaway zebras delighted the nation — and exposed their owner’s dark past",
     "select": false,
-    "skills": ["development", "react", "figma"]
+    "skills": [
+      "development",
+      "react",
+      "figma"
+    ]
   },
   {
     "image": {
@@ -201,10 +284,13 @@
     "date": "10/3/2023",
     "url": "https://wapo.st/46s4RQv",
     "headline": "Compare your life expectancy with others around the world",
-    "skills": ["d3", "react", "illustrator"],
+    "skills": [
+      "d3",
+      "react",
+      "illustrator"
+    ],
     "select": true
   },
-
   {
     "image": {
       "src": "./brooke-and-billy.png",
@@ -213,7 +299,11 @@
     "date": "8/1/2023",
     "url": "https://wapo.st/457F1QQ",
     "headline": "An abortion ban made them teen parents. This is life two years later.",
-    "skills": ["design", "development", "react"]
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ]
   },
   {
     "image": {
@@ -224,7 +314,12 @@
     "url": "https://wapo.st/3pQ1JxV",
     "headline": "A fragile new phase of abortion in America",
     "select": false,
-    "skills": ["design", "development", "react", "datawrapper"]
+    "skills": [
+      "design",
+      "development",
+      "react",
+      "datawrapper"
+    ]
   },
   {
     "image": {
@@ -235,7 +330,11 @@
     "url": "https://specials.idsnews.com/local-state-election-monroe-county-indiana-2022/",
     "headline": "Meet your candidates for local Bloomington and executive state office",
     "select": false,
-    "skills": ["design", "development", "from scratch"]
+    "skills": [
+      "design",
+      "development",
+      "from scratch"
+    ]
   },
   {
     "image": {
@@ -246,7 +345,11 @@
     "url": "https://wapo.st/3RpKWcH",
     "headline": "A melting glacier, an imperiled city and one farmer’s fight for climate justice",
     "select": false,
-    "skills": ["design", "development", "react"]
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ]
   },
   {
     "image": {
@@ -257,7 +360,11 @@
     "url": "https://wapo.st/3SuPH66",
     "headline": "Kids who witness parents shot to death rarely get help for trauma",
     "select": false,
-    "skills": ["design", "development", "react"]
+    "skills": [
+      "design",
+      "development",
+      "react"
+    ]
   },
   {
     "image": {
@@ -268,14 +375,19 @@
     "url": "https://wapo.st/3dZR3XB",
     "headline": "Art With a Point: A rotating cast of artists weighs in on the state of the world",
     "select": false,
-    "skills": ["design", "development", "react", "typography"]
+    "skills": [
+      "design",
+      "development",
+      "react",
+      "typography"
+    ]
   },
-
   {
     "image": {
       "src": "./nagpra.jpeg",
       "alt": "A computer screen with three black and white photos and the title 'Thousands of Native American remains, a legacy of offensive research and the effort to move forward"
     },
+    "select": true,
     "date": "4/28/2023",
     "url": "https://specials.idsnews.com/iu-nagpra-native-american-remains-repatriation/",
     "headline": "Thousands of Native American remains, a legacy of offensive research and the effort to move forward",
@@ -297,7 +409,12 @@
     "url": "https://specials.idsnews.com/halloween-makeup-indiana-haunted-house/",
     "headline": "Grandma gets gory: Meet Indy Scream Park’s longtime makeup manager",
     "select": false,
-    "skills": ["design", "development", "photography", "from scratch"]
+    "skills": [
+      "design",
+      "development",
+      "photography",
+      "from scratch"
+    ]
   },
   {
     "image": {
@@ -307,7 +424,13 @@
     "date": "12/10/2021",
     "url": "https://specials.idsnews.com/unmarked-graves-racism-bloomington-eagleson-jordan-rose-hill/",
     "headline": "Indignity in death: Unmarked graves in Bloomington indicate long history of racism",
-    "skills": ["design", "development", "audio", "illustrator", "from scratch"]
+    "skills": [
+      "design",
+      "development",
+      "audio",
+      "illustrator",
+      "from scratch"
+    ]
   },
   {
     "image": {
@@ -352,6 +475,10 @@
     "url": "http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/",
     "headline": "Steve Moore almost died. Now he uses his experience to show COVID-19 is real and life-changing.",
     "select": false,
-    "skills": ["design", "development", "html/css/js"]
+    "skills": [
+      "design",
+      "development",
+      "html/css/js"
+    ]
   }
 ]
