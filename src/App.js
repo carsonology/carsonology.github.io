@@ -11,11 +11,6 @@ import design_clips from "./clips/design.json";
 
 const config = [
   {
-    section: "graphics",
-    data: graphic_clips,
-    icon: "chart",
-  },
-  {
     section: "webdev",
     data: web_clips,
     name: "web dev",
@@ -25,6 +20,11 @@ const config = [
     section: "design",
     data: design_clips,
     icon: "palette",
+  },
+  {
+    section: "graphics",
+    data: graphic_clips,
+    icon: "chart",
   },
   {
     section: "writing",
