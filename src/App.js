@@ -34,7 +34,7 @@ const config = [
 ];
 
 const App = () => {
-  const [shownSection, setShownSection] = useState("graphics");
+  const [shownSection, setShownSection] = useState("webdev");
 
   return (
     <>
