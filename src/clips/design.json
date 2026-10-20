@@ -1,6 +1,78 @@
 [
   {
     "image": {
+      "src": "working-class.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "wellness.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "voting.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "polymarket.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "payment.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "old-leaders.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "midterms.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
+      "src": "influencers.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ]
+  },
+  {
+    "image": {
       "src": "us-democracy.png",
       "alt": ""
     },
