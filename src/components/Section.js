@@ -14,15 +14,15 @@ const Section = (props) => {
     <article id={title}>
       <h2 className="show-mobile-xs">{title}</h2>
 
-      <div className={title === "design" ? "grid-2" : ""}>
+      <div className={title === "design" ? "" : ""}>
         <>
           {selects.length > 0 && (
             <>
-              <h3 style={{ marginTop: 0 }}>💫 Selects</h3>
+              {/* <h3 style={{ marginTop: 0 }}>💫 Selects</h3> */}
               {selects.map((clip, i) => {
                 return <Clip key={i} {...clip} />;
               })}
-              <h3 style={{ marginTop: "1.5em" }}>🗓️ Recent work</h3>
+              {/* <h3 style={{ marginTop: "1.5em" }}>🗓️ Recent work</h3> */}
             </>
           )}
           {nonSelects

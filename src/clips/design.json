@@ -1,12 +1,15 @@
 [
   {
     "image": {
-      "src": "working-class.jpeg",
+      "src": "midterms.jpeg",
       "alt": ""
     },
     "skills": [
       "illustration"
-    ]
+    ],
+    "date": "10/15/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/10/15/majority-of-americans-expect-democrats-to-win-control-of-house-public-is-split-on-senate/",
+    "headline": "Majority of Americans Expect Democrats to Win Control of House; Public Is Split on Senate"
   },
   {
     "image": {
@@ -15,52 +18,10 @@
     },
     "skills": [
       "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "voting.jpeg",
-      "alt": ""
-    },
-    "skills": [
-      "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "polymarket.jpeg",
-      "alt": ""
-    },
-    "skills": [
-      "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "payment.jpeg",
-      "alt": ""
-    },
-    "skills": [
-      "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "old-leaders.jpeg",
-      "alt": ""
-    },
-    "skills": [
-      "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "midterms.jpeg",
-      "alt": ""
-    },
-    "skills": [
-      "illustration"
-    ]
+    ],
+    "date": "7/13/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/07/13/nearly-6-in-10-young-women-get-health-and-wellness-information-from-influencers/",
+    "headline": "Nearly 6 in 10 young women get health and wellness information from influencers"
   },
   {
     "image": {
@@ -69,7 +30,46 @@
     },
     "skills": [
       "illustration"
-    ]
+    ],
+    "date": "10/7/2026",
+    "url": "https://www.pewresearch.org/data-labs/2026/10/07/what-do-health-and-wellness-influencers-post-about/",
+    "headline": "What Do Health and Wellness Influencers Post About?"
+  },
+  {
+    "image": {
+      "src": "voting.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ],
+    "date": "11/20/2025",
+    "url": "https://www.pewresearch.org/short-reads/2026/06/23/more-than-half-of-states-restrict-betting-on-elections/",
+    "headline": "More than half of states restrict betting on elections"
+  },
+  {
+    "image": {
+      "src": "polymarket.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ],
+    "date": "7/22/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/07/22/what-we-know-about-the-typical-polymarket-user/",
+    "headline": "What we know about the typical Polymarket user"
+  },
+  {
+    "image": {
+      "src": "payment.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ],
+    "date": "9/300/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/09/30/from-cash-to-credit-how-americans-payment-methods-have-changed-in-the-past-decade/",
+    "headline": "From cash to credit, how Americans’ payment methods have changed in the past decade"
   },
   {
     "image": {
@@ -78,7 +78,22 @@
     },
     "skills": [
       "illustration"
-    ]
+    ],
+    "date": "7/2/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/07/02/8-ways-that-us-style-democracy-stands-out-globally/",
+    "headline": "8 ways that U.S.-style democracy stands out globally"
+  },
+  {
+    "image": {
+      "src": "old-leaders.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ],
+    "date": "6/9/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/06/09/as-trump-turns-80-who-are-the-oldest-and-youngest-current-world-leaders/",
+    "headline": "As Trump turns 80, who are the oldest – and youngest – current world leaders?"
   },
   {
     "image": {
@@ -87,7 +102,22 @@
     },
     "skills": [
       "illustration"
-    ]
+    ],
+    "date": "6/1/2026",
+    "url": "https://www.pewresearch.org/short-reads/2026/06/01/federal-agency-x-accounts-are-getting-far-more-engagement-in-the-second-trump-term-than-under-biden/",
+    "headline": "Federal agency X accounts are getting far more engagement in the second Trump term than under Biden"
+  },
+  {
+    "image": {
+      "src": "working-class.jpeg",
+      "alt": ""
+    },
+    "skills": [
+      "illustration"
+    ],
+    "date": "8/31/2026",
+    "url": "https://www.pewresearch.org/politics/2026/08/31/who-sees-themselves-as-working-class/",
+    "headline": "Who Sees Themselves as Working Class?"
   },
   {
     "image": {
@@ -143,62 +173,6 @@
       "print layout",
       "illustration",
       "photoshop"
-    ]
-  },
-  {
-    "image": {
-      "src": "./sign1twitter.gif",
-      "alt": "A gif with the words 'how to sign Do you have a mask' above an animation of how to communicate that phrase in sign language"
-    },
-    "skills": [
-      "illustration",
-      "animation"
-    ]
-  },
-  {
-    "image": {
-      "src": "./sign2twitter.gif",
-      "alt": "A gif with the words 'how to sign coronavirus' above an animation of how to communicate that phrase in sign language"
-    },
-    "skills": [
-      "illustration",
-      "animation"
-    ]
-  },
-  {
-    "image": {
-      "src": "./larisa1.png",
-      "alt": "A poster titled 'The Nutcracker' with a photo of a ballerina in a pink tutu"
-    },
-    "skills": [
-      "print layout"
-    ]
-  },
-  {
-    "image": {
-      "src": "./sleeping-beauty.png",
-      "alt": "A poster titled 'The Sleeping Beauty' with a photo of two dancers dressed in white"
-    },
-    "skills": [
-      "print layout"
-    ]
-  },
-  {
-    "image": {
-      "src": "./dashboard-illo.png",
-      "alt": "An illustration of the Sample Gates at IU surrounded by bar charts and pie charts"
-    },
-    "skills": [
-      "illustration"
-    ]
-  },
-  {
-    "image": {
-      "src": "./sports-psych-01.png",
-      "alt": "An illustration of a brain inside a football helmet"
-    },
-    "skills": [
-      "illustration"
     ]
   }
 ]
