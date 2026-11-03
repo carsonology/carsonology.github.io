@@ -1,31 +1,22 @@
-import Icon from "./Icon.js";
-import NameAnim from "./NameAnim.js";
 
-function SocialButton(props) {
-  const { link, icon } = props;
-  return (
-    <a href={link} target="_blank">
-      <Icon name={icon} />
-    </a>
-  );
-}
+import { styled } from '@stitches/react';
+
+const HeaderStyled = styled('header', {
+  backgroundImage: 'url(/2022-03-26-howth-43.jpg)',
+  height: 350,
+  backgroundPosition: 'center 35%',
+  backgroundSize: 'cover',
+  color: 'var(--text-color)',
+  padding: '2em 4em',
+  borderBottom: '3px solid var(--text-color)'
+})
 
 function Header() {
   return (
-    <header>
-      <div className="socials">
-        {/* <SocialButton link="https://twitter.com/_carsonology" icon="twitter" /> */}
-        <SocialButton link="mailto:carson.terbush@gmail.com" icon="envelope" />
-        <SocialButton
-          link="https://www.linkedin.com/in/carson-terbush-6a1a58193/"
-          icon="linkedin"
-        />
-      </div>
-      <img src="./wave.png" alt="wave emoji" />
-
-      <NameAnim />
-      <h1>Visual journalist, designer and graphic artist.</h1>
-    </header>
+    <HeaderStyled>
+      <h1>Carson TerBush</h1>
+      <h2>Storytelling with visuals and data</h2>
+    </HeaderStyled>
   );
 }
 export default Header;
