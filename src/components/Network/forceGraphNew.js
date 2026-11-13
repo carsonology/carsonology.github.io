@@ -1,63 +1,34 @@
 import { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
 import miserables from "./miserables.json"
-
-function drag(simulation) {
-  function dragstarted(event) {
-    if (!event.active) simulation.alphaTarget(0.3).restart()
-    event.subject.fx = event.subject.x
-    event.subject.fy = event.subject.y
-  }
-
-  function dragged(event) {
-    event.subject.fx = event.x
-    event.subject.fy = event.y
-  }
-
-  function dragended(event) {
-    if (!event.active) simulation.alphaTarget(0)
-    event.subject.fx = null
-    event.subject.fy = null
-  }
-
-  return d3
-    .drag()
-    .on("start", dragstarted)
-    .on("drag", dragged)
-    .on("end", dragended)
-}
+import { useContainerSize, animateRadius, drag, getNeighborIds } from "./utils"
 
 const SUB_SIZE = 300
-
-// links must already have object source/target (true once forceLink has run)
-function neighborIds(centerId, links) {
-  const ids = new Set([centerId])
-  for (const l of links) {
-    if (l.source.id === centerId) ids.add(l.target.id)
-    if (l.target.id === centerId) ids.add(l.source.id)
-  }
-  return ids
+const margin = {
+  top: 40,
+  bottom: 10,
+  left: 20,
+  right: 20,
 }
 
-export const ForceGraph = () => {
+export const ForceGraph = ({ setCurrentView, setCurrentProject }) => {
+  // refs
+  const containerRef = useRef(null)
   const svgRef = useRef(null)
   const subSvgRef = useRef(null)
   const graphRef = useRef({}) // shares main-graph data with the subgraph effect
   const [selectedId, setSelectedId] = useState(null)
 
-  const margin = {
-    top: 40,
-    bottom: 10,
-    left: 20,
-    right: 20,
-  }
-  const width = 700 - margin.left - margin.right
-  const height = 500 - margin.top - margin.bottom
+  const { width: w, height: h } = useContainerSize(containerRef)
 
+  const width = w - margin.left - margin.right
+  const height = h - margin.top - margin.bottom
+
+  // render the main force graph + simulation
   useEffect(() => {
     const { nodes, links } = miserables
 
-    const baseRadius = (d) => (d.type === "tag" ? 8 : 5)
+    const baseRadius = (d) => (d.type === "tag" ? 10 : 8) // tags are slightly larger
 
     nodes.forEach((d) => {
       d.r0 = baseRadius(d) // resting radius, never changes
@@ -100,14 +71,45 @@ export const ForceGraph = () => {
         node_enter.append("title").text((d) => d.id)
         return node_enter
       })
+      .style("fill", (d) => color(d.group))
+      .attr("r", (d) => d.r)
+      .call(drag(simulation))
+      .on("mouseenter", function (event, d) {
+        animateRadius(this, d, d.r0 * 1.6)
+      })
+      .on("mouseleave", function (event, d) {
+        animateRadius(this, d, d.r0)
+      })
+      .style("cursor", "pointer")
+      .on("click", (event, d) => {
+        console.log("clicked", d.id, "event")
+        setCurrentView("project")
+        setCurrentProject(d.id)
+        // later: show the subgraph here
+        // for project nodes you could also do: if (d.url) window.location.href = d.url;
+      })
+    // .append("g")
+    // .selectAll("text")
+    // .data(nodes)
+    // .join("text")
+    // .text((d) => d.id)
+    // .attr("font-size", 10)
+    // .attr("fill", "#ccc")
+    // .attr("text-anchor", "middle")
+    // .attr("dy", -12)
+    // .style("pointer-events", "none")
 
-    node.style("fill", (d) => color(d.group))
-
-    const collideRadius = (d) => d.r + 7
-    const chargeStrength = (d) => -60 * (d.r / d.r0) ** 2
-
-    const collide = d3.forceCollide(collideRadius)
-    const charge = d3.forceManyBody().strength(chargeStrength).distanceMax(150)
+    const labels = g
+      .append("g")
+      .selectAll("text")
+      .data(nodes)
+      .join("text")
+      .text((d) => d.id)
+      .attr("font-size", 10)
+      .attr("fill", "#545454")
+      .attr("text-anchor", "middle")
+      .attr("dy", -12)
+      .style("pointer-events", "none")
 
     simulation
       .nodes(miserables.nodes)
@@ -116,21 +118,21 @@ export const ForceGraph = () => {
         d3
           .forceLink(links)
           .id((d) => d.id)
-          .distance(50)
+          .distance(120)
           .strength(1)
           .iterations(3),
       )
+      .alpha(0.5)
       .alphaDecay(0.01)
-      .force("charge", d3.forceManyBody().strength(-120).distanceMax(100))
+      // .force("charge", d3.forceManyBody().strength(-200).distanceMax(50))
       .force(
         "charge",
         d3
           .forceManyBody()
-          .strength((d) => (d.type === "tag" ? -300 : -60))
-          .distanceMax(300),
+          .strength((d) => (d.type === "tag" ? -800 : -300))
+          .distanceMax(200),
       )
-      .force("collide", d3.forceCollide(9))
-      // .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collide", d3.forceCollide(2))
       .force("x", d3.forceX(width / 2).strength(0.05))
       .force("y", d3.forceY(height / 2).strength(0.05))
       .on("tick", () => {
@@ -142,43 +144,8 @@ export const ForceGraph = () => {
           .attr("stroke", "#545454")
           .attr("stroke-width", 0.5)
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y)
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y)
       })
-
-    node.call(drag(simulation))
-
-    node.attr("r", (d) => d.r)
-
-    function animateRadius(el, d, target) {
-      d3.select(el)
-        .transition("hover")
-        .duration(150)
-        .ease(d3.easeCubicOut)
-        .tween("radius", () => {
-          const i = d3.interpolateNumber(d.r, target)
-          return (t) => {
-            d.r = i(t)
-            d3.select(el).attr("r", d.r)
-            collide.radius(collideRadius) // re-read every node's radius
-            charge.strength(chargeStrength) // re-read every node's strength
-          }
-        })
-    }
-
-    node
-      .on("mouseenter", function (event, d) {
-        animateRadius(this, d, d.r0 * 1.6)
-        // simulation.alpha(Math.max(simulation.alpha(), 0.3)).restart()
-      })
-      .on("mouseleave", function (event, d) {
-        animateRadius(this, d, d.r0)
-        // simulation.alpha(Math.max(simulation.alpha(), 0.3)).restart()
-      })
-
-    node.style("cursor", "pointer").on("click", (event, d) => {
-      console.log("clicked", d.id)
-      // later: show the subgraph here
-      // for project nodes you could also do: if (d.url) window.location.href = d.url;
-    })
 
     const zoom = d3
       .zoom()
@@ -187,14 +154,14 @@ export const ForceGraph = () => {
         g.attr("transform", event.transform)
       })
 
-    svg.call(zoom)
-
-    // const nodeById = new Map(nodes.map((d) => [d.id, d]))
+    // svg.call(zoom)
 
     // ---- click selects a node; clicking empty space clears it ----
     node.on("click", (event, d) => {
       event.stopPropagation()
       setSelectedId(d.id)
+      setCurrentProject(d)
+      setCurrentView("project")
     })
 
     graphRef.current = { nodes, links, node, link }
@@ -204,7 +171,7 @@ export const ForceGraph = () => {
       svg.on(".zoom", null).on("click", null)
       node.interrupt("hover")
     }
-  }, [])
+  }, [w, h])
 
   useEffect(() => {
     const { nodes, links, node, link } = graphRef.current
@@ -220,13 +187,13 @@ export const ForceGraph = () => {
       return
     }
 
-    const ids = neighborIds(selectedId, links)
+    const ids = getNeighborIds(selectedId, links)
     const touchesCenter = (l) =>
       l.source.id === selectedId || l.target.id === selectedId
 
     // dim everything except the selected node and its neighbors
-    node.attr("opacity", (d) => (ids.has(d.id) ? 1 : 0.15))
-    link.attr("stroke-opacity", (l) => (touchesCenter(l) ? 0.9 : 0.05))
+    // node.attr("opacity", (d) => (ids.has(d.id) ? 1 : 0.15))
+    // link.attr("stroke-opacity", (l) => (touchesCenter(l) ? 0.9 : 0.05))
 
     // copies, so this simulation doesn't overwrite x/y on the main graph's nodes
     const subNodes = nodes
@@ -297,12 +264,14 @@ export const ForceGraph = () => {
 
   return (
     <>
-      <svg
-        ref={svgRef}
-        width={width + margin.left + margin.right}
-        height={height + margin.top + margin.bottom}
-        style={{ border: "1px solid red" }}
-      ></svg>
+      <div style={{ width: "100%", height: "70vh" }} ref={containerRef}>
+        <svg
+          ref={svgRef}
+          width={width + margin.left + margin.right}
+          height={height + margin.top + margin.bottom}
+          style={{ border: "1px solid red" }}
+        />
+      </div>
       <div
         id="subgraph"
         hidden={selectedId === null}

@@ -1,13 +1,14 @@
-import "./App.css";
-import { useState } from "react";
-import Header from "./components/Header.js";
+import "./App.css"
+import { useState } from "react"
+import Header from "./components/Header.js"
 // import content for clips
-import web_clips from "./clips/web_dev.json";
-import graphic_clips from "./clips/graphics.json";
-import writing_clips from "./clips/writing.json";
-import design_clips from "./clips/design.json";
+import web_clips from "./clips/web_dev.json"
+import graphic_clips from "./clips/graphics.json"
+import writing_clips from "./clips/writing.json"
+import design_clips from "./clips/design.json"
 
-import Network from "./components/Network/index.js";
+import Network from "./components/Network/index.js"
+import ProjectPage from "./components/ProjectPage/index.js"
 
 const config = [
   {
@@ -31,21 +32,34 @@ const config = [
     data: writing_clips,
     icon: "pencil",
   },
-];
+]
 
 const App = () => {
-  const [shownSection, setShownSection] = useState("webdev");
+  const [shownSection, setShownSection] = useState("webdev")
+
+  const [currentView, setCurrentView] = useState("home")
+  const [currentProject, setCurrentProject] = useState("")
 
   return (
     <>
       <Header />
 
       <main>
-        <Network />
-
+        {currentView == "home" && (
+          <Network
+            setCurrentView={setCurrentView}
+            setCurrentProject={setCurrentProject}
+          />
+        )}
+        {currentView == "project" && (
+          <ProjectPage
+            currentProject={currentProject}
+            setCurrentView={setCurrentView}
+          />
+        )}
       </main>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
