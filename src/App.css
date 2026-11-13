@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
 
 :root {
   --text-color: #634646;
@@ -21,9 +21,33 @@ h2 {
 }
 
 body {
-  background-image: url(/public/heather-green-OIKBzKrTdxA-unsplash.jpg);
+  /* background-image: url(/public/heather-green-OIKBzKrTdxA-unsplash.jpg); */
   background-size: cover;
   background-repeat: repeat;
   min-height: 200vh;
   /* background-attachment: fixed; */
+}
+
+#subgraph {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 8px;
+}
+#sub-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: none;
+  border: 0;
+  color: #ccc;
+  cursor: pointer;
+}
+#sub-title {
+  margin: 0 0 4px;
+  font: 12px sans-serif;
+  color: #ccc;
 }

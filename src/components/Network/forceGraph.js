@@ -1,13 +1,15 @@
-import * as d3 from 'd3'
+import * as d3 from "d3";
 
 // Copyright 2021-2024 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/force-directed-graph
-export const ForceGraph = ({
+export const ForceGraph = (
+  {
     nodes, // an iterable of node objects (typically [{id}, …])
-    links // an iterable of link objects (typically [{source, target}, …])
-}, {
-    nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
+    links, // an iterable of link objects (typically [{source, target}, …])
+  },
+  {
+    nodeId = (d) => d.id, // given d in nodes, returns a unique identifier (string)
     nodeGroup, // given d in nodes, returns an (ordinal) value for color
     nodeGroups, // an array of ordinal values representing the node groups
     nodeTitle, // given d in nodes, a title string
@@ -29,131 +31,160 @@ export const ForceGraph = ({
     colors = d3.schemeTableau10, // an array of color strings, for the node groups
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
-    invalidation // when this promise resolves, stop the simulation
-} = {}) => {
-    // Compute values.
-    const N = d3.map(nodes, nodeId).map(intern);
-    const R = typeof nodeRadius !== "function" ? null : d3.map(nodes, nodeRadius);
-    const LS = d3.map(links, linkSource).map(intern);
-    const LT = d3.map(links, linkTarget).map(intern);
-    if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
-    const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
-    const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
-    const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
-    const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
+    invalidation, // when this promise resolves, stop the simulation
+  } = {},
+) => {
+  // Compute values.
+  const N = d3.map(nodes, nodeId).map(intern);
+  const R = typeof nodeRadius !== "function" ? null : d3.map(nodes, nodeRadius);
+  const LS = d3.map(links, linkSource).map(intern);
+  const LT = d3.map(links, linkTarget).map(intern);
+  if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
+  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
+  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
+  const W =
+    typeof linkStrokeWidth !== "function"
+      ? null
+      : d3.map(links, linkStrokeWidth);
+  const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
 
+  // Replace the input nodes and links with mutable objects for the simulation.
+  nodes = d3.map(nodes, (_, i) => ({ id: N[i] }));
+  links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i] }));
 
-    // Replace the input nodes and links with mutable objects for the simulation.
-    nodes = d3.map(nodes, (_, i) => ({ id: N[i] }));
-    links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i] }));
+  // Compute default domains.
+  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
 
-    // Compute default domains.
-    if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
+  // Construct the scales.
+  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
 
-    // Construct the scales.
-    const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+  // Construct the forces.
+  const forceNode = d3.forceManyBody();
+  const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
+  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
+  if (linkStrength !== undefined) forceLink.strength(linkStrength);
+  if (linkDistance !== undefined) forceLink.distance(linkDistance);
 
+  console.log(R);
 
-    // Construct the forces.
-    const forceNode = d3.forceManyBody();
-    const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
-    if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
-    if (linkStrength !== undefined) forceLink.strength(linkStrength);
-    if (linkDistance !== undefined) forceLink.distance(linkDistance);
+  const simulation = d3
+    .forceSimulation(nodes)
+    // .force("link", forceLink)
+    // .force("charge", forceNode)
+    .force("center", d3.forceCenter())
+    .force(
+      "collide",
+      d3.forceCollide((_, i) => R[i] + 12),
+    )
+    .on("tick", ticked);
 
-    console.log(R)
+  const svg = d3
+    .create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [-width / 2, -height / 2, width, height])
+    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+  // .call(zoom);
 
-    const simulation = d3.forceSimulation(nodes)
-        .force("link", forceLink)
-        .force("charge", forceNode)
-        .force("center", d3.forceCenter())
-        .force('collide', d3.forceCollide((_, i) => R[i] + 4))
-        .on("tick", ticked);
+  const g = svg.append("g");
 
-    const svg = d3.create("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [-width / 2, -height / 2, width, height])
-        .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
-    // .call(zoom);
+  const zoom = d3
+    .zoom()
+    .scaleExtent([0.1, 10]) // Min and max zoom scale
+    .on("zoom", (event) => {
+      g.attr("transform", event.transform); // Apply transform to container g
+    });
 
-    const g = svg.append('g')
+  const link = g
+    .append("g")
+    .attr("stroke", typeof linkStroke !== "function" ? linkStroke : null)
+    .attr("stroke-opacity", linkStrokeOpacity)
+    .attr(
+      "stroke-width",
+      typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null,
+    )
+    .attr("stroke-linecap", linkStrokeLinecap)
+    .selectAll("line")
+    .data(links)
+    .join("line");
 
-    const zoom = d3.zoom()
-        .scaleExtent([0.1, 10]) // Min and max zoom scale
-        .on("zoom", (event) => {
-            g.attr("transform", event.transform); // Apply transform to container g
-        });
+  console.log(nodeRadius);
+  const node = g
+    .append("g")
+    .attr("fill", nodeFill)
+    .attr("stroke", nodeStroke)
+    .attr("stroke-opacity", nodeStrokeOpacity)
+    .attr("stroke-width", nodeStrokeWidth)
+    .attr("opacity", nodeFillOpacity)
+    .selectAll("circle")
+    .data(nodes)
+    .join("circle")
+    // .attr("r", nodeRadius)
+    .attr("cursor", "pointer")
+    // .call(drag(simulation))
+    .on("mouseover", (e, t, d) => {
+      console.log(e.target, t, d);
+      //   const originalRadius = e.target.r
+      //   e.target.r = 3;
+      d3.select(e.target).attr("r", 20);
+    })
+    .on("mouseleave", (e, t) => {
+      console.log(nodes);
+      d3.select(e.target).attr("r", nodeRadius(nodes[t.id]));
+    });
 
+  if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
+  if (L) link.attr("stroke", ({ index: i }) => L[i]);
+  if (G) node.attr("fill", ({ index: i }) => color(G[i]));
+  if (R) node.attr("r", ({ index: i }) => R[i]);
+  if (T) node.append("title").text(({ index: i }) => T[i]);
+  if (invalidation != null) invalidation.then(() => simulation.stop());
 
-    const link = g.append("g")
-        .attr("stroke", typeof linkStroke !== "function" ? linkStroke : null)
-        .attr("stroke-opacity", linkStrokeOpacity)
-        .attr("stroke-width", typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null)
-        .attr("stroke-linecap", linkStrokeLinecap)
-        .selectAll("line")
-        .data(links)
-        .join("line");
+  function intern(value) {
+    return value !== null && typeof value === "object"
+      ? value.valueOf()
+      : value;
+  }
 
-    const node = g.append("g")
-        .attr("fill", nodeFill)
-        .attr("stroke", nodeStroke)
-        .attr("stroke-opacity", nodeStrokeOpacity)
-        .attr("stroke-width", nodeStrokeWidth)
-        .attr('opacity', nodeFillOpacity)
-        .selectAll("circle")
-        .data(nodes)
-        .join("circle")
-        .attr("r", nodeRadius)
-        .attr('cursor', 'pointer')
-        .call(drag(simulation));
+  function ticked() {
+    link
+      .attr("x1", (d) => d.source.x)
+      .attr("y1", (d) => d.source.y)
+      .attr("x2", (d) => d.target.x)
+      .attr("y2", (d) => d.target.y);
 
-    if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
-    if (L) link.attr("stroke", ({ index: i }) => L[i]);
-    if (G) node.attr("fill", ({ index: i }) => color(G[i]));
-    if (R) node.attr("r", ({ index: i }) => R[i]);
-    if (T) node.append("title").text(({ index: i }) => T[i]);
-    if (invalidation != null) invalidation.then(() => simulation.stop());
+    node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+  }
 
-    function intern(value) {
-        return value !== null && typeof value === "object" ? value.valueOf() : value;
+  function drag(simulation) {
+    function dragstarted(event) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      event.subject.fx = event.subject.x;
+      event.subject.fy = event.subject.y;
     }
 
-    function ticked() {
-        link
-            .attr("x1", d => d.source.x)
-            .attr("y1", d => d.source.y)
-            .attr("x2", d => d.target.x)
-            .attr("y2", d => d.target.y);
-
-        node
-            .attr("cx", d => d.x)
-            .attr("cy", d => d.y);
+    function dragged(event) {
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
     }
 
-    function drag(simulation) {
-        function dragstarted(event) {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            event.subject.fx = event.subject.x;
-            event.subject.fy = event.subject.y;
-        }
-
-        function dragged(event) {
-            event.subject.fx = event.x;
-            event.subject.fy = event.y;
-        }
-
-        function dragended(event) {
-            if (!event.active) simulation.alphaTarget(0);
-            event.subject.fx = null;
-            event.subject.fy = null;
-        }
-
-        return d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended);
+    function dragended(event) {
+      if (!event.active) simulation.alphaTarget(0);
+      event.subject.fx = null;
+      event.subject.fy = null;
     }
 
-    return Object.assign(svg.node(), { scales: { color } });
-}
+    const mouseOn = (e) => {
+      console.log(e?.subject);
+    };
+
+    return d3
+      .drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+    //   .on("mouseon", mouseOn);
+  }
+
+  return Object.assign(svg.node(), { scales: { color } });
+};
