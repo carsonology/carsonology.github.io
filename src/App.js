@@ -38,7 +38,7 @@ const App = () => {
   const [shownSection, setShownSection] = useState("webdev")
 
   const [currentView, setCurrentView] = useState("home")
-  const [currentProject, setCurrentProject] = useState("")
+  const [projectIdSelectedFromHome, setProjectIdSelectedFromHome] = useState("")
 
   return (
     <>
@@ -48,13 +48,14 @@ const App = () => {
         {currentView == "home" && (
           <Network
             setCurrentView={setCurrentView}
-            setCurrentProject={setCurrentProject}
+            setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
           />
         )}
         {currentView == "project" && (
           <ProjectPage
-            currentProject={currentProject}
+            projectIdSelectedFromHome={projectIdSelectedFromHome}
             setCurrentView={setCurrentView}
+            setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
           />
         )}
       </main>
