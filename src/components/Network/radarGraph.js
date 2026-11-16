@@ -52,7 +52,7 @@ function forceVenn(centers, radius, tolerance = 0) {
 }
 
 const margin = {
-  top: 40,
+  top: 120,
   bottom: 40,
   left: 20,
   right: 20,
@@ -74,13 +74,12 @@ const Radar = ({}) => {
   const vennRatio = 1.2
 
   useEffect(() => {
-    const axisName = ["Graphics", "Design & illustration", "Interactives"]
+    const axisName = ["Design & illustration", "Graphics", "Interactives"]
     const venn = ["#FAA9B2", "#F8CD29", "#1D95BB"]
 
     const maxValue = 100
     const angleSlice = (Math.PI * 2) / 3
-
-    const lineStroke = "#201E1F"
+    const angle = (i) => angleSlice * i + Math.PI / 2 // vertex 0 points down, 1 top-left, 2 top-right
 
     const svg = d3.select(svgRef.current)
 
@@ -91,19 +90,13 @@ const Radar = ({}) => {
     let placement = {
       radius: (width - 2 * marginx) / 2,
       xOffset: width / 2,
-      yOffset: marginx + width / 2,
+      yOffset: margin.top + width / 3.25,
     }
 
     let rScale = d3
       .scaleLinear()
       .domain([0, maxValue])
       .range([0, placement.radius])
-
-    let radarLine = d3
-      .lineRadial()
-      .curve(d3.curveLinearClosed)
-      .radius((d) => rScale(d))
-      .angle((d, i) => i * angleSlice)
 
     const axisGrid = g
       .append("g")
@@ -124,14 +117,8 @@ const Radar = ({}) => {
       .data(venn)
       .enter()
       .append("circle")
-      .attr(
-        "cx",
-        (d, i) => rScale(maxValue / 2) * Math.cos(angleSlice * i - Math.PI / 2),
-      )
-      .attr(
-        "cy",
-        (d, i) => rScale(maxValue / 2) * Math.sin(angleSlice * i - Math.PI / 2),
-      )
+      .attr("cx", (d, i) => rScale(maxValue / 2) * Math.cos(angle(i)))
+      .attr("cy", (d, i) => rScale(maxValue / 2) * Math.sin(angle(i)))
       .attr("r", vennRadius)
       //   .attr("fill", (d) => d)
       .attr("fill", (d, i) => `url('#myGradient-${i + 1}')`)
@@ -144,8 +131,8 @@ const Radar = ({}) => {
         "transform",
         (d, i) =>
           `translate(
-              ${transR * Math.cos(angleSlice * i - Math.PI / 2)},
-              ${transR * Math.sin(angleSlice * i - Math.PI / 2)})
+              ${transR * Math.cos(angle(i))},
+              ${transR * Math.sin(angle(i))})
             `,
       )
 
@@ -153,19 +140,6 @@ const Radar = ({}) => {
       let r = (maxValue / axisTick) * (index + 1)
       return [r, r, r]
     })
-
-    // grid line
-    // axisGrid
-    //   .append("g")
-    //   .selectAll("g")
-    //   .data(tickData)
-    //   .join("g")
-    //   .attr("fill", "transparent")
-    //   .attr("opacity", 0.3)
-    //   .attr("stroke", lineStroke)
-    //   .attr("stroke-dasharray", "5 5")
-    //   .append("path")
-    //   .attr("d", (d) => radarLine(d))
 
     // axis line
     let axisLine = axisGrid
@@ -175,45 +149,11 @@ const Radar = ({}) => {
       .append("g")
       .attr("class", "axis-line")
 
-    // axisLine
-    //   .append("line")
-    //   .attr("x1", (d, i) => rScale(0) * Math.cos(angleSlice * i - Math.PI / 2))
-    //   .attr("y1", (d, i) => rScale(0) * Math.sin(angleSlice * i - Math.PI / 2))
-    //   .attr(
-    //     "x2",
-    //     (d, i) => rScale(maxValue) * Math.cos(angleSlice * i - Math.PI / 2),
-    //   )
-    //   .attr(
-    //     "y2",
-    //     (d, i) => rScale(maxValue) * Math.sin(angleSlice * i - Math.PI / 2),
-    //   )
-    //   .attr("stroke", lineStroke)
-    //   .attr("opacity", 0.3)
-
-    // axisLine
-    //   .append("circle")
-    //   .attr(
-    //     "cx",
-    //     (d, i) => rScale(maxValue) * Math.cos(angleSlice * i - Math.PI / 2),
-    //   )
-    //   .attr(
-    //     "cy",
-    //     (d, i) => rScale(maxValue) * Math.sin(angleSlice * i - Math.PI / 2),
-    //   )
-    //   .attr("r", 3)
-    //   .attr("stroke", "#201E1F")
-
     axisLine
       .append("text")
-      .attr(
-        "x",
-        (d, i) => rScale(maxValue) * Math.cos(angleSlice * i - Math.PI / 2),
-      )
-      .attr(
-        "y",
-        (d, i) => rScale(maxValue) * Math.sin(angleSlice * i - Math.PI / 2),
-      )
-      .attr("dy", (d, i) => (i > 0 ? -300 : -10))
+      .attr("x", (d, i) => rScale(maxValue) * Math.cos(angle(i)))
+      .attr("y", (d, i) => rScale(maxValue) * Math.sin(angle(i)))
+      .attr("dy", (d, i) => (i > 0 ? -50 : 30))
       .attr("text-anchor", "middle")
       .attr("fill", "var(--text-color)")
       .style("font-size", 24)
@@ -238,22 +178,22 @@ const Radar = ({}) => {
 
     // --- where each project belongs: weighted average of the 3 corners ---
     const vertices = [0, 1, 2].map((i) => [
-      rScale(maxValue) * Math.cos(angleSlice * i - Math.PI / 2),
-      rScale(maxValue) * Math.sin(angleSlice * i - Math.PI / 2),
+      rScale(maxValue) * Math.cos(angle(i)),
+      rScale(maxValue) * Math.sin(angle(i)),
     ])
 
     const vennCenters = [0, 1, 2].map((i) => {
-      const a = angleSlice * i - Math.PI / 2
+      const a = angle(i)
       const dist = rScale(maxValue / 2) + transR // base offset + the translate you apply
       return [dist * Math.cos(a), dist * Math.sin(a)]
     })
 
     function position(d) {
       const s = [
-        d.tags?.includes("Graphics") ? 0.8 : 0.1,
         d.tags?.includes("Design") || d.tags?.includes("Illustration")
           ? 0.8
           : 0.1,
+        d.tags?.includes("Graphics") ? 0.8 : 0.1,
         d.tags?.includes("Interactive") ? 0.8 : 0.1,
       ]
       const total = d3.sum(s)
@@ -266,15 +206,12 @@ const Radar = ({}) => {
 
     // copies, so the simulation doesn't write x/y onto your imported data
     const simNodes = nodes
-      .filter((d) => d.type !== "tag")
+      .filter((d) => d.type !== "tag" && !d?.excludeFromRadar)
       .map((d) => {
         const [x, y] = position(d)
         return { ...d, tx: x, ty: y, x, y, r0: photoImgWidth, r: photoImgWidth }
       })
 
-    //   const nodeRadius = photoWid
-
-    // --- one group per project: image + border + label move together ---
     const photoGroup = axisGrid
       .append("g")
       .attr("class", "photo")
@@ -301,6 +238,9 @@ const Radar = ({}) => {
       .attr("preserveAspectRatio", "xMidYMid slice") // Crops image cleanly to fit circle
 
     photoGroup
+      .append("a")
+      .attr("target", "_blank")
+      .attr("href", (d) => d.url)
       .append("circle")
       .attr("r", (d) => d.r)
       .attr("fill", (d) => `url(#img-${d.id.split(" ").join("-")})`)
@@ -360,9 +300,9 @@ const Radar = ({}) => {
     <div
       style={{
         width: "100vw",
-        height: "75vw",
+        height: "100vw",
         // aspectRatio: 1,
-        maxWidth: 1200,
+        maxWidth: 1350,
         margin: "auto",
       }}
       ref={containerRef}

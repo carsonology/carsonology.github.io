@@ -21,14 +21,20 @@ h2 {
 }
 
 body {
-  /* background-image: url(/public/heather-green-OIKBzKrTdxA-unsplash.jpg); */
-  background-size: cover;
+  background-image: url(/public/Texturelabs_Paper_234L.jpg);
+  background-size: 100%;
   background-repeat: repeat;
-  min-height: 200vh;
+  background-blend-mode: lighten;
+  /* ba */
+  /* min-height: 100vh; */
   /* background-attachment: fixed; */
 }
 
-#subgraph {
+a {
+  color: var(--text-color);
+}
+
+/* #subgraph {
   position: fixed;
   right: 16px;
   bottom: 16px;
@@ -50,4 +56,4 @@ body {
   margin: 0 0 4px;
   font: 12px sans-serif;
   color: #ccc;
-}
+} */

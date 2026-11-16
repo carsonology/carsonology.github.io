@@ -85,3 +85,85 @@ export function useContainerSize(
 
   return size
 }
+
+export function forceBoundary(getBounds, padding = 10, strength = 0.3) {
+  let nodes
+
+  function force() {
+    const { width, height } = getBounds()
+    for (const d of nodes) {
+      const p = padding + (d.r ?? 0) // leave room for the node's own radius
+      if (d.x < p) d.vx += (p - d.x) * strength
+      else if (d.x > width - p) d.vx -= (d.x - (width - p)) * strength
+      if (d.y < p) d.vy += (p - d.y) * strength
+      else if (d.y > height - p) d.vy -= (d.y - (height - p)) * strength
+    }
+  }
+
+  force.initialize = (n) => (nodes = n)
+  return force
+}
+
+export function clampToBounds(nodes, width, height, padding = 4) {
+  for (const d of nodes) {
+    const p = padding + (d.r ?? 0)
+    if (d.x < p) {
+      d.x = p
+      d.vx = 0
+    } else if (d.x > width - p) {
+      d.x = width - p
+      d.vx = 0
+    }
+    if (d.y < p) {
+      d.y = p
+      d.vy = 0
+    } else if (d.y > height - p) {
+      d.y = height - p
+      d.vy = 0
+    }
+  }
+}
+
+const idOf = (x) => (typeof x === "object" ? x.id : x)
+
+export function buildNeighborMap(nodes, links) {
+  // each node starts with itself, so the hovered node stays fully visible
+  const map = new Map(nodes.map((d) => [d.id, new Set([d.id])]))
+  links.forEach((l) => {
+    const s = idOf(l.source)
+    const t = idOf(l.target)
+    map.get(s).add(t)
+    map.get(t).add(s)
+  })
+  return map
+}
+
+export const polygonCentroid = function (path) {
+  let vertices = path
+    .slice(0, path.length - 2)
+    .split(/(?=[LM])/)
+    .map(function (d) {
+      var pointsArray = d.slice(1, d.length).split(",")
+      return [+pointsArray[0], +pointsArray[1]]
+    })
+
+  let a = 0,
+    x = 0,
+    y = 0,
+    l = vertices.length
+
+  for (let i = 0; i < l; i++) {
+    const s = i === l - 1 ? 0 : i + 1,
+      v0 = vertices[i],
+      v1 = vertices[s],
+      f = v0[0] * v1[1] - v1[0] * v0[1]
+
+    a += f
+    x += (v0[0] + v1[0]) * f
+    y += (v0[1] + v1[1]) * f
+  }
+
+  const d = a * 3
+
+  return [x / d, y / d]
+}

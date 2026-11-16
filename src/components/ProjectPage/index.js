@@ -2,9 +2,20 @@ import { useState, useEffect } from "react"
 import Project from "./Project"
 import { styled } from "@stitches/react"
 import Subgraph from "../Network/Subgraph"
-import miserables from "../Network/miserables.json"
+import miserables from "../Network/miserables"
 
-const ButtonStyled = styled("button", {})
+const ButtonStyled = styled("button", {
+  background: "none",
+  border: "none",
+  fontSize: 16,
+  fontWeight: "bold",
+  cursor: "pointer",
+})
+const Flex = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "1rem",
+})
 
 const { nodes } = miserables
 
@@ -21,13 +32,41 @@ const ProjectPage = ({ projectIdSelectedFromHome, setCurrentView }) => {
 
   return (
     <>
-      <ButtonStyled onClick={() => setCurrentView("home")}>Home</ButtonStyled>
-      <p>{selectedId}</p>
-      <Project />
+      <Flex>
+        <ButtonStyled
+          onClick={() => {
+            const index = nodes.findIndex((n) => n.id == selectedId)
+            if (index > 0) {
+              setSelectedId(nodes[index - 1]?.id)
+            } else if (index == 0) {
+              setSelectedId(nodes[nodes.length - 1].id)
+            } else {
+              setSelectedId(nodes[0].id)
+            }
+          }}
+        >
+          ← Previous project
+        </ButtonStyled>
+        <ButtonStyled onClick={() => setCurrentView("home")}>Home</ButtonStyled>
+        <ButtonStyled
+          onClick={() => {
+            const index = nodes.findIndex((n) => n.id == selectedId)
+            if (index < nodes.length - 1) {
+              setSelectedId(nodes[index + 1]?.id)
+            } else {
+              setSelectedId(nodes[0].id)
+            }
+          }}
+        >
+          Next project →
+        </ButtonStyled>
+      </Flex>
+      {/* <p>{selectedId}</p> */}
+      <Project currentNode={currentNode} />
 
-      <Subgraph selectedId={selectedId} setSelectedId={setSelectedId} />
-      <ButtonStyled>Previous project</ButtonStyled>
-      <ButtonStyled>Next project</ButtonStyled>
+      <div style={{ borderTop: "2px solid var(--text-color)" }}>
+        <Subgraph selectedId={selectedId} setSelectedId={setSelectedId} />
+      </div>
     </>
   )
 }

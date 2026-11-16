@@ -1,6 +1,7 @@
 import "./App.css"
 import { useState } from "react"
 import Header from "./components/Header.js"
+import { styled } from "@stitches/react"
 // import content for clips
 import web_clips from "./clips/web_dev.json"
 import graphic_clips from "./clips/graphics.json"
@@ -9,6 +10,9 @@ import design_clips from "./clips/design.json"
 
 import Network from "./components/Network/index.js"
 import ProjectPage from "./components/ProjectPage/index.js"
+import Work from "./components/Work"
+import Nav from "./components/Nav"
+import Home from "./components/Home"
 
 const config = [
   {
@@ -37,27 +41,33 @@ const config = [
 const App = () => {
   const [shownSection, setShownSection] = useState("webdev")
 
+  const [currentPage, setCurrentPage] = useState("Home")
+
   const [currentView, setCurrentView] = useState("home")
   const [projectIdSelectedFromHome, setProjectIdSelectedFromHome] = useState("")
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+
+      <Nav setCurrentPage={setCurrentPage} currentPage={currentPage} />
 
       <main>
-        {currentView == "home" && (
-          <Network
+        {currentPage == "Home" && (
+          <Home
             setCurrentView={setCurrentView}
+            setCurrentPage={setCurrentPage}
             setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
           />
         )}
-        {currentView == "project" && (
+        {currentPage == "Work" && <Work />}
+        {/* {currentView == "project" && (
           <ProjectPage
             projectIdSelectedFromHome={projectIdSelectedFromHome}
             setCurrentView={setCurrentView}
             setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
           />
-        )}
+        )} */}
       </main>
     </>
   )

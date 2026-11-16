@@ -1,11 +1,20 @@
 import { ForceGraph } from "./forceGraphNew"
+import Radar from "./radarGraph.js"
 
 const Network = ({ setCurrentView, setProjectIdSelectedFromHome }) => {
   return (
-    <ForceGraph
-      setCurrentView={setCurrentView}
-      setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
-    />
+    <div
+      style={
+        {
+          // background: "#63464615"
+        }
+      }
+    >
+      <Radar
+        setCurrentView={setCurrentView}
+        setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
+      />
+    </div>
   )
 }
 

@@ -1,14 +1,20 @@
 import { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
-import { getNeighborIds } from "./utils"
-import miserables from "./miserables.json"
-
-const SUB_SIZE = 300
+import { getNeighborIds, useContainerSize } from "./utils"
+import miserables from "./miserables"
 
 const Subgraph = ({ setSelectedId, selectedId }) => {
   const subSvgRef = useRef(null)
+  const containerRef = useRef(null)
 
   const { nodes, links } = miserables
+
+  const { width, height } = useContainerSize(containerRef)
+
+  console.log(width)
+
+  // const width = w - margin.left - margin.right
+  // const height = h - margin.top - margin.bottom
 
   useEffect(() => {
     if (!selectedId) return
@@ -33,35 +39,34 @@ const Subgraph = ({ setSelectedId, selectedId }) => {
       .map((l) => ({ source: l.source.id, target: l.target.id }))
 
     const centerNode = subNodes.find((n) => n.id === selectedId)
-    centerNode.fx = SUB_SIZE / 2
-    centerNode.fy = SUB_SIZE / 2
+    centerNode.fx = width / 2
+    centerNode.fy = height / 2
 
-    const sLink = subSvg
-      .append("g")
+    const G = subSvg.append("g")
+
+    const sLink = G.append("g")
       .attr("stroke", "#999")
       .attr("stroke-opacity", 0.6)
       .selectAll("line")
       .data(subLinks)
       .join("line")
 
-    const sNode = subSvg
-      .append("g")
+    const sNode = G.append("g")
       .selectAll("circle")
       .data(subNodes)
       .join("circle")
       .attr("r", (d) => (d.id === selectedId ? 10 : 6))
-      .attr("fill", (d) => (d.id === selectedId ? "#fff" : "#ccc"))
+      .attr("fill", (d) => (d.id === selectedId ? "#565656" : "#565656"))
       .style("cursor", "pointer")
       .on("click", (event, d) => setSelectedId(d.id)) // hop to that node
 
-    const sLabel = subSvg
-      .append("g")
+    const sLabel = G.append("g")
       .selectAll("text")
       .data(subNodes)
       .join("text")
       .text((d) => d.id)
       .attr("font-size", 10)
-      .attr("fill", "#ccc")
+      .attr("fill", "#565656")
       .attr("text-anchor", "middle")
       .attr("dy", -12)
       .style("pointer-events", "none")
@@ -88,45 +93,36 @@ const Subgraph = ({ setSelectedId, selectedId }) => {
         sLabel.attr("x", (d) => d.x).attr("y", (d) => d.y)
       })
 
+    const zoom = d3
+      .zoom()
+      .scaleExtent([1, 6])
+      .on("zoom", (event) => {
+        G.attr("transform", event.transform)
+      })
+
+    subSvg.call(zoom)
+
     return () => subSim.stop() // stops the old sim before the next selection
-  }, [selectedId])
+  }, [selectedId, width])
 
   return (
     <div
       id="subgraph"
-      //   hidden={selectedId === null}
+      ref={containerRef}
       style={{
-        position: "fixed",
-        right: 16,
-        bottom: 16,
-        background: "#1e1e1e",
-        border: "1px solid #444",
-        borderRadius: 8,
+        // background: "#1e1e1e",
+        // border: "1px solid #444",
         padding: 8,
+        height: 280,
       }}
     >
-      <button
-        id="sub-close"
-        onClick={() => setSelectedId(null)}
-        style={{
-          position: "absolute",
-          top: 4,
-          right: 8,
-          background: "none",
-          border: 0,
-          color: "#ccc",
-          cursor: "pointer",
-        }}
-      >
-        ×
-      </button>
       <h3
         id="sub-title"
         style={{ margin: "0 0 4px", font: "12px sans-serif", color: "#ccc" }}
       >
         {selectedId}
       </h3>
-      <svg ref={subSvgRef} width={SUB_SIZE} height={SUB_SIZE} />
+      <svg ref={subSvgRef} width={width} height={height} />
     </div>
   )
 }
