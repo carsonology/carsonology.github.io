@@ -1,5 +1,7 @@
 import { styled } from "@stitches/react"
 
+import { NavLink } from "react-router-dom"
+
 const NavStyled = styled("nav", {
   // background: "var(--text-color)",
   // borderBottom: "1px solid var(--text-color)",
@@ -34,7 +36,12 @@ const NavStyled = styled("nav", {
     justifyContent: "center",
     letterSpacing: ".075em",
 
-    li: {
+    // a: { textDecoration: "none" },
+
+    a: {
+      textDecoration: "none",
+      display: "flex",
+      alignItems: "center",
       // textTransform: "lowercase",
       cursor: "pointer",
       opacity: 0.7,
@@ -42,7 +49,6 @@ const NavStyled = styled("nav", {
 
       "&:before": {
         content: "",
-        // transform: "translateY(1.5px)",
         width: 6,
         height: 6,
         border: "2px solid var(--text-color)",
@@ -54,23 +60,15 @@ const NavStyled = styled("nav", {
       },
 
       "&:hover": {
-        // fontWeight: "bold",
         "&:before": {
           opacity: 1,
           background: "none",
           // background: "white",
           transition: "200ms opacity ease-in",
-          // content: "",
-          // width: 10,
-          // height: 10,
-          // background: "white",
-          // display: "inline-block",
-          // marginRight: ".4em",
-          // borderRadius: 99,
         },
       },
     },
-    "li.active": {
+    "a.active": {
       opacity: 1,
       textTransform: "lowercase",
       fontWeight: "bold",
@@ -78,13 +76,6 @@ const NavStyled = styled("nav", {
         opacity: 1,
         transition: "200ms opacity ease-in",
         background: "var(--text-color)",
-        // content: "",
-        // width: 10,
-        // height: 10,
-        // background: "white",
-        // display: "inline-block",
-        // marginRight: ".4em",
-        // borderRadius: 99,
       },
     },
   },
@@ -96,21 +87,15 @@ const config = [
   // "About"
 ]
 
-const Nav = ({ currentPage, setCurrentPage }) => {
+const Nav = () => {
   return (
     <NavStyled>
       <ul>
         {config.map((c) => {
           return (
-            <li
-              className={currentPage == c ? "active" : ""}
-              id={c}
-              onClick={() => {
-                setCurrentPage(c)
-              }}
-            >
-              {c}
-            </li>
+            <NavLink to={`/${c == "Home" ? "" : c.toLowerCase()}`}>
+              <li id={c}>{c}</li>
+            </NavLink>
           )
         })}
       </ul>

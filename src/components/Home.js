@@ -10,6 +10,7 @@ import Network from "./Network/index.js"
 import ProjectPage from "./ProjectPage/index.js"
 import Work from "./Work"
 import Nav from "./Nav"
+import { Link } from "react-router-dom"
 
 const Intro = styled("div", {
   margin: "auto",
@@ -241,16 +242,7 @@ const Home = ({
         <p>
           Many of my projects cross disciplines, and these are some I'm proudest
           of. Click on a bubble to see it live on the web. For more detail,
-          check out my{" "}
-          <a
-            onClick={(e) => {
-              e.preventDefault()
-              setCurrentPage("Work")
-            }}
-            href="www.google.com"
-          >
-            full list of work.
-          </a>
+          check out my <Link to="/work">full list of work.</Link>
           {/* and case studies. */}
         </p>
       </Intro>
