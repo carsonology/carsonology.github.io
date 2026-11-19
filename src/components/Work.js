@@ -24,6 +24,7 @@ const TextContainer = styled("div", {
   span: {
     border: "1px solid var(--text-color)",
     display: "inline-block",
+    color: "var(--text-color)",
     padding: ".2em .6em",
     marginRight: ".2em",
     borderRadius: 6,
@@ -60,14 +61,20 @@ const WorkContainer = styled("div", {
 })
 
 const Work = () => {
-  console.log(miserables)
-
   const [activeTag, setActiveTag] = useState("All")
 
-  const tags = Array.from(
-    new Set(miserables.nodes.flatMap((m) => m?.tags)),
-  ).filter((t) => Boolean(t))
-  console.log(tags)
+  const tags = Array.from(new Set(miserables.nodes.flatMap((m) => m?.tags)))
+    .filter((t) => Boolean(t) && t != "Design" && t != "Social")
+    .sort((a, b) => {
+      const order = [
+        "Graphics",
+        "Interactive",
+        "Design",
+        "Multimedia",
+      ].reverse()
+      return order.findIndex((d) => d == b) - order.findIndex((d) => d == a)
+    })
+
   return (
     <>
       <TextContainer>
@@ -78,6 +85,7 @@ const Work = () => {
             return (
               <>
                 <span
+                  style={{ mixBlendMode: "multiply" }}
                   onClick={() => {
                     setActiveTag(t)
                   }}
@@ -92,7 +100,16 @@ const Work = () => {
       </TextContainer>
       <WorkContainer>
         {miserables.nodes
-          .filter((p) => p.type != "tag")
+          .reduce((acc, d) => {
+            return d?.select
+              ? [
+                  ...acc.filter((a) => Boolean(a?.select)),
+                  d,
+                  ...acc.filter((a) => !Boolean(a?.select)),
+                ]
+              : [...acc, d]
+          }, [])
+          .filter((p) => p.type != "tag" && !p?.excludeFromWork)
           .filter((p) => {
             if (activeTag == "All") {
               return true

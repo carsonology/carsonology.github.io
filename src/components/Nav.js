@@ -1,6 +1,7 @@
 import { styled } from "@stitches/react"
 
 import { NavLink } from "react-router-dom"
+import jump from "jump.js"
 
 const NavStyled = styled("nav", {
   // background: "var(--text-color)",
@@ -93,7 +94,15 @@ const Nav = () => {
       <ul>
         {config.map((c) => {
           return (
-            <NavLink to={`/${c == "Home" ? "" : c.toLowerCase()}`}>
+            <NavLink
+              to={`/${c == "Home" ? "" : c.toLowerCase()}`}
+              onClick={() => {
+                jump("body", {
+                  duration: 0, // Optional: time in milliseconds
+                  offset: -200, // Optional: pixel offset from the top
+                })
+              }}
+            >
               <li id={c}>{c}</li>
             </NavLink>
           )

@@ -28,6 +28,7 @@ const Container = styled("div", {
     width: 450,
     height: "auto",
     borderRadius: 10,
+
     // border: "1px solid var(--text-color)",
   },
 })
@@ -71,7 +72,8 @@ const H4 = styled("h4", {
 })
 
 const Clip = (props) => {
-  const { id, image, date, url, headline, skills, publication, tags } = props
+  const { id, image, date, url, headline, skills, publication, tags, context } =
+    props
 
   return (
     <Container>
@@ -88,16 +90,20 @@ const Clip = (props) => {
         </LazyLoad>
       )}
       <div className="headline-wrapper">
-        <Sig>{tags?.length > 0 ? tags.join(", ") : "Project"}</Sig>
+        <Sig>
+          {tags?.length > 0
+            ? tags.filter((t) => t != "Design").join(", ")
+            : "Project"}
+        </Sig>
         <H4>
           <A url={url}>{headline}</A>
         </H4>
         <Date>
-          {date && d3.timeFormat("%B %d, %Y")(d3.timeParse("%M/%d/%Y")(date))}{" "}
+          {date && d3.timeFormat("%B %-d, %Y")(d3.timeParse("%m/%d/%Y")(date))}{" "}
           • {publication && publication}
         </Date>
         {skills && (
-          <p style={{ marginTop: "2em" }}>
+          <p style={{ marginTop: "1em" }}>
             <strong>Skills:</strong>{" "}
             {skills.length > 0 &&
               skills
@@ -105,6 +111,7 @@ const Clip = (props) => {
                 .join(", ")}
           </p>
         )}
+        {context && <p dangerouslySetInnerHTML={{ __html: context }} />}
       </div>
     </Container>
   )

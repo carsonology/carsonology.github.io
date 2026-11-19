@@ -11,6 +11,7 @@ const Project = ({ currentNode }) => {
       skills={currentNode?.skills}
       publication={currentNode?.publication}
       tags={currentNode?.tags}
+      context={currentNode?.context}
     />
   )
 }

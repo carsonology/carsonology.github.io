@@ -1,16 +1,9 @@
-import { useState } from "react"
 import { styled } from "@stitches/react"
-// import content for clips
-import web_clips from "../clips/web_dev.json"
-import graphic_clips from "../clips/graphics.json"
-import writing_clips from "../clips/writing.json"
-import design_clips from "../clips/design.json"
 
 import Network from "./Network/index.js"
-import ProjectPage from "./ProjectPage/index.js"
-import Work from "./Work"
-import Nav from "./Nav"
 import { Link } from "react-router-dom"
+
+import jump from "jump.js"
 
 const Intro = styled("div", {
   margin: "auto",
@@ -110,7 +103,7 @@ const Home = ({
           <strong>
             <span
               style={{
-                background: "rgba(188,214,237,.75)",
+                background: "#FB8DA680",
                 paddingLeft: ".2em",
                 paddingRight: ".2em",
                 mixBlendMode: "multiply",
@@ -120,7 +113,7 @@ const Home = ({
             </span>{" "}
             <span
               style={{
-                background: "rgba(253,199,22,.75)",
+                background: "#BBD9F7",
                 paddingLeft: ".2em",
                 paddingRight: ".2em",
                 mixBlendMode: "multiply",
@@ -131,7 +124,7 @@ const Home = ({
             and{" "}
             <span
               style={{
-                background: "rgba(122,173,103,.75)",
+                background: "#FFAB0B90",
                 paddingLeft: ".2em",
                 paddingRight: ".2em",
                 mixBlendMode: "multiply",
@@ -169,21 +162,20 @@ const Home = ({
             target="_blank"
             href="https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
           >
-            AI
+            AI,
           </a>{" "}
-          and{" "}
           <a
             href="https://www.pewresearch.org/short-reads/2026/09/23/prediction-markets-trading-volume-doubled-between-may-and-july-largely-driven-by-sports/"
             target="_blank"
           >
             prediction markets,
           </a>{" "}
-          among{" "}
+          and many{" "}
           <a
             href="https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/"
             target="_blank"
           >
-            other things.
+            other topics.
           </a>{" "}
           I also{" "}
           <a
@@ -240,9 +232,45 @@ const Home = ({
       <Intro>
         <H4>Selected projects</H4>
         <p>
-          Many of my projects cross disciplines, and these are some I'm proudest
-          of. Click on a bubble to see it live on the web. For more detail,
-          check out my <Link to="/work">full list of work.</Link>
+          My projects tend to cross disciplines.{" "}
+          {/* , and these are some I'm proudest
+          of.  */}
+          Click on a bubble{" "}
+          <span style={{ width: 50, position: "inline-block" }}>
+            <img
+              src="/hand-pointer.svg"
+              style={{
+                width: "1em",
+                height: "1em",
+                marginBottom: -3,
+                marginRight: -2,
+                fill: "var(--text-color",
+              }}
+            ></img>
+          </span>{" "}
+          to see it live on the web. For more detail, here is my{" "}
+          <Link
+            to="/work"
+            onClick={() => {
+              jump("body", {
+                duration: 0, // Optional: time in milliseconds
+                offset: -200, // Optional: pixel offset from the top
+              })
+            }}
+          >
+            full list of work.
+          </Link>{" "}
+          <span style={{ width: 50, position: "inline-block" }}>
+            <img
+              src="/rectangle-list.svg"
+              style={{
+                width: "1em",
+                height: "1em",
+                marginBottom: -3,
+                fill: "var(--text-color",
+              }}
+            ></img>
+          </span>
           {/* and case studies. */}
         </p>
       </Intro>
@@ -250,22 +278,62 @@ const Home = ({
         setCurrentView={setCurrentView}
         setProjectIdSelectedFromHome={setProjectIdSelectedFromHome}
       />
-      {/* <Intro>
-              <p>Case studies</p>
-              <p>I'm a visual journalist, designer and graphic artist.</p>
-              <p>
-                I work at Pew Research Center, making charts about politics, AI
-                and prediction markets, among other things. I also design and
-                commission illustrations for reports.
-              </p>
-              <p>
-                Previously I worked on The Washington Post Design Team,
-                designing visual articles and building interactive tooling for
-                new story formats. I also collaborated often with the Graphics
-                Team.
-              </p>
-              <p>Check out my selected projects below.</p>
-            </Intro> */}
+      <Intro css={{ marginTop: 0, marginBottom: "6rem" }}>
+        {/* <H4>Selected projects</H4> */}
+        <p style={{ textAlign: "center" }}>
+          Check out{" "}
+          <Link
+            to="/work"
+            onClick={() => {
+              jump("body", {
+                duration: 0, // Optional: time in milliseconds
+                offset: -200, // Optional: pixel offset from the top
+              })
+            }}
+          >
+            my full list of work here{" "}
+            <span style={{ width: 50, position: "inline-block" }}>
+              <img
+                src="/face-grin-wide.svg"
+                style={{
+                  width: "1em",
+                  height: "1em",
+                  marginBottom: -3,
+                  fill: "var(--text-color",
+                }}
+              ></img>
+            </span>
+          </Link>{" "}
+          or{" "}
+          <a href="mailto:carson.terbush@gmail.com">
+            email me{"  "}
+            <span style={{ width: 50, position: "inline-block" }}>
+              <img
+                src="/envelope.svg"
+                style={{
+                  width: "1em",
+                  height: "1em",
+                  marginBottom: -3,
+                  fill: "var(--text-color",
+                }}
+              ></img>
+            </span>
+          </a>{" "}
+          if you want to connect. Always happy to chat about data viz, knitting,
+          travel photography or my cats. Thanks for stopping by!{" "}
+          <span style={{ width: 50, position: "inline-block" }}>
+            <img
+              src="/hand-peace.svg"
+              style={{
+                width: "1em",
+                height: "1em",
+                marginBottom: -3,
+                fill: "var(--text-color",
+              }}
+            ></img>
+          </span>
+        </p>
+      </Intro>
     </>
   )
 }
