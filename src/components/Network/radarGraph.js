@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
 import miserables from "./miserables"
+import { styled } from "@stitches/react"
 
 import { useContainerSize } from "./utils"
 
@@ -45,14 +46,27 @@ const margin = {
   right: 20,
 }
 
+const Container = styled("div", {
+  width: "100vw",
+  height: "100vw",
+  maxHeight: 1350,
+  // aspectRatio: 1,
+  maxWidth: 1350,
+  margin: "auto",
+  // border: "1px solid red",
+
+  "@media screen and (max-width: 600px)": {
+    height: "120vw",
+  },
+})
+
 const Radar = ({}) => {
   const containerRef = useRef(null)
-  // const svgVennRef = useRef(null)
   const svgRef = useRef(null)
   const { width: w, height: h } = useContainerSize(containerRef)
 
-  const width = w - margin.left - margin.right
-  const height = h - margin.top - margin.bottom
+  const width = w
+  const height = h
 
   const nodes = miserables.nodes.map((m) => {
     if (m.id == "Measles memories") {
@@ -65,7 +79,7 @@ const Radar = ({}) => {
   })
 
   const axisTick = 6
-  const marginx = 50
+  const marginx = width > 600 ? 50 : 5
   const vennRatio = 1.2
 
   const maxValue = 100
@@ -76,8 +90,12 @@ const Radar = ({}) => {
   let placement = {
     radius: (width - 2 * marginx) / 2,
     xOffset: width / 2,
-    yOffset: margin.top + width / 3.25,
+    yOffset:
+      (width - 2 * marginx) / 2 + (width < 600 ? 10 : width > 1000 ? -30 : 0),
+    //  margin.top + width / (width > 600 ? 3.25 : 4),
   }
+
+  console.log(width)
 
   // venn
   const vennRadius = (placement.radius / (axisTick * 2)) * axisTick * vennRatio
@@ -158,7 +176,7 @@ const Radar = ({}) => {
       .data([1, 2, 3])
       .join("text")
       .attr("text-anchor", "middle")
-      .attr("font-size", 24)
+      .attr("font-size", width > 600 ? 24 : 16)
       .attr("font-weight", "bold")
       .attr("letter-spacing", 2)
       .attr("fill", "var(--text-color)")
@@ -170,7 +188,7 @@ const Radar = ({}) => {
       .text((_, i) => axisName[i])
       .attr("side", "right")
 
-    const photoImgWidth = width > 1000 ? 50 : width < 750 ? width * 0.04 : 40
+    const photoImgWidth = width > 1000 ? 50 : width < 750 ? width * 0.05 : 40
 
     // --- where each project belongs: weighted average of the 3 corners ---
     const vertices = [0, 1, 2].map((i) => [
@@ -364,17 +382,7 @@ const Radar = ({}) => {
     `
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "90vw",
-        maxHeight: 1350 * 0.9,
-        // aspectRatio: 1,
-        maxWidth: 1350,
-        margin: "auto",
-      }}
-      ref={containerRef}
-    >
+    <Container ref={containerRef}>
       {/* <svg
         className="venn"
         ref={svgVennRef}
@@ -387,8 +395,8 @@ const Radar = ({}) => {
       ></svg> */}
       <svg
         ref={svgRef}
-        width={width + margin.left + margin.right}
-        height={height + margin.top + margin.bottom}
+        width={width}
+        height={height}
         style={{
           overflow: "visible",
           transform: `translateZ(0)`,
@@ -427,7 +435,7 @@ const Radar = ({}) => {
           })}
         </defs>
       </svg>
-    </div>
+    </Container>
   )
 }
 

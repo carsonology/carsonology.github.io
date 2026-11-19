@@ -12,11 +12,19 @@ const Intro = styled("div", {
   paddingRight: 20,
   maxWidth: 700,
 
+  "@media screen and (max-width: 600px)": {
+    marginTop: "5em",
+  },
+
   "div p": {
     fontFamily: "Young Serif",
     fontSize: 64,
     lineHeight: 1,
     margin: 0,
+
+    "@media screen and (max-width: 600px)": {
+      fontSize: 32,
+    },
   },
 
   p: {
@@ -25,13 +33,16 @@ const Intro = styled("div", {
     fontSize: 24,
     color: "var(--text-color)",
     lineHeight: 1.6,
+
+    "@media screen and (max-width: 600px)": {
+      fontSize: 18,
+    },
   },
 
   ".name": {
     position: "relative",
     width: "100%",
     display: "flex",
-    // flexDirection: "column",
     margin: "auto",
     alignItems: "center",
     justifyContent: "center",
@@ -40,29 +51,25 @@ const Intro = styled("div", {
       display: "flex",
       alignItems: "center",
       gap: "1rem",
+
+      "@media screen and (max-width:600px)": {
+        flexDirection: "column",
+      },
     },
   },
   ".name span:first-child": {
-    // position: "absolute",
     top: 0,
     left: "1.3rem",
     mixBlendMode: "multiply",
     zIndex: 1,
-    // display: "block",/
   },
   ".name span:nth-child(2)": {
-    // display: "block",
-    // margin: "auto",
-    // transform: "translateX(-2rem)",
     zIndex: 0,
-    // margin: "auto",
   },
   ".name span:nth-child(3)": {
-    // position: "absolute",
     bottom: 0,
     right: "2.2rem",
     mixBlendMode: "multiply",
-    // display: "block",
   },
 })
 
@@ -73,6 +80,10 @@ const H4 = styled("h4", {
   color: "var(--text-color)",
   marginTop: "4rem",
   marginBottom: 0,
+
+  "@media screen and (max-width: 600px)": {
+    fontSize: 24,
+  },
 })
 
 const Mug = styled("span", {

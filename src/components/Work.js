@@ -11,6 +11,8 @@ const H4 = styled("h4", {
   color: "var(--text-color)",
   marginTop: "4rem",
   marginBottom: 0,
+
+  "@media screen and (max-width: 600px)": { fontSize: 24 },
 })
 
 const TextContainer = styled("div", {
@@ -26,10 +28,18 @@ const TextContainer = styled("div", {
     display: "inline-block",
     color: "var(--text-color)",
     padding: ".2em .6em",
-    marginRight: ".2em",
+    marginRight: ".5em",
+    marginBottom: ".5em",
     borderRadius: 6,
     cursor: "pointer",
     transition: "300ms background ease-in",
+
+    "@media screen and (max-width: 600px)": {
+      padding: ".5em 1.25em",
+      fontSize: 16,
+      marginRight: "1em",
+      marginBottom: "1em",
+    },
 
     "&:hover": {
       background: "#63464625",
@@ -58,6 +68,11 @@ const WorkContainer = styled("div", {
 
   justifyItems: "start",
   alignItems: "start",
+
+  "@media screen and (max-width: 600px)": {
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
 })
 
 const Work = () => {
@@ -75,51 +90,62 @@ const Work = () => {
       return order.findIndex((d) => d == b) - order.findIndex((d) => d == a)
     })
 
+  const visibleNodes = miserables.nodes
+    .reduce((acc, d) => {
+      return d?.select
+        ? [
+            ...acc.filter((a) => Boolean(a?.select)),
+            d,
+            ...acc.filter((a) => !Boolean(a?.select)),
+          ]
+        : [...acc, d]
+    }, [])
+    .filter((p) => p.type != "tag" && !p?.excludeFromWork)
+    .filter((p) => {
+      if (activeTag == "All") {
+        return true
+      } else {
+        return p.tags.includes(activeTag)
+      }
+    })
+
   return (
     <>
       <TextContainer>
         <H4>Work</H4>
-        <p>
+        <p style={{ color: "var(--text-color)", marginBottom: 0 }}>
           Show:{" "}
           {["All", ...tags].map((t, i) => {
             return (
-              <>
-                <span
-                  style={{ mixBlendMode: "multiply" }}
-                  onClick={() => {
-                    setActiveTag(t)
-                  }}
-                  className={t == activeTag ? "active" : ""}
-                >
-                  {t}
-                </span>{" "}
-              </>
+              <span
+                key={`${t}-${i}`}
+                style={{ mixBlendMode: "multiply" }}
+                onClick={() => {
+                  setActiveTag(t)
+                }}
+                className={t == activeTag ? "active" : ""}
+              >
+                {t}
+              </span>
             )
           })}
         </p>
+        <p
+          style={{
+            fontStyle: "italic",
+            color: "var(--text-color)",
+            fontSize: 14,
+            marginTop: ".25em",
+          }}
+        >
+          Showing {activeTag == "All" ? "all" : ""} {visibleNodes.length}{" "}
+          {activeTag != "All" ? activeTag.toLowerCase() : ""} projects
+        </p>
       </TextContainer>
       <WorkContainer>
-        {miserables.nodes
-          .reduce((acc, d) => {
-            return d?.select
-              ? [
-                  ...acc.filter((a) => Boolean(a?.select)),
-                  d,
-                  ...acc.filter((a) => !Boolean(a?.select)),
-                ]
-              : [...acc, d]
-          }, [])
-          .filter((p) => p.type != "tag" && !p?.excludeFromWork)
-          .filter((p) => {
-            if (activeTag == "All") {
-              return true
-            } else {
-              return p.tags.includes(activeTag)
-            }
-          })
-          .map((p) => {
-            return <Project currentNode={p} />
-          })}
+        {visibleNodes.map((p, i) => {
+          return <Project key={`${p.id}-${i}`} currentNode={p} />
+        })}
       </WorkContainer>
     </>
   )

@@ -3,33 +3,41 @@ import { styled } from "@stitches/react"
 import * as d3 from "d3"
 
 const Container = styled("div", {
-  // maxWidth: 800,
-  // paddingLeft: 30,
-  // paddingRight: 30,
-  // margin: "auto",
   alignSelf: "start",
   border: "1px solid var(--text-color)",
   padding: 30,
   background: "rgba(255,255,255,.5)",
   borderRadius: 30,
-  width: "100%",
+  width: "calc(100% - 60px)",
   display: "flex",
   gap: 30,
-  // paddingTop: 60,
-  // paddingBottom: 60,
-
-  // display: "grid",
-  // gridTemplateColumns: "repeat(2, 1fr)",
-
   color: "var(--text-color)",
 
+  "@media screen and (max-width: 600px)": {
+    flexDirection: "column",
+    width: "calc(100% - 40px)",
+    gap: 10,
+    padding: 20,
+  },
+
   img: {
-    // width: "100%",
     width: 450,
+
+    "@media screen and (max-width: 1000px)": {
+      width: 350,
+    },
+    "@media screen and (max-width: 800px)": {
+      width: 300,
+    },
+    "@media screen and (max-width: 700px)": {
+      width: 250,
+    },
+    "@media screen and (max-width: 600px)": {
+      width: "100%",
+    },
+    flex: 1,
     height: "auto",
     borderRadius: 10,
-
-    // border: "1px solid var(--text-color)",
   },
 })
 const Sig = styled("p", {
@@ -41,6 +49,18 @@ const Sig = styled("p", {
   letterSpacing: ".1em",
   marginBottom: ".4em",
   fontWeight: "bold",
+
+  "&.show-mobile": {
+    display: "none",
+  },
+  "&.show-desktop": { display: "block" },
+
+  "@media screen and (max-width: 600px)": {
+    "&.show-mobile": {
+      display: "block",
+    },
+    "&.show-desktop": { display: "none" },
+  },
 })
 const Title = styled("h2", {
   fontFamily: '"Young Serif", serif',
@@ -55,6 +75,10 @@ const Date = styled("p", {
   letterSpacing: 1,
   textTransform: "uppercase",
   margin: 0,
+
+  "@media screen and (max-width: 600px)": {
+    fontSize: 12,
+  },
 })
 const H4 = styled("h4", {
   fontFamily: '"Archivo", sans-serif',
@@ -64,6 +88,15 @@ const H4 = styled("h4", {
   marginBottom: ".5em",
   lineHeight: 1.4,
   fontWeight: 500,
+
+  "@media screen and (max-width: 900px)": {
+    fontSize: 20,
+  },
+
+  "@media screen and (max-width: 600px)": {
+    fontSize: 18,
+    marginTop: 0,
+  },
 
   a: {
     color: "var(--text-color)",
@@ -77,6 +110,11 @@ const Clip = (props) => {
 
   return (
     <Container>
+      <Sig className="show-mobile">
+        {tags?.length > 0
+          ? tags.filter((t) => t != "Design").join(", ")
+          : "Project"}
+      </Sig>
       {/* <Title>{id}</Title> */}
       {image && (
         <LazyLoad height={image.height} offset={100}>
@@ -90,7 +128,7 @@ const Clip = (props) => {
         </LazyLoad>
       )}
       <div className="headline-wrapper">
-        <Sig>
+        <Sig className="show-desktop">
           {tags?.length > 0
             ? tags.filter((t) => t != "Design").join(", ")
             : "Project"}

@@ -95,6 +95,7 @@ const Nav = () => {
         {config.map((c) => {
           return (
             <NavLink
+              key={c}
               to={`/${c == "Home" ? "" : c.toLowerCase()}`}
               onClick={() => {
                 jump("body", {
