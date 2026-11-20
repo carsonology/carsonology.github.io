@@ -35,10 +35,10 @@ const TextContainer = styled("div", {
     transition: "300ms background ease-in",
 
     "@media screen and (max-width: 600px)": {
-      padding: ".5em 1.25em",
+      padding: ".25em 1em",
       fontSize: 16,
-      marginRight: "1em",
-      marginBottom: "1em",
+      marginRight: ".75em",
+      marginBottom: ".75em",
     },
 
     "&:hover": {

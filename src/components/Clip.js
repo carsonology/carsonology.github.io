@@ -1,5 +1,6 @@
+import { useState } from "react"
 import LazyLoad from "react-lazy-load"
-import { styled } from "@stitches/react"
+import { styled, keyframes } from "@stitches/react"
 import * as d3 from "d3"
 
 const Container = styled("div", {
@@ -37,7 +38,7 @@ const Container = styled("div", {
     },
     flex: 1,
     height: "auto",
-    borderRadius: 10,
+    // borderRadius: 10,
   },
 })
 const Sig = styled("p", {
@@ -104,6 +105,73 @@ const H4 = styled("h4", {
   },
 })
 
+const Spin = keyframes({
+  "0%": {
+    transform: "rotate(45deg)",
+  },
+  "100%": {
+    transform: "rotate(405deg)",
+  },
+})
+
+const LoadingContainer = styled("div", {
+  background: "lightgray",
+  borderRadius: 10,
+  position: "relative",
+
+  "&:before": {
+    // content: "url(/cloud.svg)",
+    content: "",
+    width: 30,
+    height: 30,
+
+    border: "3px solid #e2e8f0",
+    borderTopColor: "var(--text-color)",
+
+    borderRadius: 99,
+    position: "absolute",
+    top: "calc(50% - 25px)",
+    left: "calc(50% - 25px)",
+    display: "block",
+    zIndex: 0,
+    transformOrigin: "50% 50%",
+    animation: `1.5s ${Spin}  cubic-bezier(0.65, 0, 0.35, 1) infinite`,
+  },
+
+  variants: {
+    loaded: {
+      true: {
+        "&:before": {
+          opacity: 0,
+        },
+      },
+    },
+  },
+})
+
+const Image = ({ className, src, alt }) => {
+  const [loaded, setLoaded] = useState(false)
+
+  return (
+    <LoadingContainer loaded={loaded}>
+      <img
+        className={className}
+        src={src}
+        alt={alt}
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: "300ms opacity ease-in",
+          borderRadius: 10,
+          display: "block",
+        }}
+        onLoad={() => {
+          setLoaded(true)
+        }}
+      />
+    </LoadingContainer>
+  )
+}
+
 const Clip = (props) => {
   const { id, image, date, url, headline, skills, publication, tags, context } =
     props
@@ -117,9 +185,13 @@ const Clip = (props) => {
       </Sig>
       {/* <Title>{id}</Title> */}
       {image && (
-        <LazyLoad height={image.height} offset={100}>
+        <LazyLoad
+          height={image.height}
+          offset={100}
+          onContentVisible={(e) => console.log(e)}
+        >
           <A url={url} className="no-highlight">
-            <img
+            <Image
               className="image"
               src={`thumbnails/${image.src}`}
               alt={image.alt}

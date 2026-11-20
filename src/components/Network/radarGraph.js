@@ -95,8 +95,6 @@ const Radar = ({}) => {
     //  margin.top + width / (width > 600 ? 3.25 : 4),
   }
 
-  console.log(width)
-
   // venn
   const vennRadius = (placement.radius / (axisTick * 2)) * axisTick * vennRatio
   const transR = (placement.radius - vennRadius * 2) / 2
@@ -117,8 +115,6 @@ const Radar = ({}) => {
     const venn = ["#FAA9B2", "#F8CD29", "#1D95BB"]
 
     const svg = d3.select(svgRef.current)
-
-    // const svgVenn = d3.select(svgVennRef.current)
 
     svg.select(".triangle").remove()
 
@@ -181,12 +177,13 @@ const Radar = ({}) => {
       .attr("letter-spacing", 2)
       .attr("fill", "var(--text-color)")
       .style("pointer-events", "none")
-      .append("textPath")
-      .attr("href", (d, i) => `#vennPath-${i}`)
-      .attr("startOffset", (_, i) => (i == 0 ? "25%" : i == 1 ? "22%" : "32%"))
       .attr("textAnchor", "middle")
       .text((_, i) => axisName[i])
-      .attr("side", "right")
+      .attr(
+        "transform",
+        (d, i) => `translate(${vennCenters[i][0]}, ${vennCenters[i][1]})`,
+      )
+      .attr("dy", (_, i) => (i < 1 ? 1 : -1) * vennRadius + (i < 1 ? 30 : -10))
 
     const photoImgWidth = width > 1000 ? 50 : width < 750 ? width * 0.05 : 40
 
@@ -256,28 +253,6 @@ const Radar = ({}) => {
       .attr("stroke-width", 1.5)
       .attr("stroke", "var(--text-color)")
 
-    // const labels = axisGrid
-    //   .append("g")
-    //   .attr("class", "labels")
-    //   .selectAll("text")
-    //   .data([...simNodes, ...simNodes])
-    //   .join("text")
-    //   .text((d) => d.id)
-    //   .attr("font-size", 16)
-    //   .attr("fill", (d, i) =>
-    //     i < simNodes.length ? "white" : "var(--text-color)",
-    //   )
-    //   .attr("font-weight", "bold")
-    //   .attr("stroke-width", (d, i) => (i < simNodes.length ? 5 : 0))
-    //   .attr("stroke", (d, i) => (i < simNodes.length ? "white" : 0))
-    //   .attr("stroke-linecap", "round")
-    //   .attr("stroke-linejoin", "round")
-    //   .attr("text-anchor", "middle")
-    //   .attr("dy", (d) => -1.3 * d.r0 - 10)
-    //   .style("pointer-events", "none")
-    //   .style("opacity", 0)
-    //   .style("transition", "300ms opacity")
-
     const hoverLabel = axisGrid
       .append("g")
       .style("pointer-events", "none")
@@ -345,13 +320,9 @@ const Radar = ({}) => {
         if (width < 600) {
           return
         }
-        console.log(this)
-        // d3.selectAll(simNodes).attr("opacity", 0.3)
-        // nodes.enter().attr("opacity", 0.5)
-        // d3.select(this).raise() // draw the hovered bubble above its neighbors
+
         grow(d3.select(this).select("circle"), d, d.r0 * 1.3)
         photoGroup.style("opacity", (n) => (n === d ? 1 : 0.5)) // dim everyone else
-        // labels.style("opacity", (n) => (n === d ? 1 : 0)) // dim everyone else
         active = d
         hoverLabel.selectAll("text").text(d.id)
         hoverLabel
@@ -364,7 +335,6 @@ const Radar = ({}) => {
         }
         grow(d3.select(this).select("circle"), d, d.r0)
         photoGroup.style("opacity", null) // remove the override, back to fully visible
-        // labels.style("opacity", 0) // dim everyone else
         active = null
         hoverLabel.style("opacity", 0)
       })
@@ -404,35 +374,20 @@ const Radar = ({}) => {
       >
         <defs>
           <radialGradient id="myGradient-2">
-            <stop offset="0%" stop-color="#BBD9F790" />
-            <stop offset="80%" stop-color="#BBD9F730" />
-            <stop offset="110%" stop-color="#BBD9F700" />
+            <stop offset="0%" stopColor="#BBD9F790" />
+            <stop offset="80%" stopColor="#BBD9F730" />
+            <stop offset="110%" stopColor="#BBD9F700" />
           </radialGradient>
           <radialGradient id="myGradient-3">
-            <stop offset="0%" stop-color="#FFAB0B90" />
-            <stop offset="80%" stop-color="#FFAB0B30" />
-            <stop offset="110%" stop-color="#FFAB0B00" />
+            <stop offset="0%" stopColor="#FFAB0B90" />
+            <stop offset="80%" stopColor="#FFAB0B30" />
+            <stop offset="110%" stopColor="#FFAB0B00" />
           </radialGradient>
           <radialGradient id="myGradient-1">
-            <stop offset="0%" stop-color="#FB8DA690" />
-            <stop offset="80%" stop-color="#FB8DA630" />
-            <stop offset="110%" stop-color="#FB8DA600" />
+            <stop offset="0%" stopColor="#FB8DA690" />
+            <stop offset="80%" stopColor="#FB8DA630" />
+            <stop offset="110%" stopColor="#FB8DA600" />
           </radialGradient>
-
-          {vennCenters.map((v, i) => {
-            return (
-              <path
-                id={`vennPath-${i}`}
-                d={createCirclePath(
-                  v[0],
-                  v[1],
-                  i == 0 ? vennRadius + 30 : vennRadius + 12,
-                  i == 0,
-                )}
-                transform={`rotate(86, ${v[0]}, ${v[1]})`}
-              />
-            )
-          })}
         </defs>
       </svg>
     </Container>
