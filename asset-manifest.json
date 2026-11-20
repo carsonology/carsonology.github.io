@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.357e00bf.css",
-    "main.js": "/static/js/main.ff6b4a34.js",
+    "main.js": "/static/js/main.3e073414.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/Texturelabs_Paper_234L.jpg": "/static/media/Texturelabs_Paper_234L.2545c481ecb2f5878b78.jpg",
     "index.html": "/index.html",
     "main.357e00bf.css.map": "/static/css/main.357e00bf.css.map",
-    "main.ff6b4a34.js.map": "/static/js/main.ff6b4a34.js.map",
+    "main.3e073414.js.map": "/static/js/main.3e073414.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.357e00bf.css",
-    "static/js/main.ff6b4a34.js"
+    "static/js/main.3e073414.js"
   ]
 }
