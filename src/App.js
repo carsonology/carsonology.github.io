@@ -5,7 +5,7 @@ import Work from "./components/Work"
 import Nav from "./components/Nav"
 import Home from "./components/Home"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 
 const Footer = styled("div", {
   background: "#63464630",
@@ -23,7 +23,7 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState("Home")
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* <Header /> */}
 
       <Nav setCurrentPage={setCurrentPage} currentPage={currentPage} />
@@ -65,7 +65,7 @@ const App = () => {
           .
         </p>
       </Footer>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
