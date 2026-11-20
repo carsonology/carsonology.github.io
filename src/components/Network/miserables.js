@@ -20,6 +20,20 @@ const nodes = [
     type: "tag",
   },
   {
+    id: "Election trading",
+    image: {
+      src: "./election-trading.png",
+      alt: "",
+    },
+    date: "11/20/2026",
+    url: "https://www.pewresearch.org/short-reads/2026/11/20/how-the-2026-midterms-played-out-on-kalshi-and-polymarket/",
+    headline: "How the 2026 Midterms Played Out on Kalshi and Polymarket",
+    skills: ["photoshop", "d3"],
+    tags: ["Illustration", "Graphics"],
+    publication: "Pew Research Center",
+    excludeFromRadar: true,
+  },
+  {
     id: "Legislation requiring cash",
     image: {
       src: "./cash-legislation.jpg",
@@ -330,7 +344,7 @@ const nodes = [
   {
     id: "Juneteenth map",
     image: {
-      src: "./juneteenth.gif",
+      src: "./juneteenth-social-video.jpg",
       alt: "",
     },
     date: "6/11/2026",
@@ -1093,8 +1107,6 @@ const links = nodes.reduce((acc, d) => {
     ]
   }
 }, [])
-
-console.log(links)
 
 const data = { nodes, links }
 
